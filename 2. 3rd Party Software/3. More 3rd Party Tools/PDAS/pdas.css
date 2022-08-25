@@ -1,0 +1,64 @@
+/* Style sheet for PDAS pages called for display */
+/* Last modified: 13 July 2017 */
+body {margin: 5px; color: black; background: white;
+ font-family: Arial,helvetica,sans-serif;}
+
+h1,h2,h3,h4,h5,h6 { font-family: arial,helvetica,univers,sans-serif;
+                    font-weight: bold; background:white}
+h1 {text-align: center}
+h1 {font-size: 2.0em; color: #0000d0; margin-top: 0.5em;}
+h2 {font-size: 1.5em; color: #0000a0} 
+h3 {font-size: 1.5em; color: #000080}
+h4 {font-size: 1.25em; color: #000060}
+h5 {font-size: 1em; color: #000040}
+h6 {font-size:  0.75em; color: #000020}
+
+div.picasso {text-align: center;}
+p.cosmic {font-style: italic;}
+p.equation {text-align: center; font-family: monospace; white-space: pre}
+p.input {font-family:monospace; white-space: pre}
+div.equation {text-align: center; font-family: monospace; white-space: pre}
+p.quote {margin-left: 5em;}
+p.q {font-size: 1em; font-weight: bold}
+p.a {font-size: 1em; font-weight: normal}
+p.code {font-family:monospace; white-space: pre; font-size: 0.7em; }
+div.wip {font-size:smaller; font-style:italic;}
+span.wip {font-size:smaller; font-style:italic;}
+
+ul.cosmic {font-style: italic;}
+ol.cosmic {font-style: italic;}
+
+table {border-collapse: collapse}
+table.centered {text-align: center}
+table.eq {width: 100%;}
+table.archivelist {margin-left: 3em; font-size: 90%; }
+
+td {border: 1px solid black; padding: 1px 5px 1px 20px;}
+td.center {text-align:center}
+td.right {text-align:right}
+td.eqno {width: 1em;}
+
+address {background: white; color: black; line-height: 1em;}
+
+a:hover {background: yellow; color: black;}
+
+nav {margin: 0.25em;}
+div.crumb {margin: 0.25em;}
+div.section {font-size: 1.25em; font-weight: bold;}
+div.newbanner {width: 100%; background: blue; color: white;
+  font-size: 120%;
+  font-family: Verdana,Arial,Helvetica, sans-serif; text-align: right;}
+div#header {width: 100%; border-bottom: 3px solid blue;
+   padding-top: 3px; padding-bottom: 3px; }
+div#footer {width: 100%; font-size: 90%; 
+   border-top: 3px solid red; border-bottom: 3px solid red;
+   padding-top: 3px; padding-bottom: 3px;}
+
+footer {width: 100%; font-size: 90%; 
+   border-top: 3px solid red; border-bottom: 3px solid red;
+   padding-top: 3px; padding-bottom: 3px;}
+
+img {float: right;}
+img#valid401 {position: absolute; right: 0; border: 0;}
+img#validxhtml {position: absolute; right: 0; border: 0;}
+

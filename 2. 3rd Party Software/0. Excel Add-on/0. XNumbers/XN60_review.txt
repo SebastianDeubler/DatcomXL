@@ -1,0 +1,869 @@
+XNUMBERS version 6.0
+MULTI-PRECISION FLOATING POINT COMPUTATION and NUMERICAL METHODS for EXCEL 
+	with support for Excel 97-2003/2007/2010/64-bit Office and Vista/Windows 7
+History review
+
+----------------------------------------------------------------------------------------
+
+        - Update of Dec 11 2013 -
+
+XN.xlam and XN.xla - Ver. 6.0.5.6
+
+Fixed Major Bug in all non-complex SVD functions. Bug introduced in ver. 6.0.5.2.
+
+Changed function PyMpMath to recognize complex number returns. It strips the leading and trailing parentheses and optionally splits the real and imag portions for an array return.
+
+Changed function digamma to raise an error for large negative integers.
+
+Added functions from Matrix.xla:
+	xMCharPolyC(Mat,[CFormat],[Digit_Max])
+	xMCharPoly(Mat,[Variable],[Digit_Max])
+	xMChar(Mat, x,[Digit_Max])
+	xSysLinIterG(Mat,U,[x0],[nMax],[w],[Digit_Max])
+	xSysLinIterJ(Mat,U,[x0],[nMax],[Digit_Max])
+
+----------------------------------------------------------------------------------------
+
+        - Update of Oct 11 2012 -
+
+XN.xlam and XN.xla - Ver. 6.0.5.5
+
+Adds new Functions: - Chebycev's polynomials single n(real) or array return n(positive integer)
+ xPoly_ChebychevT(x, n, [Digit_Max]) - First Kind
+ xPoly_ChebychevU(x, n, [Digit_Max]) - Second Kind
+ xdPoly_ChebychevT(x, n, [Digit_Max]) - 1st Derivative First Kind
+ xdPoly_ChebychevU(x, n, [Digit_Max]) - 1st Derivative Second Kind
+ xd2Poly_ChebychevT(x, n, [Digit_Max]) - 2nd Derivative First Kind
+
+Bug Fix: Poly_ChebychevU(x,1) returned Derivative 1, now properly returns 2.
+
+Adds new Functions:
+ xIncrSq(x, Digit_Max, [IsNeg]) - Calcs (1-x^2) or (1+x^2)
+ xDecrSq(x, Digit_Max) - Calcs (x^2-1)
+   x must be a string
+   IsNeg is a Boolean(default=FALSE)
+   Returns Unformated(Raw) String
+
+Improved parsing of parameters(labels and values, or only values) for most of the functions that use the mathparser function strings.
+mathparser labels cannot start with a number, plus sign, negative sign, or the current decimal separator character followed by a number.
+If the variable range is passed without “labels”, the functions will assign the values to the variables in the same order that they appear in the formula string, from left to right.
+Fixed problem with Function Hessian(Var_Values, Func, [Param], [Var_Labels]) for Param without a label.
+
+Changed:
+PyMpMath to return both Standard Output and Standard Error. No longer uses Clipboard or "import os".
+It uses nprint(PyCmdStr, mp.dps). If PyCmdStr returns list(), decodes returned list [...] for array return.
+An example is "list(diffs(lambda x:sin(x**2),mpf('0.1'),25))" which will return 26 strings.
+
+Tried to make the returned numeric strings internationally compliant.
+
+Function xSerie(Funct, id, Id_min, Id_max, [Param], [Digit_Max], [Increment], [Chk4NoChange])
+Function xSerie2D(Funct, Id1, Id1_min, Id1_max, Id2, Id2_min, Id2_max, [Param], [Digit_Max], [Increment1], [Increment2], [Chk4NoChange])
+	Digit_Max  -1=quad precision, 0=double precision, >0 extended precision; Default=0
+	Id_min and Id_max can now be real
+	Added optional real parameter Increment(Default=1)
+	Added optional Boolean parameter Chk4NoChange(Default=FALSE) if FALSE Summation terminates when Id_min + Increment(s) becomes > Id_max.
+	 if TRUE Summation will also terminate when no change is detected after 3 iterations(this will only work for a series that converges). At least one iteration is always performed at Id_min.
+	Will now optionally return an array of cells containing the sum and final iteration count(s). If an error occurs, the error, sum and counts are returned in reverse order.	
+
+Macro Double Integral - Fixed Parameter box to work on all equations.
+	Fixed Constant equation for Fxy, when neither x or y occur in equation.
+	Changed # of Points so it reflects ErrMax's effect on the algorithm
+Function Integr_2D(Fxy, xMin, xMax, yMin, yMax, [Param], [Polar], [ErrMax], [Var_Labels],[Rank])
+	Added optional parameter Var_Labels for ability to integrate with respect to any variable(s) with any ordering (default="x","y")
+	Added optional parameter Rank (default=8)
+	optional parameter ErrMax (default=1E-11)
+	optional parameter Polar (default=FALSE)
+
+Macro Triple Integral - Fixed the Help button to point to correct help page
+	Fixed Parameter box to work for all equations
+	Added ErrMax box (was hard coded to 2 * 10^-16)
+Added Function Integr_3D(Fxyz, xMin, xMax, yMin, yMax, zMin, zMax, [Param], [SysCoor], [ErrMax], [Var_Labels], [Rank])
+	Optional SysCoor sets the coordinate system (1= cartesian ortho, 2= polar, 3= cylindrical)(default=1 rectangular)
+	Optional ErrMax (defalut=2E-16)
+	Optional Var_Labels refers to the name and order of xMin...zMax (default="x","y","z")
+	Optional Rank (default=8)
+
+Fixed a bug in Macro Infinite Integral for upper limit "inf"
+Fixed a bug in Complex Matrix functions where the input maxtrix is type 3, strings.
+Fixed xIsNumeric to no longer evaluate as numeric with strings like "-$0,1$", "&6" or "123,456,789" (thousand separator with doubles still evaluates as numeric) 
+
+Added knowledge of "**" for power(same as "^") in both math parsers, so more equations copied from the internet work without modification.
+
+Added Function DblDif(q, c) -- returns number of doubles difference between q and c. If q=c returns 0 (zero).
+
+Added Function xKummer1(a, b, z, [Digit_Max], [ConvDetCnt], [Tolerance],[Force_NUMBER_ret])
+      Function xHypGeom(a, b, c, x, [Digit_Max], [ConvDetCnt], [Tolerance],[Force_NUMBER_ret])
+	Optional ConvDetCnt(default=5000) -- Integer, Iteration count to start checking for Convergence
+	Optional Tolerance(default=0.05)  -- Real, Minimum change required to continue checking for Convergence
+	Optional Force_NUMBER_ret(default=FALSE) -- If TRUE does not return Error Message, instead returns current sum at time of Convergence Tolerance failure.
+  Many values appear to converge too slowly. Reducing Tolerance too much may create an apparent infinite loop.
+**Note** Hyper Geometric functions are still under construction.
+
+Changed xConverter Macro to use faster and more accurate functions xAddR, xSubR, xMultR, and xDivR for internally nested calls where appropriate.
+
+Fixed Functions diGamma(x) to properly work for negative numbers, and cplxDiGamma to work for imaginary portion=0.
+
+Changed Complex Math Parser abs() and div() functions to use alternate algorithms, enabling larger numbers.
+
+Changed Functions LRE(q, c, [NoSD]) and mjkLRE to now accept NoSD as a real nonInteger.
+
+Fixed bug for 32-bit International.(Thanks to Andrey Grischenk)
+
+Changed Functions Poly_Weight_Hermite(n) & Poly_Weight_Laguerre(n, m) - n & m now must be integers.
+	Poly_Weight_Hermite now returns a string if n > 22.
+
+Fixed bug in xAtan for large negative numbers. Will have impact on all complex functions that convert to polar coords.
+
+----------------------------------------------------------------------------------------
+
+        - Update of Aug 18 2012 -
+
+XN.xlam and XN.xla - Ver. 6.0.5.4
+
+Adds vInt(x) and vFix(x) - VBA's Double Functions provided because Excel does not always work properly with small numbers and numbers close to Integers.
+
+Adds multi-precision matrix functions:
+ xMDetMCM(Mat, [Digit_Max],[IsIntMat]) - IsMissing IsIntMat tests for integer matrix.
+ xMInvMCM(Mat, [Digit_Max])
+ xSysLinMCM(Mat, v, [Digit_Max])
+ xMBABMCM(a, b, [Digit_Max])
+Uses a variant of the Gauss/Jordan algorithm with MCM(LCM) and rounding to more accurately detect a singular matrix.
+
+Changed GetNextDouble(x) and GetPrevDouble(x) to always return doubles further away and closer to 0 respectively. GetNextDouble("-0") returns -4.94065645841247E-324 (the smallest negative double).
+
+Fixed Hex2Dbl(HexStr) to now correctly return Signaling NaN(Not a Number) values.
+
+Changed xCStr(x, [Digit_Max] to return VBA's text strings for special Doubles
+ +-1.#INF  - Infinity
+  -1.#IND  - Indeterminate
+ +-1.#sNAN - signaling Not A Number
+ +-1.#qNAN - quiet Not A Number
+
+Fixed xMCM(A1,[A2]) and xMCD(A1,[A2]) to now correctly always return positive numbers.
+
+Fixed bug in xFact2(N,[Digit_Max]) for N > 47.(thanks to Dr. Georg Ströhlein)
+also added support for large values, negative numbers, and non-integers using xGamma function.
+
+Adds support for all non-integers to xFact(N,[Digit_Max]).
+
+Fixed bug in xGamma(x,[Digit_Max]) for large values of x when Digit_Max was 16-30.
+
+Fixed bug in CDec_ for values smaller than 5.6843418860808E-14. Unknown impact, potentially all quadruple precision routines.
+
+Adds new parameter for xIElliptic1/2 (phi, k, [AngleSet], [Digit_Max], [ArcLen]) ArcLen is a Boolean, default=FALSE to return Periodic, =TRUE for Arc Length of the Elliptic Integral.
+
+Adds new function xIElliptic3(phi, k, n, [AngleSet], [Digit_Max], [ArcLen]) - Elliptic Integral of 3rd kind.
+Adds Elli3(phi,k,n) to mathparser functions list.
+
+Adds new function PyMpMath(PyCmdStr, [Digit_Max], [WaitForOutput])
+ - PyCmdStr is a Python command string for use with mpmath. i.e. fadd('1.5','0.1') or sin('0.5')
+ - Digit_Max default=Default_Digits
+ - WaitForOutput is a Boolean (Default= True). That waits for python to finish before retrieving the result from the clipboard.
+PyMpMath uses Python's "command line" feature.
+  Python -c "PyCmdStr"
+It appends to PyCmdStr the reqired starting and ending " and
+  from mpmath import *
+  import os
+  mp.Pretty=True
+  mp.dps=Digit_Max
+and copies nstr(PyCmdStr,mp.dps) to the clipboard
+Note: this function can only be used if Python and MpMath are installed on your computer; see
+      http://mpmath.googlecode.com/svn/trunk/doc/build/index.html
+
+If the location of Python.exe or Msieve.exe changes, please delete "XNExtPgm.ini" from the xnumbers installation folder so the locations can be re-initialized.
+
+----------------------------------------------------------------------------------------
+
+        - Update of May 8 2012 -
+
+XN.xlam and XN.xla - Ver. 6.0.5.3
+
+The checkbox in the configuration screen for "Calculate FULL on Set or Save" now also applies to "ReInit Mem Variables" (under "Help" in the Xnumbers toolbar) when Excel is set to Manual calculation.  In Automatic, "ReInit Mem Variables" performs the same.
+
+Has a bug fix for 6.0.5.2's newer (faster) method of converting a "double" into extended precision.
+Also fixes option of creating an xlam from an xla (in 2007 & 2010) using the DeCompiled button on the Configuration Screen
+
+----------------------------------------------------------------------------------------
+
+        - Update of Apr 24 2012 -
+
+XN.xlam and XN.xla - Ver. 6.0.5.2
+
+Only one version of XN.xla and one version of XN.xlam is now necessary, working for both 32-bit and 64-bit Office. All speed differences between packet sizes are now very slight, and 64-bit is now very slightly faster than 32-bit. Maximum Digits_Limit can be configured up to 32760 from the Configuration Screen in the Xnumbers toolbar under X-Edit>>Configuration.
+It is distributed with Digits_Limit of 816.
+32-bit installations will use PktSize 7 up to Digits_Limit of 630. When configuring Digits_Limit greater than 630 it will use PktSize 6.
+64-bit installations will use PktSize 8 up to Digits_Limit of 7376. When configuring Digits_Limit greater than 7376 it will use PktSize 7.
+
+Settings are saved from the new "Save to Disk" section of the Configuration Screen:
+	"CfgFile" saves only a Configuration File, does not overwrite the add-in
+	"Compiled" is the recommended method of saving (overwrites the add-in)
+	"DeCompiled" is a quick method for creating a decompiled version, used for switching platforms. This is now the method of creating an xla from the xlam. The add-in is distributed fully DeCompiled from the program at:
+http://cpap.com.br/orlando/VBADecompilerMore.asp?IdC=Help
+It is recommended to save it "Compiled" in each machine's environment.
+
+"Clear" clears the function book the same as the "Clear" button in the introduction screen (in the Xnumbers toolbar under Help>>Version). Will instead say "Load" if it is cleared.
+"Set" is for the current session of Excel only. Nothing is saved.
+"Reset Form" resets all of the settings to the distribution defaults
+
+The method to save an add-in to return full length unformatted strings is changed:
+There is simply a checkbox in the configuration screen
+
+-----------
+Adds multi-precision complex matrix functions with same names (preceded with an "x")
+as the double precision  functions in Matrix.xla (from Foxes Team):
+
+xMCharC(Mat, z, [CFormat], [Digit_Max]) 'returns the complex characteristic matrix A-zI
+xMAddC(Mat1, Mat2, [CFormat], [Digit_Max]) 'performs complex matrix addtion  a3 = a1 + a2
+xMSubC(Mat1, Mat2, [CFormat], [Digit_Max]) 'performs complex matrix subtraction  a3 = a1 + a2
+xMAbsC(Mat, [CFormat], [Digit_Max]) 'complex matrix Euclidean Norm
+xMTC(Mat, [CFormat], [Conj]) 'transpose of a complex matrix
+xMTH(Mat, [CFormat]) 'transpose-conjugate of a complex matrix
+xMCplx([Ar], [Ai], [CFormat]) 'converts 2 real matrices into a complex matrix
+xMMultSC(Mat, scalar, [CFormat], [Digit_Max]) 'multiplies a complex scalar for a complex matrix
+xMDetC(Mat, [CFormat], [Digit_Max]) 'complex matrix determinant
+xMMultC(Mat1, Mat2, [CFormat], [Digit_Max]) 'performs complex matrix multiplication a3 = a1 x a2
+xSysLinC(a, b, [CFormat], [Digit_Max]) 'Solve a complex linear system A*X=B
+xMInvC(Mat, [CFormat], [Digit_Max]) 'returns the inverse of a complex matrix
+xProdScalC(v1, v2, [CFormat], [Digit_Max]) ' returns complex scalar product (inner)
+xMNormalizeC(Mat, [NormType], [CFormat], [Tiny], [Digit_Max]) 'NormType = 1 (scaled to min) ,  2 (modulo=1),  3 (scaled to max)
+xMPowC(Mat, N, [CFormat], [Digit_Max]) 'returns the complex M^n
+xMExpC(Mat, [n], [CFormat], [Tiny], [Digit_Max]) 'returns the complex matrix series expansion for exp(Mat)
+xMExpErrC(Mat, n, [CFormat], [Digit_Max]) 'returns the truncation error of complex matrix series expansion for exp(Mat)
+xMMopUp(Mat, [ErrMin], [CFormat], [Digit_Max]) 'substitutes values too small with zero
+
+Adds Sub MPMatrix_Complex in the Xnumbers toolbar under Macros>>Matrix>>Complex
+
+Also adds the regular (real) matrix functions:
+xMExp(Mat, [n], [Tiny], [Digit_Max]) 'returns the matrix series expansion for exp(Mat)
+xMExpErr(Mat, n, [Digit_Max]) 'returns the truncation error of matrix series expansion for exp(Mat)
+xMNormalize(Mat, [NormType], [Tiny], [Digit_Max]) 'NormType = 1 (scaled to min) ,  2 (modulo=1),  3 (scaled to max), 4 (scaled to Mean), 5 (normalized mean = 0 and stdev = 1)
+xMMultS(Mat, Scalar, [DgtMax])  multiplies a scalar for a real matrix in multi-precision
+
+Adds New function names to match Matrix.xla nomenclature (thanks to Robert de Levie)
+Original names are still also valid
+
+New        =      Original
+
+xMT        =      MatT
+xMDet      =      xMatDet
+xMInv      =      xMatInv
+xMAbs      =      xMatAbs
+xMMult     =      xMatMult
+xMSub      =      xMatSub
+xMAdd      =      xMatAdd
+xMBAB      =      xMatBAB
+xMPow      =      xMatPow
+xMLU       =      xMatLU
+xMCholesky =      xMatLL
+
+
+Changes the names and parameters of SVD functions (thanks to Robert de Levie):
+
+From xSVD_U to xSVDU(Mat, [Digit_Max], [ETA])
+From xSVD_D to xSVDD(Mat, [Digit_Max], [ETA])
+From xSVD_V to xSVDV(Mat, [Digit_Max], [ETA])
+From xSVD_PI to xMPseudoinv(Mat, [Digit_Max], [ETA])
+From xSVD_RLC to xRegrL(Y, X, [Digit_Max], [Intcpt], [ETA])
+xMCond(Mat, [Digit_Max], [ETA])
+xMpCond(Mat, [Digit_Max], [ETA])
+
+Adds multi-precision Singular Value Decomposition functions for complex matrices,
+with same names as regular (real) multi-precision SVD functions, appended with a "C":
+
+xSVDUC(Mat, [Cformat], [Digit_Max], [ETA], [TOL])
+xSVDDC(Mat, [Cformat], [Digit_Max], [ETA], [TOL])
+xSVDVC(Mat, [Cformat], [Digit_Max], [ETA], [TOL])
+xMPseudoinvC(Mat, [Cformat], [Digit_Max], [ETA], [TOL])
+xRegrLC(y, x, [Cformat], [Digit_Max], [Intcpt], [ETA], [TOL])
+xMCondC(Mat, [Cformat], [Digit_Max], [ETA], [TOL])
+xMpCondC(Mat, [Cformat], [Digit_Max], [ETA], [TOL])
+
+New SVD functions parameters:
+
+ETA – default= "1E- & Digit_Max"; relative machine precision to use in QR diagonalization & Cancellation
+TOL – default=0; too small value for initial off diagonal reduction process
+
+
+Adds quad and multi-precision to Elliptic Integral functions  (thanks to Dr. Georg Ströhlein):
+xIElliptic1(phi, k, [AngleSet], [Digit_Max]) returns 1st kind; as 2 cell array returns 2nd kind to 2nd cell
+xIElliptic2(phi, k, [AngleSet], [Digit_Max]) returns 2nd kind; as 2 cell array returns 1st kind to 2nd cell
+
+Elliptic Integral functions support:
+Digit_Max  -1=quad precision, 0=double precision, >0 extended precision; default=Default_Digits in extended precision. Elli1 and Elli2 now also supported by the multiprecision mathparser (xEval with DgtMax > 0)
+AngleSet  RAD, DEG, or GRAD; default=RAD
+
+Moves Functions IElliptic1, IElliptic2 to Modulo_old
+
+xGamma, and functions that use it internally, are now valid for DgtMax > 30 up to Digits_Limit. when Digit_Max is missing it now uses Default digits
+
+
+new functions:
+
+xAGM(a, b, [Digit_Max])  The arithmetic-geometric mean (AGM) of two positive real numbers
+
+x2Dbl2(x)  Converts a string into a Double  ensuring that the double produced is the mathematically closest double to the numeric string being passed, x. For strings half way between 2 doubles chooses the double closer to Zero (whereas x2Dbl chooses the double away from zero).
+
+x2Dbl3(x)   same as x2Dbl, but for strings half way between 2 doubles chooses the double with 1st bit clear(Alternating).
+
+Dbl2Hex(x, [Separator])  Converts a double into a 16 byte Hex string that represents the full 64bit internal storage. Separator character defaults to a space, but can also be null.
+
+Hex2Dbl(HexStr)  Converts 16 byte Hex string back into a double
+
+vPow(x,y)  Uses VBA's power function. vPow(x, y) = x^y  .Works for some values that Excel can not handle, i.e. 2^-1074
+
+fixString(s, [OldDecSep], [OldMilSep])  Attempts to fix string to current international settings for Decimal Separator.
+
+qCStr(x) Fast up to 29 Digit Convert Double (x) to String
+
+xqPow2(n)  Integer Powers of 2, xqPow2(n) = 2^n ; Retrieves Stored up to 29 digits in quadruple precision
+
+xqAdd(x, y)  Performs addition in quadruple precision up to 29 digits:  xqAdd(x, y) = x + y
+
+xqSub(x, y)  Performs subtraction in quadruple precision up to 29 digits:  xqSub(x, y) = x - y
+
+xqMult(x, y)  Performs multiplication in quadruple precision up to 29 digits:  xqMult(x, y) = x * y
+
+xqDiv(x, y)  Performs division in quadruple precision up to 29 digits:  xqDiv(x, y) = x / y
+
+xqAbs(x)  Returns the absolute value in quadruple precision up to 29 digits: xqAbs(x)= |x|
+
+xqInt(x)  Returns the 'integer' of a number 'x' as the greatest integer less than or equal to 'x'
+Returns up to 29 digits in quadruple precision
+
+xqDec(x)  Returns the decimal part of a number in quadruple precision up to 29 digits
+
+xqRound(x, [DecDgts])  Rounding of numbers in quadruple precision up to 29 digits (default DecDgts = 0)
+
+xInvR(x, Digit_Max) Internal function the same as xInv, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent
+
+xCompZ(x)  Compares x to Zero ; Returns: 1 if x>0,  or  -1 if x<0,  or 0 if x=0
+
+xPowInt(y, n, [Digit_Max]) the same as xPow=y^n, except n must be an Integer
+
+xPow2Int(n, [Digit_Max]) the same as xPow2=2^n, except n must be an Integer
+
+xExpaNI(x, a, [Digit_Max]) the same as xExpa=a^x, except x must be a Non-Integer
+
+GetXnVersion() Returns the Configured version of Xnumbers
+
+
+
+Bug fixes:
+
+	Integr_2D fixed for univariate function boundaries (thanks to Michael Hautus)
+	BaseChange fixed for strings that have decimal portions (thanks to Ron Rosenfeld)
+	xSqr returned incorrectly for some results VERY close to an integer and DgtMax > ~60:
+	xSqr("4.000000000000000000000000000000000000000000000000000000000000001",66) returned "2" instead of
+	     "2.00000000000000000000000000000000000000000000000000000000000000025" (thanks to Georg Ströhlein)
+	xAsin(0) errored out with argument zero (thanks to Georg Ströhlein)
+	xDecr(0) also errored out with argument zero
+	IElliptic1, IElliptic2 weren't valid outside the range -pi/2 to pi/2
+	xLRE errored out for +x and -x
+	eliminates a potential 'Div by zero' error in the xSVD functions
+	xSVD's fixed for Rows less than Columns
+	xMultAdjust can now be set up to NumOfPackets without too much time penalty (for retaining exact precision when the rounding flag is turned off)
+	xMatMult bug fixed for multiplying a single cell by a vector (thanks to Bob de Levie)
+	Zeta and xZeta fixed for negative numbers
+	
+
+
+----------------------------------------------------------------------------------------
+
+        - Update of Apr 22 2011 -
+
+XN.xlam and XN.xla - Ver. 6.0.5
+
+The Simulated Machine Precision "Digit Max Adjustment" in X-Edit>>Configuration is now distributed set to 5 for all packet sizes, as the xFunctions now more closely respond to a "digit by digit" internal precision, even though the internal calculations are "packet by packet".
+	0 and 1 are not recommended settings.
+	2 : assures that internally, there will be at least 2 extra digits of accuracy for the core functions, and the more difficult internally "nested" functions will never be off by more than 2 significant digits, which could be 10 to 99 units of the least significant digit. The probability of being off by a single unit is generally about 1 per 400, analyzed with random numbers and random Digit_Max requests for truncated results. The probability generally decreases by a factor of at least 5 for each increase in SMPadj.
+	3 : at least 3 extra digits of accuracy for core functions. The more difficult functions always accurate to 1 unit of least significance. Probability of the 1 unit "error": ~1/2000
+	4 : at least 4 extra digits of accuracy for core functions. The more difficult functions ~1/10,000 probability of the 1 unit "error"
+	5 : at least 5 extra digits of accuracy for core functions. The more difficult functions ~1/50,000 ...
+   ... 14 : at least 14 extra digits of accuracy for core functions. The more difficult functions ~1/100,000,000,000 ...
+
+xDiv Adjustment is distributed set to zero instead of one, as the code now adds one when set to "Return Rounded Xnumbers"
+
+xAdd Adjustment is distributed set to zero, as the code now also adds the SMPadj "Digit Max Adjustment"
+
+xAdd, xMult and xDiv changed to accept length of input strings to Digit_Max + SMPadj, the same as all other xFunctions
+
+Enables compilation of the Add-In to return xFunctions as unformatted strings with the full length of internal results:
+In Visual Basic under Tools>>Xnumbers60 Properties... in the General tab set the "Conditional Compilation Arguments:" to  RetUnFmtStr = -1 instead of RetUnFmtStr = 0. When compiled and saved = -1 the functions xRoundR, xTruncR and xFmt use vRoundR and vTruncR to return formatted strings. Example:
+xDiv(2,3,15) returns 3 packets using PktSz 7, unformatted 21 digits 666666666666666666666E-21
+xFmt(xDiv(2,3,15),15) returns 15 digits 0.666666666666667 when configured to "Return Rounded Xnumbers"
+sFmt(xDiv(2,3,15),15) returns 21 digits 6.66666666666666666666E-1 in standard scientific format
+
+Adds functions:
+
+	xDivTrunc(N,D) multiprecision quotient Q = xTrunc(N/D), the integer part of N/D, rounds toward zero,
+	as does QUOTIENT(N,D) in Excel, and Fix(N/D) in Visual Basic and the Xnumbers MathParser
+
+	xTruncMod(N,D) multiprecision remainder R = N - D * Q where Q = xDivTrunc(N,D)
+	With Q = xTrunc(N/D) the sign of R will always be the same as the sign of N
+
+	xIntMod(N,D) multiprecision remainder R = N - D * Q where Q = xDivInt(N,D)
+	Equivalent to old xDivRem(A,B) and xMod(A,B,[DgtMax]) where DgtMax is ignored (both still supported)
+	With Q = xInt(N/D) the sign of R will always be the same as the sign of D
+
+	xTruncQR(N,D) 2 × array function returns quotient Q and remainder R to 2 cells,
+	where Q = xDivTrunc(N,D) and R = xTruncMod(N,D)
+
+	xIntQR(N,D) 2 × array function returns quotient Q and remainder R to 2 cells,
+	where Q = xDivInt(N,D) and R = xIntMod(N,D)
+
+	vDivInt(N,D) double precision quotient Q = INT(N/D), the greatest integer <= N/D.
+	Extends Excels capabilities for numbers up to 2^53
+
+	vDivTrunc(N,D) double precision quotient Q = TRUNC(N/D), the integer part of N/D (rounds toward zero).
+	Extends Excels QUOTIENT(N,D) capabilities for numbers up to 2^53
+
+	vIntMod(N,D) double precision remainder R = N - D * Q where Q = INT(N/D)
+	Formerly introduced as vMod(A,B) in v.6.0.4 (no longer supported)
+	Extends Excels MOD(N,D) capabilities for numbers up to 2^53
+
+	vTruncMod(N,D) double precision remainder R = N - D * Q where Q = QUOTIENT(N,D) = TRUNC(N/D)
+	Extends Excels capabilities for numbers up to 2^53
+
+	vRound(x,[DecDgts]) double precision, rounds to DecDgts decimal places using VBA's rounding rules:
+	rounds a 5 up if the previous digit is odd, rounds a 5 down if the previous digit is even.
+	Default DecDgts = 0
+
+	vTruncR(x,[SigDgts]) same as xTruncR: for use when compiled to return unformatted strings
+
+	xDgMat(x,y,[M]) returns the number of matching digits between x and y, similar to fDgMat, but the	
+	fractional portion is linear rather than logarithmic. M is the match value to return when x and y are 
+	exact. When M is passed as a negative number, Abs(M) is used for match value, and zero is returned for 
+	no matching digits rather than -ABS(Log(x)-Log(y)), the difference in exponents.
+	fDgMat(x,y,[M]) also now accepts M as a negative number
+
+Adds optional True/False parameter [IntSwapFix] to xEval, and supported by xEvall (default = False).
+	Swaps definitions of "Int" and "Fix" to facilitate Formula string in "programming style" of Fortran,
+	Pascal, C, etc., where the definition of Int(x) is the integer portion of x, rounded toward zero
+	(rather than the greatest integer less than or equal to x, as in Excel and Xnumbers)
+	When IntSwapFix is set to True xEval will calculate:
+	"Int(x)" as xTrunc(x) instead of xInt(x)
+	"Fix(x)" as xInt(x) instead of xTrunc(x)
+	"Mod(n,d)" as xTruncMod(n,d) instead of xIntMod(n,d)
+	"n \ d" (backslash denotes integer division) as xDivTrunc(n,d) instead of xDivInt(n,d)
+
+	Adds "Modulo" to list of functions recognized by the MathParser for Formula string,
+	always defined as xIntMod regardless of the IntSwapFix True/False parameter
+
+	Adds spreadsheet function xRad12(DgtMax), as the square root of 12 is also stored as a "constant"
+
+	Informational function GetExcelAppVer(), 14=Office 2010, 12=2007, 11=2003, 10=2002, 9=2000, 8=97
+
+Add-In now stores constants to 8151 digits (Pi/2 and Pi/4 to 16289) to accomodate 64-bit compilation of
+626 packets at PacketSize 13 = 8138 digits.
+They are still stored in memory at Digits_Limit( × 2 for Pi/2 and Pi/4) + xBASE
+(Digits_Limit = max internal floating point precision. xBASE = PacketSize = digits per packet)
+xDgtS( ) now can recognize more than Digits_Limit number of digits
+
+internal Sub xAngleReduction changed to use Pi/4 instead of Pi/2. Speed and accuracy gained for trig functions
+
+PolyBuild( ) adds optional DgtMax (as per the Macro) - and is 37% faster when there is no imaginary portion
+
+
+Bug fixes:
+
+	 Integr_Ro(Funct, a, b, [Param], [Rank], [ErrMax], [Var_Label]) was sometimes stopping too early
+	 with default ErrMax (thanks to Malcolm Harper, Sydney Australia)
+
+	*Trig functions could be in error in the last few digits when extremely close to a Pi/4 increment 
+	 (where there is a change in the quadrant).
+	 xAcos(0) & qAcos(0) valued out when passing 0 (zero) - now return Pi/2
+	
+	*xDivInt(N,D) was erroneously using xTrunc(N/D) instead of xInt(N/D),
+	 so that xDivTrunc(N,D) is now used to replace Excels QUOTIENT(N,D) in the X-Converter
+
+	*xRup(v,[Dec]) round up was failing for [Dec] values >= xDgt(xDec(x))-1
+
+	*xFloor(x,[signif]) and xCeil(x,[signif]) were failing with negative x and positive [signif]
+
+	*These bugs have existed since v.6.0.4
+	
+
+----------------------------------------------------------------------------------------
+
+        - Update of Jan 1 2011 -
+
+XN.xlam and XN.xla - Ver. 6.0.4.5
+
+Adds functions
+	xLgI(x, Xi, Yi, [Level], [RadiansLB], [DgtMax]) Interpolation of data at'x' using  Lagrange Polynomial
+	xDLgI(x, Xi, Yi, [Level], [IsRadians], [DgtMax]) First Derivative at 'x' from Lagrange Interpolating Polynomial
+
+Adds option for xEval to calculate in quadruple precision using VBA’s “Variant Decimal” data type (a restricted range of values):
+set DgtMax = -1, returns up to 29 digit string. Will return a double if the final internal calculation requires double precision.
+Multiplication is more accurate than standard double precision for all calculations within the range ±(7.9228162514264337593543950335E-6 to 7.9228162514264337593543950335E+28).
+Division by a larger number obtains greater accuracy when using numbers that are within 9 exponents of each other, so that working with numbers within a range of ±(8E-6 to 8E+3) will obtain good results, as will working in any other 9 exponent range up to ±(7.9E+19 to 7.9E+28). Division by a number up to 28 exponents smaller will be more accurate than double precision.
+Some of the other quadruple precision functions can be used outside those specific ranges.
+
+Makes available to the spreadsheet some more internal quadruple precision functions:
+	xqAtan2(y, x)
+	xqCosh(x)
+	xqSinh(x)
+	xqTanh(x)
+	xqAcosh(x)
+	xqAsinh(x)
+	xqAtanh(x)
+	xqAsin(x)
+	xqAcos(x)
+	xqAtan(x)
+	xqTan(x)
+	xqSqr(x)
+	xqERF(x)
+	xqERFc(x)
+	xqRoot(x, n)
+	xqPow(x, n)
+
+the square root of pi "sqpi#" is added to list of constants recognized by the math parser
+
+Bug fixes:
+
+special characters in XN.csv caused error #1004 on installation using Chinese (thanks to Lynn Lu).
+
+xqExpa was failing with negative numbers
+
+----------------------------------------------------------------------------------------
+
+        - Update of Dec 5 2010 -
+
+XN.xlam and XN.xla - Ver. 6.0.4.4
+
+using ReInit Mem Variables in the Toolbar's Help menu should no longer be necessary (the status of the memory variables are now checked after each “calculate” (F9), or when the Toolbar icon is clicked)
+
+increased efficiency for Complex functions and functions that have multiple range input.
+
+New functions:
+	xSVD_RLC(y, x, [Digit_Max], [Intcpt])  Returns the coefficients of a linear regression with SVD
+	xSVD_PI(Mat, [Digit_Max])  Moore-Penrose Pseudo-Inverse of SVD decomposition
+	GetXnDecSep()  Returns the decimal separator being used in VBA
+	GetXnArgSep()  Returns the argument separator being used in VBA
+	GetXnMilSep()  Returns the thousands separator being used in VBA
+	xqAngleC(x) Comlement to the right angle with quadruple precision (string of 29 digits)
+
+New message on installation if your Windows System decimal separator does not match your Excel settings for the decimal separator, as this would be a VERY difficult way to use this Add-In. See new help page for International Settings in XN.chm for description of new Configuration Screen Options
+
+adds Macro 'Paste Exact' in the Xnumbers toolbar under X-Edit>Paste Special:
+	Pastes the exact cell contents of the 'Source Range' to the 'Destination Range' (does not change cell references in formulas). When one entire array is selected can change size of the array. Selecting upper left cell of array also indicates the entire array
+
+enables support for Excel 97, but the Help (XN.chm) only works from the Toolbar menu
+
+
+Bug fixes:
+
+when the Windows system Regional settings are set to Display leading zeros as ".7" instead of "0.7" (thanks to Eyal)
+
+some installations of Excel 2000 failed to save the Add-In correctly from the "Save" button on the Configuration screen. Clicking "Save" no longer saves the Add-In, it creates a file XN_Cfg.ini in the installation folder that the Add-In reads for the configuration settings. Right-clicking the "Save" button will now save the Add-In (so that the Function Book can remain loaded).
+
+If a chart was selected as the active object when requesting a calculate(F9), all functions that called Sub LoadVector failed
+
+nested Matrix operations with one dimensional arrays failed, as did passing them within {braces}
+	xMatMult({1,2},{2;3})=8
+
+Matrix operations with singular matrix requests failed. For example:
+	xMatMult({2},{3})=6
+	xMatInv({2})=0.5
+	xMatDet({2})=2
+
+Matrix Subtraction Macro under Macros>Matrix, Vector... is fixed (has not worked since before v.5.3)
+
+SVD macro is fixed: ALL previous versions were in error after the 15th digit
+
+xSVD_U, xSVD_D, xSVD_V fixed for returning strings >255 characters
+
+MatT fixed for returning mixed doubles and strings >255 characters (Note: using Excels Transpose() is faster)
+
+nesting is addressed for matrix functions. nesting will not neccessarily always work for non-square nested matrices. To force nesting to always work properly, select a square matrix (larger than the expected return) as the final spreadsheet return
+
+double precision complex functions previously returned a string when a one-cell return was requested and there was only a real portion. Now returns a double
+
+----------------------------------------------------------------------------------------
+
+        - Update of Oct 16 2010 -
+
+XN.xlam and XN.xla - Ver. 6.0.4.3
+
+toolbar icon is changed to use a standard Office icon so that the clipboard is not needed (there can be a conflict of clipboard usage with Google Earth also running, which caused an error message)
+
+Bug fix: Dpolyn was returning strings instead of doubles when requesting double precision (thanks to Bob de Levie)
+
+----------------------------------------------------------------------------------------
+
+        - Update of August 24 2010 -
+
+XN.xlam and XN.xla - Ver. 6.0.4.2
+
+all of the text wasn't displaying in X-Edit>>Configuration on some computer screens
+
+Bug fix: all previous versions fail to nest the function Polyn with only a real portion (thanks to Prof.Gustavo Mirapalheta)
+
+----------------------------------------------------------------------------------------
+
+        - Update of June 25 2010 -
+
+XN.xlam and XN.xla - Ver. 6.0.4.1
+
+Bug fix: v.6.0.4 fails to load up correctly with international settings that use a comma for the decimal separator (thanks to Prof.Gustavo Mirapalheta)
+
+----------------------------------------------------------------------------------------
+
+        - Update of June 21 2010 -
+
+XN.xlam - Ver. 6.0.4-7M, 6.0.4-6M, 6.0.4-8M, and 6.0.4-3M
+XN.xla  - Ver. 6.0.4-7A, 6.0.4-6A, and 6.0.4-3A
+
+now also supports Excel 2010, both 32-bit and 64-bit versions of Office
+64-bit Office should not use compiled versions with more than 255 packets
+
+Major changes to Configuration screen include:
+
+"Default Dbl 2 Str" setting is changed to simply enter a number:
+	0=vCStr() (VBA's 15 digit CStr)
+	15-28=dCStr() (VBA's "variant decimal type" up to 28 digits)
+	29-Digits_Limit=xCStr()
+All other CStr functions eliminated.
+
+Adds "Simulated Machine Precision" section to Configuration screen:
+
+	"Digit Max Adjustment" box. Adds specified number of digits to internal machine precision for most functions except xAdd and xMult and xDiv.
+
+	"xAdd" adjustment box. Adds specified number of digits to internal machine precision for xAdd (and xSub).
+
+	"xMult" adjustment box. Adds specified number of packets to internal machine precision for xMult.
+
+	"xDiv" adjustment box. Adds specified number of digits to internal machine precision for xDiv. "1" ensures at least 1 extra digit for returning rounded results. "0" can be used when returning truncated results
+
+Provides new configuration option "Load Function Book at Startup" to Auto-Captalize functions according to column 2 of XN.csv
+
+new configuration checkbox "Case Sensitive Variable Names" to distinguish between "a" and "A" in math parser (distributed unchecked, so that "a" and "A" are still the same). This applies to variables only, so that function names are always case insensitive, regardless of the configuration setting (tan, Tan, TAN always the same)
+
+previous to versions of 6.0 incorrectly assigned the "x" appended to the Bessel functions in the math parser, so that
+"BesselI" is used in xEval(), and BesselIx() is used for the spreadsheet function
+"BesselJ" is used in xEval(), and BesselJx() is used for the spreadsheet function
+"BesselK" is used in xEval(), and BesselKx() is used for the spreadsheet function
+"BesselY" is used in xEval(), and BesselYx() is used for the spreadsheet function
+
+
+XN.chm helpfile is much improved and now distributed with the .zip files instead of the original .hlp from Foxes Team, which can still be used instead. When using XN.xla in Excel 2000-2003, access to XN.chm from the .chm helpreader instead of through Excels helpreader is now provided from the XnumbersToolbar>>Help>>Help-on-line (Excel's helpreader doesn't provide all of the options to easily navigate the entire file). "MathParser Formula List" is updated and a link to it is added to the main helppage. List of functions recognized by X-Converter is also updated
+
+xExpa(x, [a], [DgtMax]) = a^x has been changed to allow a result if 'a' is negative and 'x' is not an integer.  It will return a leading space, alerting the user that it is only valid if the denominator of 'x' is odd:  xExpa(1/3,-8)= -2
+
+adds function xOddDen(x) returns TRUE if denominator of x is odd according to xFract() if x is a string, Fract() if x is a number. Returns FALSE if denominator is even
+
+improved algorithms for:
+FractCont(x,[n]). Enables complete continued fraction, not truncated, calculated in standard double precision, for all numbers up to 15 digits. Use optional [n] to truncate.
+xFractCont(x,[DgtMax],[n],[StopMethod],[StopValue]). Enables complete continued fraction, not truncated, for all numbers up to DigitsLimit number of digits. Use optional [n] to truncate, or use optional [StopMethod] and [StopValue] to truncate.
+	StopMethod 0 is default. returns not truncated
+	StopMethod 1 uses x - num/den
+	StopMethod 2 uses rDgMat(x,num/den)
+	StopMethod 3 uses length of num + length of den
+	StopMethod 4 uses x*den - num
+
+improved xDiff1 and xDiff2 to be both faster and more accurate.
+Diff1 and Diff2 once again use 5 point equations (previous versions of 6.0 used 7 point)
+adds optional parameter [Var_Label] to Diff1, xDiff1, Diff2, xDiff2 for ability to differentiate with respect to any variable (default is "x")
+adds optional parameter [Var_Labels] to Grad, xGrad, Jacobian, xJacobian, and Hessian for ability to differentiate with respect to any variable(s) with any ordering (default is up to 4 variables "x","y","z","t" in that order)
+adds optional parameter [Var_Label] to Zero_Bisec, Zero_Sec, Integr, Integr_DE, Integr_NC, Integr_Ro, Integr_fSin, Integr_fCos, Fourier_Sin, Fourier_Cos (default is "x")
+
+xMCM & xMCD now accept numbers or arrays of numbers.
+
+allows entering [dtype] as TRUE (= 0) or FALSE (= 1) for all Probability distribution functions
+
+adds function xNormalS(z,[dtype], [DgtMax]) for compatibility with x-converter for new Excel 2010 function NORM.S.DIST(), which supports [dtype] True/False
+
+xBeta(x,y) changed to return a string and adds optional DgtMax: xBeta(x,y,[DgtMax]). Even though DgtMax can be entered up to DigitsLimit, this function calls xGamma, which can only use a maximum of 30 digits
+
+added a function PrevPrime that works in the same manner as NextPrime, and their range is extended to return up to the last prime number less than 2^53.
+
+
+adds function GetDecr, similar to GetIncr, except it is an approximate string for the Decreasing increment to the previous double, rather than the Increasing increment to the next double
+
+functions vGetIncr and vGetDecr return doubles rather than approximate strings
+
+adds functions vAdd(), vSub(), vDiv(), & vMult(), using VBA's add, subtract, divide and multiply, enabling manipulation of doubles less than 2.2251E-308
+
+adds vMod(A, B) Returns the remainder of the division A / B in double precision
+
+adds 2 functions at request of Robert de Levie, from matrix.xla
+xMCond() Multi-precision Condition number of a Matrix using Singular Value Decomposition
+xMpCond() Multiprec -log10 of Cond number of a Matrix using Singular Value Decomposition
+also adds these 3 Singular Value Decomposition functions from matrix.xla
+xSVD_U() returns U matrix in Multi-Precision
+xSVD_D() returns D matrix in Multi-Precision
+xSVD_V() returns V matrix in Multi-Precision
+
+adds function xAdjPi() reduces an angle in radians to an angle between -pi and +pi
+changes xAdj2pi to return the reduced angle between 0 and +2pi (was returning from -2pi to +2pi)
+
+adds function fDgMat(x,y,[M]) similar to rDgMat but also returns fractional (decimal) portion of matching significant digits between x and y. Also similar to xLRE, but if x and y differ by more than an exponent returns -ABS(Log(x)-Log(y)), the negative absolute value of the difference of exponents, whereas xLRE returns zero.
+
+adds function LRE(Q, C, [NoSD]). the same as mjkLRE(Q, C, NoSD), but NoSD is optional (default 15)
+
+adds function xZeta(). The same as Zeta() with multi-precision
+
+adds function Cstr2logD(x) Returns Log (base 10) of extended number x, as a double
+
+adds function ClogD2str(x) Returns 10^x (x is a double) as a 15 digit string. The reverse of Cstr2logD
+
+adds function xAlog(x)=10^x (antilogarithm Base 10)
+
+adds function CheckFormula(Formula, [Digit_Max], [AngleSet]) as an aide to building formula string for Multiprecision MathParser used by xEval and xEvall
+
+adds logical functions x_If, x_And, x_Or, x_Not, to be able to evaluate numeric strings in the same manner Excel evaluates numbers. "0" evaluates to FALSE, all other numeric strings evaluate to TRUE
+
+adds the constants (pi, e, etc) to complex math parser
+
+adds "Paste Special" and "Trace Range" macros to X-Edit menu
+
+adds "spreadsheet controlled resets" checkbox to the "Nelder-Meade/Resets" macro.
+The "best" solution will now be returned when the "Cancel" button is clicked, or when it reaches the specified total iterations (ALL previous versions of Xnumbers simply left the last attempt on the spreadsheet when the total iteration count was reached). The "Total" box on "Nelder-Meade/Resets" now means the total of ALL iterations (in previous versions of 6.0 it meant the total of the current reset).
+
+adds GetxBASE() and GetDigitsLimit().
+constants can retrieve max of DigitsLimit + xBASE,
+and xPi2 (pi/2) can retrieve 2*(DigitsLimit + xBASE).
+
+Adds 2 x 19 array function GetXnConfigStatus() to display the current status of all 18 Configuration settings plus GetDigitsLimit()
+
+Adds "Clear" button in presentation form (Xnumbers Toolbar>Help>Version) that clears the function book (in all previous versions clicking "OK" also cleared the function book)
+
+Adds these Public variables to enable access to Xnumbers array functions (that can go in either direction and use the command "Application.Caller") from VBA projects (to enable access to the add-in from a VBA Code module go to "Tools">>"References", and put a tic mark for the add-in listed as "Xnumbers60"):
+
+xNumInvAppCallFlg (set to TRUE or FALSE)
+xNumACCols (simulates the number of columns from an array function)
+xNumACRows (simulates the number of rows from an array function)
+
+following functions also added to the 'Initialize' Module to enable ability to 'Get' the current Configuration settings and to 'Set' them to new values from VBA:
+	GetXnDefaultDigits
+	SetXnDefaultDigits
+	GetXnUseXroundOUT
+	SetXnUseXroundOUT
+	GetXnUseXroundIN
+	SetXnUseXroundIN
+	GetXnLeadZeros
+	SetXnLeadZeros
+	GetXnTrailZeros
+	SetXnTrailZeros
+	GetXnDefCStr
+	SetXnDefCStr
+	GetXNxAddAdj
+	SetXNxAddAdj
+	GetXNxDivAdj
+	SetXNxDivAdj
+	GetXNxMultAdj
+	SetXNxMultAdj
+	GetXnSMPadj
+	SetXnSMPadj
+	GetXnCaseSen
+	SetXnCaseSen
+
+
+Bug Fixes:
+
+PolyBuild was incorrectly returning the polynomial for both the real and imaginary portions when requesting a single cell return (thanks to Prof.Gustavo Mirapalheta)
+
+xMult since version 6.0 could sometimes fail to return the last packet (1 to 7 digits) of the requested DgtMax, and DgtMax is discovered to have a limit of 630 with packets of 7, so that for 32-Bit Office 2000-2010:
+	Ver. 6.0.4-7* uses packets of 7 and has a DgtMax limit of 630
+	Ver. 6.0.4-6* uses packets of 6 and has a DgtMax limit of 1866
+	Ver. 6.0.4-3* uses packets of 13 and has a DgtMax limit of 4030
+	64-bit 2010 intallations should use Ver. 6.0.4-3M with DgtMax limit of 3315, or Ver. 6.0.4-8M (packet size 8) with DgtMax limit of 2040
+
+xErfC was not always returning the full requested DgtMax
+
+In previous versions of 6.0 some of the trig functions were sometimes not accurate at the quadrant divisions (pi/2, pi, 3pi/2, 2pi)
+
+Atan2 in math parser had reversed paramaters
+
+Macros were inadvertantly disabled in previous version of 6.0
+
+xDivInt in all previous versions did not properly return the Quotient for negative numbers, nor did it return correctly for a divisor of 1 or -1
+
+xCalc in all previous versions did not work on anything but the active sheet. Cell references took the cell values of the active sheet, not the sheet they were pointing to. It also now supports cell reference to an Excel equation, or to a formula string.
+
+the number of operators allowed in a formula string (that gets sent to xEval) has been increased from 200 to 2000 (as a general "rule of thumb", one shouldn't expect much accurracy with more than Digits_Limit/2 number of operators)
+
+Macros>Numbers>Factors>Batch:Msieve>Factorize is changed to also support Excel 2010 64-bit version.
+The latest version of msieve*.exe can be used: make sure it is unblocked: right click and choose Properties>General>Unblock>Apply>OK then just rename it to msieve.exe
+Feb 2010, msieve144.exe is the latest, http://sourceforge.net/projects/msieve/files/
+Note: msieve144.exe does not support Windows95 or Windows98 operating systems
+
+"Create XLA" method changed so that it runs without changing links to open workbook(s) linked to the Add-In
+
+
+
+----------------------------------------------------------------------------------------
+XN.xla & XN.xlam - Ver. 6.0.3 - Update of Jan 2009
+
+fixed bug in test function "GetBadString" and put it back into the xTest module
+
+
+----------------------------------------------------------------------------------------
+XN.xla & XN.xlam - Ver. 6.0.2 - Update of Dec 2008
+
+Bug Fix:
+if a volatile function, such as Excel's RAND() or the Xnumbers xRand(), existed in a workbook and "Calculation" was set to "Automatic", it caused an error loading the csv into the Xnumbers "Function Manager"
+
+removed the test function "GetBadString" from the xTest module. It is also a "volatile" function, and when on a spreadsheet caused add-ins to not unload properly.
+
+
+----------------------------------------------------------------------------------------
+XN.xla & XN.xlam - Ver. 6.0.1 - Update of Dec 2008
+
+when the Add-in is "Saved", from the Configuration screen or from VBA, "Calculation" is set to "Automatic" - to avoid a "warning" from Excel
+
+new subroutine "XNsetup": run with XN.csv as the active sheet to change the function definitions from the csv (these get displayed by Excel's function manager)
+
+internal precision of xEval increased according to the number of operators in the formula string
+
+
+----------------------------------------------------------------------------------------
+XN.xla & XN.xlam - Ver. 6.0 - First release June 2008
+
+John Beyers modifies version 5.6 due to VBA updates (since 2007) incorrectly calculating Int(Log(m)/Log(2)) , causing xPow(2,8) to incorrectly return 128
+
+	Enables support for Excel 2007 and Vista
+	Compiles to calculate extended numbers in packets of 7, rather than 6
+	Extends calculation up to 1561 significant digits
+	All exponents to ±2147000000
+	Adds more than 100 functions (complete list in XN.csv)
+	Adds Configuration screen, so that "Default Digits" is now in:
+		Xnumbers Toolbar >> X-Edit >> Configuration
+
+Can use a .hlp or a .chm helpfile
+
+The VBA code has been changed to comply with any file name you choose. If you rename the add-in (simply right-click and choose “Rename”), make sure to also rename the helpfile and the .csv file. For example, if you rename XN.xlam to xnumbers.xlam (or XN.xla to xnumbers.xla), rename XN.chm to xnumbers.chm (or XN.hlp to xnumbers.hlp), and rename XN.csv to xnumbers.csv
+
+These 4 functions are re-named, as they are in conflict with existing Excel functions (Excel 2007 does not allow a user-defined function to have the same name as one of its own built-in functions): 
+	BesselI to BesselIx
+	BesselJ to BesselJx
+	BesselK to BesselKx
+	BesselY to BesselYx
+
+Constants now stored in memory to ~1561 digits (pi/2 to 3132)
+Xnumbers Toolbar >> X-Edit >>"ReInit Mem Variables" reloads memory variables (necessary to re-initialize after choosing "End" from a Visual Basic error message, or a "Reset" in VBA)
+
+All functions can now accept input as numbers or text (strings).
+Array functions can now be entered in either direction (across or down).
+Adds optional parameter "Tiny" to xEval and xEvall.
+
+Nelder-Mead optimization macros changed to calculate faster with manual calculation, screen updating off, and enables up to 96 variables
+
+xMin() & xMax() have been changed to analyze a range (matrix) rather than only a vector (single row or column)
+
+All complex number functions can return "z" to a single cell as "a + bi" or "a + bj"
+
+Fract() and xFract() will return “numerator/denominator” when entered in one cell (readable by xCalc or xEval)
+
+FractCont() and xFractCont() will return the continued fraction in brackets [a0;a1,a2,…,an] when entered into one cell.
+
+Bug Fixes:
+Macros >> Regression >> Polynomial  
+	v.5.6 failed to return a degree 7 polynomial from 8 data points
+xCplxLn  was sometimes in error by the amount of pi in the imaginary portion
+----------------------------------------------------------------------------------------
+
+for questions, comments, or "bug reports" email to
+steve@thetropicalevents.com
+

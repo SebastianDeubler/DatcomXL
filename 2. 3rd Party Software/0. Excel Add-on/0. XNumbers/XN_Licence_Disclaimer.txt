@@ -1,0 +1,51 @@
+Open Source Licence
+XN.xlam v.6.0* (Add-In for Excel 2007 and 2010) and
+XN.xla v.6.0* (Add-In for Excel 97/2000/XP/2003)
+Original Author of XNUMBERS v.5.6: Leonardo Volpi
+Modifications by: John Beyers
+available at http://www.thetropicalevents.com/Xnumbers60
+_________________________________________________________________________
+
+This software is modified from the original xnumbers.xla v.5.6
+still available From Foxes Team at the website of Leonardo Volpi:
+	http://digilander.libero.it/foxes/SoftwareDownload.htm
+
+The entirety of the modifications are too extensive to list in this document, but the source code is fully accessible, and the consequential changes for the user are documented in the included files XN.chm and XN60_review.txt
+
+
+Original Foxes Team Licence.txt is not included with this distribution but reads as follows:
+****************************************************************************************
+Xnumbers.xla v 5.6
+by Foxes Team, 2007
+____________________
+
+This is an opensource free software.
+Disclaimer: The add-in file is provided as a courtesy to others that may find it useful. 
+I have checked these functions reasonably well but we make no claims about their accuracy. 
+As with any computer software, check to make sure the answers you get make sense and are accurate. 
+That will ensure that you understand their use. 
+
+Despite the effort that went into building, there's no warranty that's free of bugs. 
+If you find any errors, please notify us via email.
+ 
+You are free to use it but with your own responsibility.
+The author shall take no responsibility for any trouble associated with the use of this software package.
+
+Contact information_________________________________________
+
+E-mail:	leovlp@libero.it
+Web:	http://digilander.libero.it/foxes
+
+****************************************************************************************
+
+
+This modified software is also freely distributed under the Open Source Definition, which may be found at http://www.opensource.org/osd.html
+
+The source code is fully accessible. Feel free to use, modify, and/or redistribute as you desire, as long as you give credit to the original author, and include this notice along with your redistribution, which should include a statement of your modifications.
+
+I would also appreciate letting me know about any changes you make that you think would be a useful improvement, so that I can include them with my own distribution.
+
+Disclaimer: All code is "use at your own risk". No warranty or guarantee of anything is provided. However, if you could use some support, or if you detect any errors or "bugs" please feel free to e-mail me at:
+
+steve@thetropicalevents.com
+

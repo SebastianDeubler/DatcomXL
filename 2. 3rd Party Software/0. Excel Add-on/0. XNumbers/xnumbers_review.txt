@@ -1,0 +1,848 @@
+XNUMBERS
+MULTI-PRECISION FLOATING POINT COMPUTATION and NUMERICAL METHODS for EXCEL 
+
+History review
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 5.6 - Update of Nov. 2007
+
+Probability distribution functions:
+DSBeta(x, a, b, [dtype])	Beta distribution
+DSBinomial(k, n, p, [dtype])	Binomial distribution
+DSCauchy(x, m, s, n, [dtype])	Cauchy (generalized) distribution
+DSChi(x, r, [dtype])		Chi distribution
+DSErlang(x, k, l, [dtype])	Erlang distribution
+DSGamma(x, k, l, [dtype])	Gamma distribution
+DSLevy(x, l, [dtype])		Levy distribution
+DSLogNormal(x, m, s, [dtype])	Log-normal distribution (*)
+DSLogistic(x, m, s, [dtype])	Logistic distribution
+DSMaxwell(x, a, [dtype])	Maxwell-Boltzman distribution
+DSMises(x, k, [dtype])		Von Mises distribution
+DSNormal(x, m, s, [dtype])	Normal distribution
+DSPoisson(k, z, [dtype])	Poisson distribution
+DSRayleigh(x, s, [dtype])	Rayleigh distribution
+DSRice(x, v, s, [dtype])	Rice distribution 
+DSStudent(t, v, [dtype])	Student distribution
+DSWeibull(x, k, l, [dtype])	Weibull distribution
+
+(*) suggested by Ramsden, James R
+
+Bug fixed:
+03.09.07 - function xanglec
+30.09.07 - macro polyGCD 
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 5.5 - Update of Aug. 2007
+
+Function Hypergeometric improved with Gauss-Pochammer series
+Function Zeta Riemman's improved with Borwein formula 
+Function serie_trig improved with Lanczos factors
+Function Convol improved with three different convolution methods: discrete, linear, parabolic
+Function BesselSphJ Spherical Bessel function of 1st kind jn
+Function BesselSphY Spherical Bessel function of 2nd kind yn
+Function xGamma improved precision up to 30 digits
+Function zero_sec now accepts also worksheet functions
+
+Macro Integer-Relation with PSLQ 2-Level algorithm
+Macro Mesh-Fill completes a 2D matrix with holes by linear interpolation
+
+Bug fixed:
+12.08.07 - BrowseFolders, BrowsePrinter eliminated from function manager list
+06.06.07 - Hypergeometric function error fixed for particular input values set
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 5.4 - Update of March. 2007
+
+Function xGammaI - Tricomi form of incomplete gamma function
+Function IntPowSin(n,x) - integral of sine raised to integer power 
+Function IntPowCos(n,x) - integral of cosine raised to integer power 
+Function FractCont  - continued fraction 
+Function xFractCont - multiprecision continued fraction
+Function FractContSqr - continued fraction of square root
+Function PellEqu - Brouncker-Pell Equation solver
+Function Factor - improved with Fermat-Lehman algorithm.
+Macro Prime Test - improved with Miller-Rabin test
+Macro Factorizing - added interface for the external program Msieve 
+
+Bug fixed:
+05.03.07 - definition of beta(x,y) function. (Thanks to Yong Yang)
+31.01.07 - xEval retuned incorrecte value for minus sign, i.e. -5^2 
+27.01.07 - macro factorization did not copy the last factor.
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 5.3 - Update of Gen. 2007
+
+Macro ODE solver - Solves ODE "on site" using the Runge-Kutta-Fehlberg 45 method
+Macro ODE slope grid - Draws the slope field of y'=f(x,y)
+
+bug fixed
+11.01.07 xEval: incorrect values in standard precision (dgtmax=0). Thanks to Steve Beyers
+21.01.07 MathParser: compiler error in oriental Excel version (Thanks to Wu Chinswei)
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 5.2 - Update of Dic. 2006
+
+Digit_Max is set to 250 for all multiprecision x-functions
+Function Kummer1 - M(a,b,z) Kummer confluent hypergeometric function of 1st kind
+Function Kummer2 - U(a,b,z) Kummer confluent hypergeometric function of 2nd kind
+Function Totient - Euler's Totient function
+Function IntegrData - Integral function of a given dataset 
+Function errfunc  - complementary error function
+
+bug 10.11.06 errfun(x) incorrect values for x<<0. Thanks to Michael Hautus
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 5.1 - Update of Oct. 2006
+
+Function xBaseChange - Converts a number from any base (2 .. >1 million) (by Ton Jeursen)
+Function xCalc - Evaluates an Excel formula in multiprecision (by Ton Jeursen)
+Function xFormat  - now the parameter Digit_Sep is optional   (by Ton Jeursen) 
+Function IntegrData2D - Bidimensional data integration
+Macro Integr3D - Triple integral over a normal domain
+Macro X-converter - can add notes to the cells containing the original standard formula 
+
+bug fixed
+10.07.2006 ODE_RK returned "?" when the diff. eq. had logical espr. "<=" or ">="
+27.07.2006 Poly_Weight_Hermite returned incorrect values
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 5.0 - Update of July. 2006
+
+Macro X-Converter - Converts an Excel formula into multiprecision (thanks to John Jones)
+Macro for Multiprecision Linear Regression
+Macro for Multiprecision Polynomial Regression
+Function xRegPolyCoef	Coefficients of the polynomial regression
+Function xRegPolyErr	Standard error of the linear regression estimate
+Function xRegPolyStat	Statistics of the polynomial regression
+Function xRegLinErr 	Standard error of the linear regression estimate
+Function ODE_PC2I 	Implicit predictor-corrector algorithm for stiff problems
+Function ODE_PC4  	4th ord. Adams-Bashforth-Moulton predictor-corrector algorithm
+Function xIsInteger	Multiprecision integer check
+Function xtrunc		Added the parameter "dec" 
+Function for modular arithmetic (thanks to John Jones)
+   xaddmod  modular addition
+   xsubmod  modular subtraction
+   xmultmod modular multiplication
+   xdivmod  modular division
+
+bug fixed
+26.06.2006 xpowmod gave incorrect result for p<=0 and m<= 0 (thanks to John Jones)
+19.06.2006 xVarp always returned  0 
+12.06.2006 xRegCov returned wrong matrix if intercept = False
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.8 - Update of June. 2006
+Only little improvements and fixes
+Function ODE_SYSL - Solves linear system ODE with constant coefficients
+04.05.2006  fix bug cplxIntegr  (Thanks to Christopher Titus)
+04.05.2006  fix bug cplxSerie 
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.7.1 - Update of April. 2006
+Only minor bug fixed
+02.04.2006  xGamma function returns #VALUE if decimal point is comma
+11.04.2006  Integr_2D incorrect value for non parametric functions
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.7 - Update of March. 2006
+Multiprecision expressions now support constants with international decimal separator "." or ","
+Polynomial functions support fractional coefficients such as: 1/3x, 1+2/3x+6/5x^2, etc.
+Macro DFT - Added the optional conversion dBm parameter
+Functions FFT, DFT - Optional argument added for centered Fourier transform.
+Function exp_integr(x) - Extended to negative argument x<0 (thanks to Hans Gunter)
+Function xGammaI - Incomplete Gamma
+Function xBetaI  - Incomplete Beta
+Function AiryA   - Airy function A(x)
+Function AiryB   - Airy function B(x)
+Function AiryAD  - Airy Derivative A'(x)
+Function AiryBD  - Airy Derivative B'(x)
+Function IElliptic1 - Elliptic Integral of 1st kind
+Function IElliptic2 - Elliptic Integral of 2nd kind
+
+Function  xStDev - It is changed: now returns the statistic standard deviation
+Function  xVar - It is changed: now returns the statistic variance
+Functions xStDevp - Population standard deviation
+Functions xVarp - Population standard variance
+These functions use the Welford's one-step algorithm.(Thanks to D. A. Heiser)
+
+18.03.2006 Bug fixed. Integration did not work for math string contains decimal numbers when decimal separator is comma (Thanks to Giovanni Longo).
+
+03.03.2006 Bug fixed. Incorrect result for numbers having leading spaces (Thanks to D. A. Heiser)
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.6.1 - Update of Jan. 2006
+only minor changes
+4.01.2006 Bug fixed - xdiv(0,0) returned 1  (Thanks to Steve Beyers)
+fixed inconsistency of xfunctions returning mixed string/numbers. 
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.6 - Update of Jan. 2006
+The following new macros/functions have been added
+Macro Polyrootfinder Siljak and Laguerre
+Macro Polynomial Factors Extractor with GCD method
+
+23.05.2005 Bug fixed in the comb(n,k) function of the internal MathParser
+08.12.2005 Bug fixed in xRoundr. Returns incorrect value for x < 1. (Thanks to Robert de Levie)
+12.09.2005 Bug fixed in MenuBars Matrix and Xnumbers when both are loaded into Excel.
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.5 - Update of Sept. 2005
+The following new macros/functions have been added
+Function xSerie2D - Double series with multiparameters and multiprecision (suggested by Abel Torres)
+macro RootfinderRF - polyn. rootfinder for integer real roots (Ruffini's method)
+
+The following macros/functions have been changed
+Function xSerie (ex Series) now supports multiparameters and multiprecision
+Substituted the static with dynamic toolbar to avoid problems after Excel crashing
+
+23.5.2005 Bug fixed in the comb(n,k) function of the internal MathParser
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.4 - Update of June. 2005
+The following new macros/functions have been added
+Function RegLinMM - Linear regression Min-Max (Chebychev)
+Function Integr_de - integration of function by double exponential transform
+Function Fourier_sin - Fourier sine transform with double exponential quadrature
+Function Fourier_cos - Fourier cosine transform with double exponential quadrature
+(from DE-Quadrature (Numerical Automatic Integrator) Package, by Takuya OOURA, Copyright(C) 1996.)
+
+The following macros/functions have been changed
+Function Integr_ro - integration of function by Romberg method
+Function POLYN - Polynomial; now accept also complex coefficients
+Function DPOLYN - Polynomial Derivative; now accept also complex coefficients
+Macro Integral_Inf - Infinite intgration with 2 methods: Variable step or DE
+Macro Downhill-Simplex optimiziation with constrains
+
+23.5.2005 .bug in PolyBuild and PolyWrite if decimal point is ",". Thanks to Gerald Schmidt
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.3.2 - Update of March. 2005
+Fixed bug in spline functions for negative numbers 
+Fixed bug in =xMod(a,b) returns an incorrect value for a<0. (Thanks to Steve Beyers) 
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.3 - Update of March. 2005
+
+The following new macros/functions have been added
+Macro SVD       - Singular values decomposition in multiprecisione
+Function xtrunc - eliminates the decimal part of a x-number
+Function xdgts  - significant digits count
+
+The following macros/functions have been changed
+Macro matrix operations - added the parameter DigitMax
+Macro matrix operations - added output double conversion option
+Fixed bug in xround - xround(0.555, 2) returned 0.55 instead of 0.56
+Fixed bug in xLRE - returned 0 if decimal separator is comma 
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.2 - Update of Jan. 2005
+
+The following new macros/functions have been added
+Macro Fermat's pseudo-prime test
+Function xPowMod  	Modular integer pow
+Function xisSquare 	Perfect square check
+Function xisOdd		Odd/even check
+Function DiophEqu	Solves Diophantine equation ax+by=c 
+Function Poly_ChebychevT
+Function Poly_ChebychevU
+Function Poly_Gegenbauer
+Function Poly_Hermite
+Function Poly_Jacobi
+Function Poly_Laguerre
+Function Poly_Weight_ChebychevT
+Function Poly_Weight_ChebychevU
+Function Poly_Weight_Gegenbauer
+Function Poly_Weight_Hermite
+Function Poly_Weight_Jacobi
+Function Poly_Weight_Laguerre
+Function Poly_Weight_Legendre
+Macro zeros of orthogonal polynomials
+Macro coefficients of orthogonal polynomials
+(Orthogonal polynomials appear thanks to Luis Isaac Ramos Garcia)
+
+The following macros/functions have been changed
+Macro Factorize   	Improved efficence of trial division method with Eratostene's Sieve. 
+Macro Factorize  	Added Pollard's rho method for factors up to 9-10 digits
+Function xExp(x) 	Fix bug: loop for |x|<1E-300       (thanks to Vögel Franz Josef )
+Function cvBinDec 	Fix bug: conversion precision was limited to 30 digits max
+Function xdivint  	Improved efficence of integer division 
+Function xmod     	Improved efficence of integere modulus 
+Function cvDecBin 	Improved efficency of binary conversion
+Function xRegLin_Covar 	Changed: returns the standard correlation matrix (thanks to Robert de Levie)
+Function RegLin_Covar 	Changed: "   
+Function xRegLin_R2 	Changed: now return also the standard error of the regression
+Function RegLin_R2 	Changed: "
+Corrected error in help topic "Macro 2D-DFT (Discrete Fourier Transform)" (thanks to Vidas Sukackas)
+Fixed installation problems (thanks to Vladimir Zakharov)
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.1 - Update of Dic. 2004
+
+The following new macros/functions have been added
+Function xMax    	Multiprecision Max
+Function xMin	 	Multiprecision Min
+Function Convolution	Discrete convolution
+Function Hypergeom	Hypergeometric function F(a,b,c,x)
+Macro Downhill-Simplex  Mimimization of free multivariate functions (thanks to Luis Isaac Ramos Garcia)
+Macro 1D Mimimization   Robust mimimization of free monovariable functions
+
+The following macros/functions have been changed
+Function Integr	 now accepts also parameters in the integration function
+Function Sort is renamed in SortRange for avoiding (rare) incompatibility  (thanks to Gregg B. Wells)
+Function spline now accept also random nodes.   (thanks to Sargon Lovkis and Carolyn Brown)
+Function Jacobian - Bug fixed. returns "?" if same variables has omitted
+Function Hessian  - Bug fixed. "
+Function Grad     - Bug fixed. " 
+Function xexp_base - Bug fixed. Incorrect result for a=0 and x<0
+Function xpow Bug fixed. Incorrect result for x=0 and n<0
+Macro Factorize - interface semplified
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 4.0 - Update of Sept. 2004
+Added the Xnumbers menu
+The following new macros have been added: 
+Macro Matrix, Vector...		
+Macro Integral double			
+Macro Integral Infinite		
+Macro Fourier Analysis - DFT		
+Macro Fourier Analysis - 2D DFT	
+Macro Fourier Analysis - Sampler	
+Macro Number Factorize
+Macro Number Prime Generator
+Macro Polynomials - Rootfinder DK
+Macro Polynomials - Rootfinder GN
+Macro Polynomials - Rootfinder JT
+Macro Polynomials - Builder
+Macro Xnumbers format			
+Macro Xnumbers unformat		
+Macro Xnumbers convert into double	
+Macro Xnumbers round 			
+Macro Xnumbers relative round 	
+Macro Xnumbers mop-up 		
+Macro Default digits
+
+The following new functions have been added
+Function xcv    	Converts multiprecision into standard
+Function xMat_LL	Cholesky decomposition
+Function xPerm  	Permutations  P(n,k)
+
+The following functions have been changed
+Function xProdScal	Now accepts also matrices as arguments
+Function xMat_LU   	Now returns also the permuation matrix P (A = PLU) 
+Function xln     	Fix bug: losing precision if x<1e-7
+Function xroot  	Fix bug: fails if the number x > 1E308.   (thanks to Ken Thompson )
+Function xmod   	Fix bug: wrong result xmod(10^29, 35) =5  (thanks to Roger Price)	
+Function baseChange     Fix bug: #VALUE for numeric argument      (thanks to Gabriel Simmonds)
+Functions: xmean, xsum, xstdev, xvar, xqmean, xgmean, xMCD, xMCM now accepts also a range as argument
+
+The following old macros/functions have been removed
+Macro Gauss Step-by-Step
+Functions Mat_LU, MatAbs, MatDet, MatInv, MatMult, MatPow, MatT, Mat_BAB
+Function  MatCharPoly
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 3.1 - Update of Nov. 2003
+The following new functions have been added: 
+xprod 	- Multiprecision Productory
+ODE_PRE	- Adams's multi-step predictors
+ODE_COR	- Adams's multi-step correctors
+
+This version fix the following bugs:
+xgmean bug fixed
+xqmean, xmean, xvar, xstdev, xsum can now used in nested functions
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 3.0 - Update of Sept. 2003
+Simplified input for all complex functions. Now, They accept both single and complex numbers.
+Example: 1+z can be computed as cplxadd(1,z) instead of cplxadd({1;0},z)
+
+Macros added or modified:
+Function cplxneg	Complex negative
+Function cplxroot	Complex root (old cplxrad)
+Function cplxconj	Complex conjugate
+Function cplxinv  	Complex inverse 1/z
+Function cplx_eval	Complex evaluation of symbolic expression
+Function cplx_integr	Complex	integral
+Function cplx_serie	Complex serie expansion
+Function cplxacos(z)	Complex inv-cos
+Function cplxacosh(z)	Complex inv-hyp-cos
+Function cplxasin(z)	Complex inv-sin
+Function cplxasinh(z)	Complex inv-hyp-sin
+Function cplxatan(z)	Complex inv-tan
+Function cplxatanh(z)	Complex inv-hyp tan
+Function cplxcos(z)	Complex	cos
+Function cplxcosh(z)	Complex	hyperbolic cos
+Function cplxdigamma(z)	Complex digamma
+Function cplxei(z)	Complex exponetial integral
+Function cplxerf(z)	Complex error function
+Function cplxerfc(z)	Complex compl. error function
+Function cplxgamma(z)	Complex gamma
+Function cplxgammaln(z)	Complex log-gammma
+Function cplxsin(z)	Complex sin
+Function cplxsinh(z)	Complex hyperbolic sin
+Function cplxtan(z)	Complex tangent
+Function cplxtanh(z)	Complex hyperbolic tangent
+Function cplxzeta(z)	Complex zeta Riemman's function
+Function xinv(x)  	Multiprecision inverse 1/x
+Function xcplxinv(z)	Multiprecision complex inverse 1/z
+Function xsqr(x)  	Multiprecision square root (old xroot2)
+Function SYSPOLY2	Solve 2x2  2nd degree polynomials system 
+Function POLYN2		Evaluate a bivariate polynomial P(x, y)
+Function cplxEquation2	Solve 2nd degree equation with complex coefficients
+Sub Integr2D		Approximates the double integral of f(x,y)
+Sub Integral_Inf	Approximates the infinite integral (x -> inf)
+Function FFT2D		FFT for bidimensional function f(x,y)
+Function FFT2D_INV	FFT inverse for bidimensional function f(x,y)
+Function DFSP		Discrete Fourier Spectrum
+Function DFSP_INV	Inverse Discrete Fourier Spectrum
+Function Integr_2D	Returns the double integral of f(x,y)
+Function xevall		Multiprecision evaluation of symbolic expression
+Sub RootFinderJT	Polynomial's rootfinder with Jenkins-Traub algotithm
+Sub RootFinderGN	Polynomial's rootfinder with Generalized Newton method 
+Sub RootFinderDK	Polynomial's rootfinder with Durand-Kerner-Aberth algotithm (also for complex coefficients)
+Function Zero_bisec	Non linear equation solver f(x)=0 with bisection method
+Function Zero_sec	Non linear equation solver f(x)=0 with secant method
+Function Diff1  	First derivative f'(x)
+Function Diff2  	Second derivative f''(x)
+Function Grad   	Gradient of f(x,y,z)
+Function Jacobian  	Jacobian matrix of vector-function
+Function Hessian 	Hessian matrix of f(x,y,z)
+Function Serie_trig 	Trigonometric serie 
+Function Serie2D_trig 	Trigonometric double serie 
+function ODE_RK4  	Ord. Diff. Equat./System with 4 Runge-Kutta-Fehlberg formulas
+Function dBell		decibell conversion
+
+function DFT, FFT, FFT_INV and DFT_INV are revised.
+
+Bug fixed
+Function PolyTerms: incorrect result for exponent coefficients.
+Function xeval: leack of accuracy for expression with pi constant
+
+The following macros are migrated in other package 
+Sub Rootfinder1		polyn. rootfinder (Lin-Bairstow)  
+Sub Rootfinder2		polyn. rootfinder (Newton) 
+Sub Rootfinder3		polyn. rootfinder (Halley)		
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 2.4.1 - Update of May. 2003
+Fixed the installation error for Excel 2002/XP (Thanks to David F. Haslam)
+
+-----------------------------------------------------------------------------------------
+XNUMBERS.XLA - Ver. 2.4 - Update of Feb. 2003
+This version has only few minor improvements.
+automatic loading of x-addins collection
+automatic external loading of functions definitions for the Xnumber Handbook
+These features will be useful for the future upgrades.
+The following new functions have been added: 
+- Sort			Array sort with swapping method
+- InterpL		Linear multi-variables interpolation
+- InterpL_Coef		Coefficients of linear multi-variables interpolation
+- Interp_mesh		Interpolation of 2D function
+
+This version fix the following bugs:
+Functions xEval 	return #VALUE for one variable	       (Thanks to David Sloan)
+Function  xLn, xLog	Loss of accuracy for Digit_Max > 60 	(Thanks to David Sloan)
+Function PolyInteg   returns #VALUE
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 2.3 - Update of Dic 2002 
+This version increases xnumbers' exponent up to +/-2.147.483.640 (4 byte)
+The following new functions have been added: 
+- Function RegLinRM	Linear Regression with Robust Method  (thanks to Alfredo Álvarez Valdivia)
+- function xGamma	Gamma function 
+- function xGammaQ	Quotient of two gamma functions
+- Function xGammaln	Natural log of gamma function
+- Function xGammalog	Decimal log of gamma function
+- Function xcomb_big	Combinations for large numbers
+- Function xsplit	returns mantissa and exponent
+- Function xcvexp	returns the exponential format
+- Function vinv(v)	utility for inverting the order of vector 
+- Function xfact2	Double-step factorial
+- Function xRoundr	Relative round
+- Function cvDecBin	Converts decimal to binary 
+- Function cvBinDec	Converts bynary to decimal
+- Function cvDecBase	Converts decimal to any base (2-16)
+- Function cvBaseDec	Converts any base (2-16) to decimal
+- Function baseChange   Converts base to base (2-36)         (Thanks to Richard Huxtable)
+- Function PolyInterpCf	Coefficients of polynomial interpolation
+- Function Fract_Interp_Coef 	Coefficients of continue fraction interpolation
+- Function Fract_Interp		Continue fraction interpolation
+- Function xFract_Interp_Coef 	Multiprecision Coefficients of continue fraction interpolation
+- Function xFract_Interp	Multiprecision Continue fraction interpolation
+- Function errfun	Integral of Gauss's error function	
+- Function digamma      Digamma function
+- Function xbeta	Beta function
+- Function xGm()	Constant "gamma" of Eulero-Mascheroni
+- Function exp_integr	Exponential integral Ei(x)
+- Function expn_integr	Exponential integral En(x)
+- Function Integr_nc	Integration with Newton-Cotes formulas
+- Function xFib		Fibonacci number
+- Function cspline_interp Interpolation with cubic spline  (Thanks to Oldgierd Zieba)
+- Function cspline_eval   Interpolation with cubic spline  (Thanks to Oldgierd Zieba)
+- Function cspline_coeff  Coefficients of cubic spline     (Thanks to Oldgierd Zieba)
+- Function cspline_pre    2nd derivatives of cubic spline  (Thanks to Oldgierd Zieba)
+
+- Function prime	States if a number is prime    (Thanks to Richard Huxtable)
+- Function sumDigits    Returns the sum of all digits  (Thanks to Richard Huxtable)
+- Function DigitsAllDiff Check if any digits are equal (Thanks to Richard Huxtable)
+- Function Integr_fcos	Integration Filon's cosinus formula
+- Function Integr_fsin	Integration Filon's sinus formula
+- Function Zeta		Riemann Zeta function
+
+The following new special function are added 
+(thanks to FORTRAN library for Special Function by Shanjie Zhang and Jianming Jin)
+- Function BesselJ	Bessel's function of first kind, order n, Jn(x)
+- Function BesselY	Bessel's function of second kind, order n, Jn(x)
+- Function BesseldJ	First derivative of Bessel's function Jn(x)
+- Function BesseldY	First derivative of Bessel's function Yn(x)
+- Function BesselI	Modified Bessel's function of first kind, order n, Jn(x)
+- Function BesselK	Modified Bessel's function of second kind, order n, Jn(x)
+- Function BesseldI	First derivative of Modified Bessel's function Jn(x)
+- Function BesseldK	First derivative of Modified Bessel's function Yn(x)
+- Function CosIntegral  Cosinus integral  Ci(x)
+- Function SinIntegral  Sinus integral  Si(x)
+- Function Fresnel_cos  Fresnel's cosinus integral
+- Function Fresnel_sin  Fresnel's sinus integral 
+
+
+The following function are modified to accept xnumber with large exponent:
+- xabs, xPow, xMult, xAdd, xDiv, xLn, xLog, xint, xdec, isXnumber, xmod, xRad, xRad2,
+ xnot, xmean, xqmean, xgmean, xmod, xdivint
+ 
+The following function are modified:
+- Sub GJ        Ex- sub GaussJordan, added optional dTiny param. to correct responce with nearly-singular matrix
+		A full pivot method developed; a bit slower but more accurate for larger matrix 
+- PScal		Ex-ProdScal, now accepts any vector-function argument (Thanks to Robert Pigeon)
+- PVect		Ex-ProdVect, now can be nested with any other vector function 
+(The name are changed to avoid interference with same functions in MATRIX addin)
+- xProdScal	Now can accept any other vector function argument (Thanks to Robert Pigeon)
+- xProdVect	Now can be nested with any other vector function
+- xacos		Bug: incorrect result for string-number argumnet
+- xasin		Bug: incorrect result string-number argumnet
+- xatan		Bug: incorrect result string-number argumnet
+- xfract	Bug: incorrect result string-number argumnet
+- xeval		changed values input parameter as parameter array
+- PoliInterp	Bug: incorrect results. vector x(i) cannot omitted anymore
+- xmod		Bug: do not pass Digit_Max parameter. (Thanks to Richard Huxtable)
+- nextprime     Efficency improved (Thanks to Richard Huxtable)
+- PolyBuild	Bug: incorrect result for two vertical cells selected
+- Factorize	Efficenty improved
+- xcplxsub	Bug: incorrect result 
+- xnot		Eliminate useles optional parameter Digit_Max
+- PrimeGenerator Efficency improved
+- MatAbs	Now can accepts any array-function argument 
+- xMatAbs	Now can accepts any array-function argument
+- Extrap_Delta2 Modif. for accelerating series with Aitken's method
+- xExtrap_Delta2 Modif. for accelerating series with Aitken's method
+
+The macro FunctionHandBook was modified; now works also for the functions of MATRIX.XLA
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 2.2  June 2002 - (17-06-02)
+This version fixes the following bugs:
+functions xMatDet(), xMatInv() return wrong result (Thanks to Bruno Monastero)
+bug into xdiv_ routine 
+bug during installation in Excel XP (Thanks to Kent Osband )
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 2.2  May 2002 - (19-05-02)
+This version fixes the following bugs:
+Function Series() and Integr() return #VALUE for a bug in XMathParser module
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 2.2  May 2002
+The following 20 new functions have been added: 
+function mjkLRE       Log Relative Error   -    (Thanks to Michael Kozluk)
+Function RegLin_Eval  Linear Regressio Evaluation
+Function xRegLin_Eval Multiprecision Linear Regressio Evaluation
+Function RLCondCoef   Linear Regression coeff. for Data Conditioned
+function xLRE         Multiprecision Log Relative Error
+function Mat_BAB      Similarity transformation
+function Mat_LU	      Matrix LU decomposition
+function MatPow	      Matrix power
+function ProdVect     Vector product
+function xMat_BAB     Multiprecision Similarity transformation
+function xMat_LU      Multiprecision Matrix LU decomposition
+function xMatPow      Multiprecision Matrix power
+function xProdVect    Multiprecision Vector product
+Function xsinh        Multiprecision Hyperbolic Sinus
+Function xcosh        Multiprecision Hyperbolic Cosinus
+Function xtanh        Multiprecision Hyperbolic Tangent
+Function xasinh       Multiprecision Inv Hyperbolic sinus
+Function xacosh       Multiprecision Inv Hyperbolic cosinus
+Function xatanh       Multiprecision Inv Hyperbolic Tangent
+Function xeval        Multiprecision Expression Evaluation
+
+The following functions have been modified: 
+Function RegLin_Coeff  
+Function RegLin_Covar
+Function xRegLin_Coeff
+Function xRegLin_Covar
+Sub RegrLinCoeff()
+Sub REGLIN_COVAR_()
+A new Linear Regression algorithm improves the general accuracy of 10-100 times
+Moreover an optional parameter is added to force the Y intercep.
+
+in this version XmenuBar is nomore supported, so
+the following 2 old macros have been eliminated
+sub XnumberCmdBar_On
+sub XnumberCmdBar_Off
+
+This version fixes the following bugs:
+Sub xGaussJordan()
+- overflow for high matrix values  - (Thanks to Michael Kozluk) 
+Function xRegLin_Coeff()
+- returns #VALUE under NIST StRD Filippelli test - (Thanks to Michael Kozluk)
+Function xLin
+- loss of precision for x >> 1, for incorrect double conversion in Excel 97
+ 
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 2.1  May 2002
+Sub GaussJordan()
+- overflow for medium-high matrix values  - (Thanks to Michael Kozluk) 
+Function RegLin_Coeff()
+- returns #VALUE under NIST StRD Longley test - (Thanks to Michael Kozluk) 
+Function POLYN()
+- ignores "x" parameter filled directly in formula
+Private Sub MacroAddMenuButtom()
+- Xnumber setup fails if "Office Assistence" icon is removed from the Standard command bar (Thanks to Robert Pigeon)
+Private Sub CommandButton1_Click()
+- Excel 2000 does not show the Help first page from the "help" popup button
+Private Function ConvXnumIntoStr()
+- leaves trailing 0 at right under rare particolar conditions.
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 2.1  Jan 2002
+compatibilty now with EXCEL 97/98/2000
+VBA module open-free
+The following 9 new functions have been added: 
+function IntegrDataC
+function IntegrDataR
+function IntRombergMat
+function Integr
+function Series
+function FFT
+function FFT_INV
+function DFT
+function DFT_INV
+This version fixes the following bugs:
+Help F1 did not work with all cplx functions set
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 2.0  Aug 2001
+This version fixes the following bugs: (Thanks to Ton Jeursen (°))
+function xcplxPolar() 
+function xcplxRect()
+ - Added a check so that only "RAD" or "DEG" can be used
+function xSum()
+function xMean()
+function xVar()
+function xStdev()
+function xQMean()
+function xGMean()
+ - Added a check for non-numerical values or empty cells, to make it work the same as Excel
+
+It fixes also the following bugs:
+Function xLN2
+Function xe
+Function xLN10
+ - digits in output > digit_max setting
+ - all this functions are increase to 415 digits
+
+Private Sub Xnum_Scaling
+Private Function xdiv_
+Private Function c_polar
+Private Sub xAngleReduction
+ - defect of precision in same computing
+
+Function xcplxpolar
+ - incorrect rounding when we set RAD angle
+
+Function Excel Dbcl
+- incorrect conversion. It was substituted by my Dbcl_
+
+The following 80 new functions have been added:
+
+Arithmetic	xdivint		Multiprecision integer division
+Arithmetic	xmod		Multiprecision remain of integer division
+Complex		cplxabs		Complex absolute 
+Complex		cplxadd		Complex Addition 
+Complex		cplxdiv		Complex Division 
+Complex		cplxExp		Complex function exp (z)
+Complex		cplxLn		Complex function Ln(z) 
+Complex		cplxmult	Complex Multiplication 
+Complex		cplxpolar	Polar Conversion 
+Complex		cplxpow		Complex Power
+Complex		cplxrad		Complex Radix
+Complex		cplxrect	Rectangular Conversion 
+Complex		cplxsub		Complex Subtraction 
+Complex		xcplxExp	Multiprecision Complex function exp (z)
+Complex		xcplxLn		Multiprecision Complex function Ln(z) 
+Linear Algebra	Extrap_Delta2	Extrapolation by Aitken's square-delta method
+Linear Algebra	MatAbs		Modulus of Vectors or Matrix
+Linear Algebra	MatCharPoly	Matrix Characteristc Polynomial
+Linear Algebra	MatDet		Determinant of a Square Matrix 
+Linear Algebra	MatInv		Inverse of a Square Matrix 
+Linear Algebra	MatMult		Multiplication of two matricies
+Linear Algebra	MatT		Transposes  Matrix 
+Linear Algebra	ProdScal	Scalar product of two vectors
+Linear Algebra	SYSLIN		Solve Linear System
+Linear Algebra	SYSLIN_ITER_G	Solve Linear System by iterative Gauss-Seidel method
+Linear Algebra	xMatAbs		Multiprecision Modulus of Vectors or Matrix
+Linear Algebra	xMatAdd		Multiprecision Addition of two matricies
+Linear Algebra	xMatDet		Multiprecision Determinant of a Square Matrix 
+Linear Algebra	xMatInv		Multiprecision Inverse of a square matrix 
+Linear Algebra	xMatMult	Multiprecision Multiplication of two matricies
+Linear Algebra	xMatSub		Multiprecision Subtraction of two matricies
+Linear Algebra	xProdScal	Multiprecision Scalar product of two vectors
+Linear Algebra	xSYSLIN		Multiprecision Solve Linear System
+Linear Algebra	Mat_Dia_Step	Didactic Matrix diagonalization (Gauss-Jordan algorithm )
+Linear Algebra	Mat_Tri_Step	Didactic Matrix triangolarization ( Gauss-Jordan algorithm )
+Manipulation	isXnumber	Check multiprecision number
+Manipulation	xFormat		Format extended numbers
+Manipulation	xmopup		Multiprecision mop-up
+Manipulation	xUnformat	Remove all formattig characters
+Numbers		CheckPrime	Check Prime number
+Numbers		Factor		Factorize a number
+Numbers		fract		Returns numerator and denominator of the fraction 
+Numbers		MCD		Maximun Common Divisor (GCD)
+Numbers		MCM		Minimun Common Multiple (LCM)
+Numbers		NextPrime	Next Prime number
+Numbers		xfract		Returns numerator and denominator of the fraction
+Numbers		xMCD		Maximun Common Divisor (GCD)
+Numbers		xMCM		Minimun Common Multiple (LCM)
+Numbers		Factorize	Factorize the number of active cell
+Numbers		PrimeGenerator	Prime Table Generator
+Polynomial	DPOLYN		Multiprecision Polynomial Derivative Calculus
+Polynomial	PolyAdd		Adds two polynomials
+Polynomial	PolyBuild	Returns a polynomial from its roots
+Polynomial	PolyCenter	Returns the center of polynomial
+Polynomial	PolyDiv		Quotient of two polynomials division
+Polynomial	PolyInt		Returns an integer denormalized polynomial
+Polynomial	PolyInterp	Polynomial Interpolation
+Polynomial	PolyMult	Multiplies two polynomials
+Polynomial	POLYN		Multiprecision Polynomial Calculus
+Polynomial	PolyRadius	Returns the radius of polynomial roots circle
+Polynomial	PolyRem		Remain of two polynomials division
+Polynomial	PolyRootMopUp	Mop-up polynomial roots
+Polynomial	PolyShift	Polynomial translation
+Polynomial	PolySolve	Roots of polynomial 
+Polynomial	PolySub		Subtracts two polynomials
+Polynomial	PolyTerms	Vector of  polynomial coefficients
+Polynomial	PolyWrite	Returns polynomial string from coefficients
+Polynomial	PolyBuildCfx	Multiprecision Polynomial Coefficients
+Polynomial	Rootfinder	Roots finder of polynomials (general method)
+Polynomial	Rootfinder1	Roots finder of polynomials (Lin-Bairstow)
+Polynomial	Rootfinder2	Roots finder of polynomials (Newton-Raphson)
+Polynomial	Rootfinder3	Roots finder of polynomials (Halley)
+Statistical 	RegLin_Coeff	Linear Regression
+Statistical 	RegLin_Covar	Cross-Covariance Matrix
+Statistical 	RegLin_R2	Linear Regression Factor
+Statistical 	xRegLin_Coeff	Multiprecision Linear Regression
+Statistical 	xRegLin_Covar	Multiprecision Cross-Covariance Matrix
+Statistical 	xRegLin_R2	Multiprecision Linear Regression Factor
+Trigonometric	x2Pi		Multiprecision  Constant 2Pi  
+
+(°) Ton Jeursen has realized also a good downgrade of XNUMBERS for the old, but still used, Excel5. This addin is called XNUMBERS95.XLA. He has developede a nice original solution for formatting extended number string. If you are interested in it, please ask me.
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 1.2  Aug 2001
+This version fixes the following bugs: (Thanks to Ton Jeursen (°))
+function xcplxPolar() 
+function xcplxRect()
+ - Added a check so that only "RAD" or "DEG" can be used
+function xSum()
+function xMean()
+function xVar()
+function xStdev()
+function xQMean()
+function xGMean()
+ - Added a check for non-numerical values or empty cells, to make it work the same as Excel
+
+It fixes also the following bugs:
+Function xLN2
+Function xe
+Function xLN10
+ - digits in output > digit_max setting
+ - all this functions are increase to 415 digits
+
+Private Sub Xnum_Scaling
+Private Function xdiv_
+Private Function c_polar
+Private Sub xAngleReduction
+ - defect of precision in same computing
+
+Function xcplxpolar
+ - incorrect rounding when we set RAD angle
+
+XNUMBERS.XLA V. 1.1  June 2000
+This version fix the following bugs: (Thanks to Eric Braekevelt, Canada.)
+
+Problem with output numbers in absolute less than 1 when Excel is set with North American standard decimal point. 
+
+----------------------------------------------------------------------------------------
+XNUMBERS.XLA V. 1.0  April 2000
+It was the first release with the following 50 core functions:
+
+Arithmetic 	xabs		Multiprecision  Absolute value
+Arithmetic 	xadd		Multiprecision  Addition 
+Arithmetic 	xdiv		Multiprecision  Division 
+Arithmetic	xmult		Multiprecision  Multiplication 
+Arithmetic	xpow		Multiprecision  Raise to power 
+Arithmetic	xRad		Multiprecision  Nth- Radix 
+Arithmetic	xRad2		Multiprecision  Square Radix 
+Arithmetic	xsub		Multiprecision  Subtraction 
+Complex		xcplxabs	Multiprecision  Complex absolute 
+Complex		xcplxadd	Multiprecision  Complex Addition 
+Complex		xcplxdiv	Multiprecision  Complex Division 
+Complex		xcplxmult	Multiprecision  Complex Multiplication 
+Complex		xcplxpolar	Multiprecision  Polar Conversion 
+Complex		xcplxpow	Multiprecision Complex Power
+Complex		xcplxrad	Multiprecision Complex Radix
+Complex		xcplxrect	Multiprecision  Rectangular Conversion 
+Complex		xcplxsub	Multiprecision  Complex Subtraction 
+Manipulation	xbreak		Multiprecision  Breaking 
+Manipulation	xcomp		Multiprecision  Compare numbers 
+Manipulation	xdec		Returns the decimal part of an extended number
+Manipulation	xdgts		Multiprecision  Digits count 
+Manipulation	xint		Multiprecision  Integer part 
+Manipulation	xnot		Multiprecision  Change sign 
+Manipulation	xround		Multiprecision  Round 
+Statistical 	xcomb		Multiprecision  Combinations 
+Statistical 	xfact		Multiprecision  Factorial 
+Statistical 	xgmean		Multiprecision  Geometric Mean 
+Statistical 	xmean		Multiprecision  Arithmetical Mean 
+Statistical 	xqmean		Multiprecision  Quadratic Mean 
+Statistical 	xstdev		Multiprecision  Standard Deviation 
+Statistical 	xsum		Multiprecision  Summation 
+Statistical 	xvar		Multiprecision  Variance 
+Transcendental 	xe		Multiprecision  Constant e 
+Transcendental 	xexp		Multiprecision  Exponential 
+Transcendental 	xexp_base	Multiprecision  Exponential base B 
+Transcendental 	xLn		Multiprecision  Logarithm natural (Neper’s) 
+Transcendental 	xLN10		Multiprecision  Constant Ln(10) 
+Transcendental 	xLN2		Multiprecision  Constant Ln(2) 
+Transcendental 	xLog		Multiprecision  Logarithm decimal (Brigs’) 
+Trigonometric	xacos		Multiprecision  Arccos 
+Trigonometric	xanglecompl	Multiprecision  Complement of right angle  
+Trigonometric	xasin		Multiprecision  Arcsin 
+Trigonometric	xatan		Multiprecision  Arctan 
+Trigonometric	xcos		Multiprecision  Cos 
+Trigonometric	xPi		Multiprecision  Constant Pi  
+Trigonometric	xPi2		Multiprecision  Constant Pi /2  
+Trigonometric	xPi4		Multiprecision  Constant Pi /4
+Trigonometric	xsin		Multiprecision  Sin 
+Trigonometric	xtan		Multiprecision  Tan 
+
+This software is free.
+I will appreciate every your suggestions and bug reports. 
+:-) 
+In the meantime, have fun! 
+Bye
+
+Leonardo Volpi
+Foxes Team
+E-mail: leovlp@libero.it
+
+
+

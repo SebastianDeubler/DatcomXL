@@ -1,0 +1,66 @@
+/* Style sheet for PDAS pages called for printing */
+/* Last modified: 13 July 2017 */
+body {margin: 5px; color: black; background: white;
+   font-family: "Times New Roman",Times,serif;}
+
+h1,h2,h3,h4,h5,h6 { font-family: arial,helvetica,univers,sans-serif;
+                    font-weight: bold; background: white; color: black;}
+h1 {font-size: 2.0em; margin-top: 0.5em; text-align: center;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.25em; }
+h5 {font-size: 1em; }
+h6 {font-size:  0.75em; }
+
+a:link {color: black; background: white;}
+a:visited { color: black; background: white;}
+
+div.picasso {text-align: center;}
+p.input {font-family:monospace; white-space: pre;}
+p.cosmic {font-style: italic;}
+p.equation {text-align: center; font-family: monospace; white-space: pre;}
+div.equation {text-align: center}
+p.quote {margin-left: 5em;}
+p.q {font-size: 1em; font-weight: bold}
+p.a {font-size: 1em; font-weight: normal}
+p.code {font-family:monospace; white-space: pre; font-size: 0.7em; }
+span.wip {font-size:smaller; font-style:italic;}
+
+ul.cosmic {font-style: italic;}
+ol.cosmic {font-style: italic;}
+
+table {border-collapse: collapse}
+table.eq {width: 100%;}
+table.centered {text-align: center}
+table.archivelist {margin-left: 3em; font-size: 90%; }
+
+td {border: 1px solid black; padding: 1px 5px 1px 20px;}
+td.center {text-align: center}
+td.right {text-align: right}
+td.eqno {width: 1em;}
+
+address {background: white; color: black;}
+
+nav {margin: 0.25em;}
+div.crumb {margin: 0.25em;}
+div.section {font-size: 1.25em; font-weight: bold;}
+div.newbanner {width: 90%; background: white; color: black;
+  padding-right: 1em; border: 1px solid black;
+  margin-left: 1em; margin-right: 1em;  
+  font-size: 120%;
+  display: none;
+  font-family: Verdana,Arial,Helvetica,sans-serif; text-align: right;}
+
+div#header {width: 100%; border-bottom: 2px solid black;
+   padding-top: 3px; padding-bottom: 3px; }
+div#footer {width: 100%; font-size: 90%; 
+   border-top: 2px solid black; border-bottom: 2px solid black;
+   padding-top: 3px; padding-bottom: 3px; }
+
+footer {width: 100%; font-size: 90%; 
+   border-top: 2px solid black; border-bottom: 2px solid black;
+   padding-top: 3px; padding-bottom: 3px;}
+
+img {float: right;}
+img#validxhtml {display: none;}
+

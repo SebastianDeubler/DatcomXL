@@ -1,0 +1,16 @@
+h1  { text-align: center;}
+.text_center { text-align: center; }
+.text_right  { text-align: right; }
+.text_left   { text-align: left; }
+p.h1a { text-align: center; font-size: 18pt; font-weight: bold; }
+p.h1b {                     font-size: 16pt; font-weight: bold; }
+p.h1c { font-style: italic; font-size: 12pt; font-weight: bold; }
+p.center { text-align: center; }
+table.center { margin-left: auto; margin-right: auto; }
+table.right  { margin-left: auto; margin-right: auto; }
+span.h1c { font-style: italic; font-weight: bold; }
+span.indent { padding-left: 25pt; }
+span.margin { margin-left: 25pt; }
+table.main_menu { width: 100%; }
+.spaced { line-height: 1.4em; }
+.spaced SUB, .spaced SUP { line-height: 0; }

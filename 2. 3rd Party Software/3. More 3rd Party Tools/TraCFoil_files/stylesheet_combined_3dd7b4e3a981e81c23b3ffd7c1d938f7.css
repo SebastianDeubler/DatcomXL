@@ -1,0 +1,18 @@
+/* cmsms stylesheet: Print modified: 12/20/15 15:24:58 */
+body{color:#000 !important;background-color:#fff !important;font-family:arial;border:0 !important;}
+*{border:0 !important;}
+.accessibility,
+.noprint{display:none !important;}
+div#content,
+div#main{display:block !important;width:100% !important;border:0 !important;padding:1em !important;}
+div#header,
+div#header h1 a,
+div.breadcrumbs,
+div#search,
+div#footer,
+div#menu_vert,
+div#news,
+div.right49,
+div.left49,
+div#sidebar{display:none !important;}
+img{float:none;}

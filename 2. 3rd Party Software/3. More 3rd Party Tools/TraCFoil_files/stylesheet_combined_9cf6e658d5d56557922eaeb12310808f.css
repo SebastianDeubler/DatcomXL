@@ -1,0 +1,133 @@
+/* cmsms stylesheet: F_style_complet modified: 12/20/15 15:30:17 */
+*{margin:0;padding:0;}
+body{text-align:left;font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;font-size:75.01%;line-height:1em;}
+div{font-size:1em;}
+img{border:0;}
+a,a:link{font-weight:700;text-decoration:none;background-color:inherit;color:Navy;}
+a:active{background-color:inherit;color:Navy;}
+a:visited{text-decoration:none;background-color:inherit;color:#FF5A00;}
+a:hover{text-decoration:underline;background-color:#D0C6DE;color:#7A5FA5;}
+body{color:#333;background-color:#ccc;margin:0;padding:0;}
+div#pagewrapper{max-width:89em;min-width:60em;color:#000;border:1px solid #000;background-color:#fff;margin:0 auto;}
+div#header{height:100px;border-bottom:1px solid #D9E2E6;margin:0;padding:0;}
+div#header h1 a{background:url(https://tracfoil.com/tracfoil/uploads/images/logo/tracfoils.gif) no-repeat 20px 12px;display:block;height:100px;width:250px;text-indent:-999em;text-decoration:none;}
+div#header h1{line-height:0;font-size:0;background:url(https://tracfoil.com/tracfoil/uploads/images/logo/tracfoils.gif) no-repeat 20px 12px;margin:0;padding:0;}
+div#header h2{float:right;line-height:1.2em;font-size:1.5em;color:#000;margin:35px 65px 0 0;}
+div.crbk{margin:0;padding:0;}
+div.breadcrumbs{font-size:90%;margin:0;padding:1em 0 1em 1em;}
+div.breadcrumbs span.lastitem{font-weight:700;}
+div#search{float:right;width:27em;text-align:right;margin:0 1em;padding:0.5em 0 0.2em;}
+input.search-button{border:none;height:22px;width:53px;margin-left:5px;font-weight:700;cursor:pointer;background:url(https://tracfoil.com/tracfoil/uploads/images/screens/search.png) no-repeat center center;padding:0 2px 2px 0;}
+div#content{margin:1.5em auto 2em 0;}
+div#main{margin-left:22%;margin-right:4%;background-color:#F6FFEF;padding:0 2%;}
+div#annonce{margin-left:25%;margin-right:4%;background-color:#F6FFEF;padding:0 2% 1%;}
+div#sidebar{float:left;width:20%;display:inline;margin-left:0;padding:0;}
+div#sidebara{background-color:#EDEDED;padding:10px 15px 15px 0;}
+div#sidebarb{padding:10px 15px 10px 20px;}
+.barrebas{border-bottom:1px solid #AF4FFF;margin:0 3em 0.5em 0;}
+div.hr{height:1px;border-bottom:1px dotted #000;margin:1em;padding:1em;}
+div#footer{clear:both;color:Navy;background-color:#eaeaea;border-top:#666 1px solid;border-bottom:2px solid #FFF;}
+div#footer p{font-size:0.9em;text-align:center;margin:0;padding:.3em;}
+div#footer p a,div#footer p a:link{color:Navy;background-color:inherit;}
+div#footer p a:hover{color:Green;background-color:inherit;}
+div.left49{width:70%;}
+div.right49{float:right;width:29%;text-align:right;}
+.titre01{background-color:#C1A5FF;font-weight:700;padding:1px 5px 1px 5px;}
+.Bdownload{text-decoration:none;color:#FFF;font-weight:700;background-color:#AF6CFF;padding:5px 5px 1px;}
+.Bdownload:hover{text-decoration:none;color:#000;background-color:#AF6CFF;}
+div#content h1{font-size:2em;line-height:1em;margin:0;}
+div#content h2{color:#294B5F;font-size:1.5em;text-align:left;padding-left:0.5em;padding-bottom:1px;border-top:1px solid #AF4FFF;border-bottom:1px solid #AF4FFF;border-left:1.1em solid #AF4FFF;line-height:1.5em;margin:0 2em 0.5em 0;}
+div#content h3{color:#294B5F;font-size:1.3em;line-height:1.3em;margin:0 0 0.5em;}
+div#content h4{color:#294B5F;font-size:1.2em;line-height:1.3em;margin:0 0 0.25em;}
+div#content h5{color:#294B5F;font-size:1.1em;line-height:1.3em;margin:0 0 0.25em;}
+h6{color:#294B5F;font-size:1em;line-height:1.3em;margin:0 0 0.25em;}
+p{font-size:1em;line-height:1.4em;margin:0 0 1.5em;padding:0;}
+blockquote{border-left:10px solid #ddd;margin-left:10px;}
+strong,b{font-weight:700;}
+em,i{font-style:italic;}
+code,pre{font-family:"Courier New", Courier, monospace;font-size:1em;}
+pre{border:1px solid #000;background-color:#ddd;line-height:1.5em;font-size:90%;margin:0 1em 1em;padding:0.5em;}
+div.templatecode{margin:0 0 2.5em;}
+div#main ul,div#main ol,div#main dl{font-size:1em;line-height:1.4em;margin:0 0 1.5em;}
+div#main ul li,div#main ol li{margin:0 0 0.25em 3em;}
+div#main dl{margin-bottom:2em;padding-bottom:1em;border-bottom:1px solid silver;}
+div#main dl dt{font-weight:700;margin:0 0 0 1em;}
+div#main dl dd{margin:0 0 1em 1em;}
+div#menuicon{float:right;text-align:left;margin-right:1em;margin-top:2em;}
+ul.icon{list-style:none;margin:0;padding:0;}
+ul.icon li{line-height:16px;background-repeat:no-repeat;background-position:0 50%;margin:2px 0 6px;padding:0;}
+ul.icon li a{padding-left:20px;}
+#contact{background-image:url(https://tracfoil.com/tracfoil/uploads/images/icon/env16.png);}
+#info{background-image:url(https://tracfoil.com/tracfoil/uploads/images/icon/info16.png);}
+#plan{background-image:url(https://tracfoil.com/tracfoil/uploads/images/icon/planb16.png);}
+span.accesskey{text-decoration:none;}
+.accessibility, hr{position:absolute;top:-999em;left:-999em;}
+dfn{position:absolute;left:-1000px;top:-1000px;width:0;height:0;overflow:hidden;display:inline;}
+a.external span{position:absolute;left:-5000px;width:4000px;}
+a.external{padding:0 12px 0 0;}
+a.external:link{color:Navy;text-decoration:none;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/external.gif) no-repeat 100% -100px;}
+a.external:visited{color:#FF5A00;background-color:inherit;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/external.gif) no-repeat 100% -200px;}
+a.external:hover{color:#644D88;background-color:#D0C6DE;text-decoration:underline;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/external.gif) no-repeat 100% 0;}
+a.document{padding:0 12px 0 0;}
+a.document:link{color:Navy;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/document.png) no-repeat 100% -100px;}
+a.document:visited{color:#FF5A00;background-color:inherit;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/document.png) no-repeat 100% -200px;}
+a.document:hover{color:#644D88;background-color:#D0C6DE;text-decoration:underline;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/document.png) no-repeat 100% 0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clear{height:0;clear:both;width:90%;visibility:hidden;}
+#main .clear{height:0;clear:right;width:90%;visibility:hidden;}
+* html>body .clearfix{display:inline-block;width:100%;}
+* html .clear{height:1%;clear:right;width:90%;}
+* html div#menu_horiz{height:1%;}
+div#menu_horiz{background-color:#644D88;width:100%;height:47px;font-weight:700;margin:0;}
+div#menu_horiz ul{list-style-type:none;padding-top:5px;padding-left:10px;margin:0;}
+div#menu_horiz li{float:left;list-style:none;margin:0;}
+div#menu_horiz a,div#menu_horiz h3 span,div#menu_horiz .sectionheader span{text-decoration:none;color:#FFF;display:block;margin:0;padding:12px 15px 15px 0;}
+div#menu_horiz li.parent a:hover span{padding-left:20px;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/parent.png) no-repeat 0.3em center;}
+div#menu_horiz li.menuactive a span{padding-left:20px;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/active.png) no-repeat 0.3em center;color:#FFF;}
+div#menu_horiz li.menuactive a:hover span{padding-left:20px;background:url(https://tracfoil.com/tracfoil/uploads/images/icon/parent.png) no-repeat 0.5em center;}
+div#menu_horiz li.menuactive{color:#000;background-color:#AF4FFF;}
+div#menu_horiz li.menuactive a:hover{color:#000;background-color:#AF84FF;}
+div#menu_horiz h3 span{color:#FFF;background-color:#AF4FFF;}
+#menu_vert{font-weight:700;margin:0;padding:0;}
+#menu_vert ul{list-style:none;margin:0;padding:0;}
+#menu_vert ul ul{margin:0;padding:0 5px 0 0;}
+#menu_vert li{list-style:none;margin:0 0 -1px;padding:0 0 4px;}
+#menu_vert li.currentpage{padding:0 0 3px;}
+#menu_vert li.menuactive{background-color:#C06CFF;margin:0;padding:0;}
+#menu_vert li.menuactive ul{margin:0;}
+#menu_vert li.activeparent{margin:0;padding:0;}
+* html #menu_vert li{height:1%;}
+* html #menu_vert li a{height:1%;}
+* html #menu_vert li hr{height:1%;}
+div#menu_vert a{display:block;color:#18507C;min-height:1em;text-decoration:none;padding:0.8em 0.3em 0.5em 1.5em;}
+div#menu_vert ul ul a{font-size:90%;padding:0.8em 0.3em 0.5em 2.8em;}
+div#menu_vert ul ul ul a{background-color:#C06CFF;padding:0.5em 0.3em 0.3em 3em;}
+div#menu_vert a:hover{background-color:transparent;color:#595959;text-decoration:underline;font-weight:700;}
+div#menu_vert a.activeparent:hover{color:#47F8FA;}
+div#menu_vert li.activeparent{color:#fff;}
+div#menu_vert li.activeparent a.activeparent{color:#000;}
+div#menu_vert li a.parent{padding-left:0;}
+div#menu_vert ul ul li a.parent{padding-left:0.9em;background-color:#AF6CFF;}
+div#menu_vert li a.menuactive.menuparent{padding-left:0;color:#FFF;}
+div#menu_vert ul ul li a.menuactive.menuparent{padding-left:0.99em;}
+div#menu_vert ul ul li a.menuactive:hover{background-color:#AF6CFF;color:#595959;}
+div#menu_vert li a.menuactive.menuparent span{display:block;font-weight:700;padding-left:1.5em;margin:0;}
+div#menu_vert li a.menuactive.menuparent:hover{text-decoration:none;color:#18507C;}
+div#menu_vert ul ul li a.activeparent{color:#fff;background-color:#AF6CFF;}
+div#menu_vert ul h3{display:block;color:#000;font-size:1em;margin:0;padding:0.8em 0.5em 0.5em 1.5em;}
+div#menu_vert ul ul h3{font-size:90%;color:#000;padding:0.8em 0.5em 0.5em 2.8em;}
+div#menu_vert ul ul ul h3{padding:0.6em 0.5em 0.2em 3em;}
+div#menu_vert li.sectionheader{border-right:none;line-height:1em;color:#18507C;cursor:text;margin:0;padding:0.8em 0.5em 0.5em 1.5em;}
+div#menu_vert .separator{height:1px !important;margin-top:-1px;margin-bottom:0;background-color:#000;overflow:hidden !important;line-height:1px !important;font-size:1px;padding:2px 0;}
+div#menu_vert li.separator hr{display:none;}
+* html div#menu_horiz,* html #menu_vert li,* html #menu_vert li a,* html #menu_vert li hr{height:1%;}
+div#menu_horiz li a:hover,div#menu_vert li a.parent:hover{background-color:#AF6CFF;}
+div#menu_horiz a span,div#menu_horiz .sectionheader span{padding-left:15px;}
+div#menu_vert li a.parent span,div#menu_vert li a.parent:hover span{display:block;padding-left:1.5em;margin:0;}
+div#menu_vert li a.menuactive,div#menu_vert ul ul li a.menuactive{color:#FFF;}
+.listable_image{display:block;margin:0.5em auto;}
+.faqlist{border-bottom:1px dotted #644D88;margin:0 0.5em 0.5em;}
+.postitText{margin:0 0.2em 1em;padding:0.1em 0.5em 0.5em;}
+div#Postit{border:1px solid #644D88;background:#f5f5f5;margin:2em 0 1em 1em;}
+div#Postit h2{line-height:1em;margin:0 0 1em 0;background-color:#AF84FF;color:#f5f5f5;}
+div#Postit h4{line-height:0.8em;margin:0 0 1em 0;padding:0.5em 0.5em 1em;background-color:#AF84FF;color:#f5f5f5;text-align:center;}

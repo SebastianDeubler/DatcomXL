@@ -1,0 +1,29 @@
+
+This Add-In requires 3 files:
+
+          XN.xlam
+          XN.chm
+          XN.csv
+
+Make sure the files are unblocked: right-click, choose “Properties”, then in the “General” tab click “Unblock”.
+
+The same as always, place these files in any folder you choose.
+
+Follow the usual procedure for installing Excel Add-Ins:
+
+1) open Excel with a blank Book1
+
+2) from the Office Button in the upper left (2007) or the File tab (2010), select  "Excel Options" ,  "Add-Ins" ,  "Go"
+
+3) then  "Browse"  for and select  "XN.xlam"
+
+Go to  "Excel Options"  from the Office Button or File tab, click  "Trust Center" ,  "Trust Center Settings" ,  "Macro Settings" , then check  "Enable all macros"  and  "Trust access to the VBA project".
+
+It is also helpful to make sure the add-in is in a Trusted Location in the  "Trust Center"  under  "Trusted Locations".  If not:  "Add new location" , and type in the address or  "Browse"  for the location of the appropriate folder.
+
+Next Save the Add-In on your machine in your environment, using the “Compiled” button in the configuration screen, from the Xnumbers toolbar under “X-Edit”, “Configuration”.
+
+You might get a  "Security Warning"  in the toolbar when you open a workbook:  Click  "Options"  and  "Enable this content".  It might be helpful to  "Enable automatic update…"  in  "Trust Center Settings"  under  "External Content".
+
+
+ 

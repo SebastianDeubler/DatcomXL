@@ -1,0 +1,1106 @@
+Function,AiryA,(x),Airy function A(x),Special functions,Airy function A(x),,,,289
+Function,AiryAD,(x),Derivative Airy function A'(x),Special functions,Derivative Airy function A'(x),,,,289
+Function,AiryB,(x),Airy function B(x),Special functions,Airy function A(x),,,,289
+Function,AiryBD,(x),Derivative Airy function B'(x),Special functions,Derivative Airy function B'(x),,,,289
+Function,BaseChange,"(number, old_base, new_base)  ",Converts a number from one base to another (up to 36).,Arithmetic,Converts a number from one base to another,,,,127
+Function,BesseldI,"(x, [n])","First derivative of mod. Bessel functions of 1st kind, order n: I'n(x)",Special functions,First derivative of mod. Bessel functions I'n(x),,,,215
+Function,BesseldJ,"(x, [n])","First derivative of Bessel functions of 1st kind, order n: J'n(x)",Special functions,First derivative of Bessel functions J'n(x),,,,215
+Function,BesseldK,"(x, [n])","First derivative of mod. Bessel functions of 2nd kind, order n: K'n(x)",Special functions,First derivative of mod. Bessel functions K'n(x),,,,215
+Function,BesseldY,"(x, [n])","First derivative of Bessel functions of 2nd kind, order n: Y'n(x)",Special functions,First derivative of Bessel functions Y'n(x),,,,215
+Function,BesselIx,"(x, [n])","Modified Bessel function of 1st kind, order n: In(x)",Special functions,Modified Bessel function In(x),,,,215
+Function,BesselJx,"(x, [n])","Bessel function of 1st kind, order n: Jn(x)",Special functions,Bessel function Jn(x),,,,215
+Function,BesselKx,"(x, [n])","Modified Bessel function of 2nd kind, order n: Kn(x)",Special functions,Modified Bessel function Kn(x),,,,215
+Function,BesselSphJ,"(x, [n])",Spherical Bessel function of 1st kind Jn,Special functions,Spherical Bessel function of 1st kind,,,,401
+Function,BesselSphY,"(x, [n])",Spherical Bessel function of 2nd kind Yn,Special functions,Spherical Bessel function of 2nd kind,,,,401
+Function,BesselYx,"(x, [n])","Bessel function of 2nd kind, order n: Yn(x)",Special functions,Bessel function Yn(x),,,,215
+Function,CheckFormula,"(Formula, [Digit_Max], [AngleSet])","Returns 1 x 3 array to 1st cell the formula as used by the Multiprecision MathParser, after stripping of spaces and substitution of symbolic constants.
+2nd cell returns the ordered list of variable names.
+3rd cell returns error message (if there is one)",Arithmetic,Check Formula as used by Multiprecision MathParser,,,,500
+Function,ClogD2str,(x),Returns 10^x (x is a double) as a 15 digit string. The reverse of Cstr2logD,Manipulation,Returns 10^x as a 15 digit string,,,,500
+Function,Convol,"(f, g, h, [algo])","convolution integral of two data vectors (fi , gi)","Integrals, Series",Convolution,faltung,,,259
+Function,CosIntegral,(x),Cosine integral Ci(x),Special functions,Cosine integral Ci(x),,,,216
+Function,cplxAbs,(z),"absolute value of a complex number
+ cplxAbs(z)= |z|",Complex,Complex absolute ,,,,57
+Function,cplxAcos,(z),Complex Inverse Cosine,Complex,Complex Inverse Cosine,,,,163
+Function,cplxAcosh,(z),Complex Inverse Hyperbolic Cosine,Complex,Complex Inverse Hyperbolic Cosine,,,,169
+Function,cplxAdd,"(a, b)","Complex addition of two complex numbers:
+ cplxAdd(a, b) = a + b ",Complex,Complex addition ,,,,51
+Function,cplxAsin,(z),Complex Inverse Sine,Complex,Complex Inverse Sine,,,,164
+Function,cplxAsinh,(z),Complex Inverse Hyperbolic Sine,Complex,Complex Inverse Hyperbolic Sine,,,,170
+Function,cplxAtan,(z),Complex Inverse Tangent,Complex,Complex Inverse Tangent,,,,165
+Function,cplxAtanh,(z),Complex Inverse Hyperbolic Tangent,Complex,Complex Inverse Hyperbolic Tangent,,,,171
+Function,cplxConj,(z),Complex conjugate,Complex,Complex conjugate,,,,147
+Function,cplxCos,(z),Complex Cosine,Complex,Complex Cosine,,,,158
+Function,cplxCosh,(z),Complex Hyperbolic Cosine,Complex,Complex Hyperbolic Cosine,,,,167
+Function,cplxDiGamma,(z),Complex diGamma,Complex,Complex diGamma,,,,172
+Function,cplxDiv,"(a, b)","Complex division of two complex numbers:
+ cplxDiv(a, b) = a / b ",Complex,Complex Division ,,,,54
+Function,cplxEi,(z),Complex Exponential Integral,Complex,Complex Exponential Integral,,,,173
+Function,cplxEquation2,"(a, b, c, [DgtMax])",Solves a 2nd degree equation with complex coefficients,Complex,Complex equation of 2nd degree,roots,,,148
+Function,cplxErf,(z),Complex Error Function,Complex,Complex Error Function,,,,174
+Function,cplxErfC,(z),Complex Complem. Error Function,Complex,Complex Complem. Error Function,,,,175
+Function,cplxEval,"(Formula, [Var], ...)",Complex evaluator,Complex,Complex evaluator,,,,155
+Function,cplxExp,(z),Complex exponential function e^z ,Complex,Complex exponential exp(z),exponential,,,102
+Function,cplxFact,(z),Returns the factorial of the complex number z,Statistical,Complex Factorial,,,,500
+Function,cplxGamma,(z),Complex Gamma Function,Complex,Complex Gamma Function,,,,176
+Function,cplxGammaLn,(z),Complex Logarith. Gamma Function,Complex,Complex Logarith. Gamma Function,,,,177
+Function,cplxIntegr,"(Funct, a, b)",Returns the integral of a complex function f(x)=formula for a <= z <= b. It uses the Romberg method. ,Complex,Complex Integration f(z) - Romberg method,,,,154
+Function,cplxInv,(z),Complex inverse. 1/z,Complex,Complex inverse 1/z,,,,145
+Function,cplxLn,(z),Returns the complex function Ln(z) where z is a complex number,Complex,Complex logarithm Ln(z) ,Logarithm,,,101
+Function,cplxMult,"(a, b)","Performs the complex multiplication of two complex numbers
+ cplxmult(a, b) = a x b ",Complex,Complex Multiplication ,,,,53
+Function,cplxNeg,(z),Retruns the opposite of a complex  -z,Complex,Complex opposite. -z,sign,,,146
+Function,cplxPolar,"(z, [angle])","Converts a complex number from rectangular to polar form
+Angle is RAD(default), DEG, or GRAD",Complex,Polar conversion ,,,,55
+Function,cplxPow,"(z, [n])","Raises a complex number to real power n.
+ cplxPow(z, n) = z^n   (default n = 2)",Complex,Complex integer power,,,,96
+Function,cplxRect,"(z, [angle])","Converts a complex number from polar to rectangular form
+Angle is RAD(default), DEG, or GRAD",Complex,Rectangular conversion ,,,,56
+Function,cplxRoot,"(z, [n])","Complex root  z^(1/n)   (default n=2).
+Array returns all the nth roots",Complex,Complex nth root,,,,97
+Function,cplxSerie,"(Funct, n_min, n_max, z0)","Returns the series of a complex function F(z,n) for n =min to n =max, step by 1",Complex,Complex serie expansion,,,,156
+Function,cplxSin,(z),Complex Sine,Complex,Complex Sine,,,,157
+Function,cplxSinh,(z),Complex Hyperbolic Sine,Complex,Complex Hyperbolic Sine,,,,166
+Function,cplxSub,"(a, b)","Performs the complex subtraction of two complex number:
+  cplxSub(a, b) = a - b",Complex,Complex Subtraction ,,,,52
+Function,cplxTan,(z),Complex Tangent,Complex,Complex Tangent,,,,160
+Function,cplxTanh,(z),Complex Hyperbolic Tangent,Complex,Complex Hyperbolic Tan,,,,168
+Function,cplxZeta,(z),Complex Zeta Function,Complex,Complex Zeta Function,,,,178
+Function,Cspline_Coeff,"(Xin, Yin)","Calculates Cubic Spline Coefficients
+a3*x^3+a2*x^2+a1*x+a0",Interpolation,Cubic Spline Coefficients,,,,140
+Function,Cspline_Eval,"(Xin, Yin, Ypp, Xtarget)","Interpolates one point from sorted X,Y data pairs using Cubic Spline Interpolation with 2nd derivatives (fast formula)",Interpolation,Cubic Spline Interpolation (fast formula),,,,139
+Function,Cspline_Interp,"(Xin, Yin, Xtarget)","Interpolates one point from sorted X,Y data pairs using Cubic Spline Interpolation",Interpolation,Cubic Spline Interpolation,,,,139
+Function,Cspline_Pre,"(Xin, Yin)","2nd derivative values of cubic spline,",Interpolation,Cubic Spline 2nd derivative values,,,,141
+Function,Cstr2logD,(x),"Returns Log of extended number x (base 10), as a double",Manipulation,"Log of extended number x (base 10), as a double",,,,500
+Function,cvBase,"(number, [oldBASE], [newBASE])  ","Converts a number from one base to another (2 to 200)
+Default oldBASE = 10, newBASE = 16",Arithmetic,Converts a number from one base to another,,,,127
+Function,cvBaseDec,"(BaseNum, [Base])","Converts any base (2 to 200) into decimal
+Default base = 16",Arithmetic,Converts any base (2 to 200) into decimal,,,,127
+Function,cvBinDec,(BinNum),Converts digits binary into decimal ,Arithmetic,Converts binary into decimal,,,,127
+Function,cvDecBase,"(DecNum, [Base])","Converts decimal-base into any base (2 to 200)
+Default base = 16",Arithmetic,Converts decimal-base into any base (2 to 200),,,,127
+Function,cvDecBin,(DecNum),Converts decimal into binary ,Arithmetic,Converts decimal into binary ,,,,127
+Function,dBel,"(Amp, [MinLevel])","Returns the decibel of amplitude A, where dB(A) = 20*LOG(A)",Arithmetic,decibel conversion,Logarithm,,,198
+Function,Dbl2Hex,"(x, [Separator])","Converts a double into a 16 byte Hex string that represents the full 64bit internal storage. Separator character defaults to a space, but can also be null.",Manipulation,Converts a double into a 16 byte Hex string,,,,127
+Function,DblDif,"(q, c)","Returns number of doubles difference between q and c
+If q=c returns 0",Manipulation,Returns number of doubles difference between q and c,,,,501
+Function,dCStr,"(x, [Digits])","Converts double precision number (x) into multiprecision.
+Optional [Digits] from 1 to Digits Limit
+If [Digits] is missing uses Default Dbl 2 Str configuration setting.",Manipulation,Converts double precision into multiprecision,,,,501
+Function,DFSP,"(samples, [dB], [Angle])",returns the N/2 harmonics of the Discrete Fourier Spectrum from N samples,"Integrals, Series",Discrete Fourier Spectrum ,"fourier, sin, cos",,,197
+Function,DFSP_Inv,"(samples, [dB], [Angle])",returns a temporal sequence of 2N samples from N harmonics spectrum,"Integrals, Series",Inverse of Discrete Fourier Spectrum ,"fourier, sin, cos",,,199
+Function,DFT,"(samples, [central])",returns the N x 2 matrix of the DFT transformation of N samples.,"Integrals, Series",Discrete Fourier Transformation,coefficients armonic analysis,,,104
+Function,DFT_Inv,(samples. [central]),returns the N samples of the Inverse DFT transformation,"Integrals, Series",Discrete Fourier Inverse Transformation,coefficients armonic analysis,,,105
+Function,DgMat,"(x, y, [MatchValue])","Returns the number of matching significant digits of x and y. If x and y are an exact match, by default returns 20000, but can be specified by [MatchValue].",Manipulation,Returns the # of matching significant digits of x and y,,,,500
+Function,Diff1,"(Var_Value, Func, [Lim], [Param], [Var_Label], [MaxPrecision])","First derivative of f(x), 'x' is default, otherwise can be specified by 'Var_Label'
+lim = 0 central, -1 left and +1 right","Derivatives, limits",First derivative of f(x),,,,189
+Function,Diff2,"(Var_Value, Func, [Param], [Var_Label], [MaxPrecision])","Second derivative of f(x), 'x' is default, otherwise can be specified by 'Var_Label'","Derivatives, limits",Second derivative of f(x),,,,190
+Function,diGamma,(x),diGamma function,Special functions,diGamma function,psi,,,212
+Function,DigitsAllDiff,(number),Checks if the digits are all different,Manipulation,Check digits,,,,137
+Function,DiophEqu,"(a, b, c)",Diophantine equation ax+by=c solving ,Numbers,Diophantine equation,,,,262
+Function,Dpoly,"(x, Coef, ord)","Returns the derivative value (double precision) of a polynomial at the point x
+Coef is an array of coefficients
+ord is order (1 for first derivative, 2 for second, etc)",Polynomial,Derivative value of a polynomial,,,,36
+Function,Dpolyn,"(z, Coefficients, Order, [DgtMax])",polynomial derivative in extended precision for argument z real or complex.,Polynomial,Multiprecision Polynomial Derivative,,,,231
+Function,DSBeta,"(x, a, b, [Dtype])","Beta distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Beta distribution,,,,403
+Function,DSBinomial,"(k, n, p, [Dtype])","Binomial distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Binomial distribution,,,,403
+Function,DSCauchy,"(x, avg, dev, [n], [Dtype])",Cauchy (generalized) distribution,Statistical,Cauchy (generalized) distribution,,,,403
+Function,DSChi,"(x, R, [Dtype])","Chi distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Chi distribution,,,,403
+Function,DSErlang,"(x, k, lambda, [Dtype])","Erlang distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Erlang distribution,,,,403
+Function,DSGamma,"(x, k, lambda, [Dtype])","Gamma distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Gamma distribution,,,,403
+Function,DSLevy,"(x, lambda, [Dtype])","Levy distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Levy distribution,,,,403
+Function,DSLogistic,"(x, avg, dev, [Dtype])","Logistic distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Logistic distribution,,,,403
+Function,DSLogNormal,"(x, avg, dev, [Dtype])","Log-normal distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Log-normal distribution,,,,403
+Function,DSMaxwell,"(x, a, [Dtype])","Maxwell-Boltzman
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Maxwell-Boltzman,,,,403
+Function,DSMises,"(x, k, [Dtype])","Von Mises distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Von Mises distribution,,,,403
+Function,DSNormal,"(x, avg, dev, [Dtype])","Normal distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Normal distribution,,,,403
+Function,DSPoisson,"(k, z, [Dtype])","Poisson distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Poisson distribution,,,,403
+Function,DSRayleigh,"(x, dev, [Dtype])","Rayleigh distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Rayleigh distribution,,,,403
+Function,DSRice,"(x, v, s, [Dtype])","Rice distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Rice distribution,,,,403
+Function,DSStudent,"(x, v, [Dtype])","Student distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Student distribution,,,,403
+Function,DSWeibull,"(x, k, lambda, [Dtype])","Weibull distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Weibull distribution,,,,403
+Function,errFun,(x),error function ERF(x),Statistical,error function,Gauss,,,204
+Function,errFunC,(x),complementary of error function ERFC(x),Statistical,complementary of error function,Gauss,,,204
+Function,Exp_Integr,(x),Exponential integral Ei(x) for x >0,Special functions,Exponential integral Ei(x) for x >0,,,,205
+Function,Expn_Integr,"(x, n)",Exponential integral En(x),Special functions,Exponential integral En(x),,,,206
+Function,ExtDelta2,(x),Aitken's delta square extrapolation ,Interpolation,Aitken's delta square extrapolation ,"iterate, sequence",,,95
+Function,Factor,(n),"Returns the prime factors = [factor, exponent] of integer number",Numbers,Number factorization,prime,,,98
+Function,fDgMat,"(x, y, [M])","Returns number of matching digits of x and y, including fractional portion.
+If x and y are exact, by default returns xDgtS(x), but can be specified by [M]
+If < 0 returns -ABS(Log(x)-Log(y))
+If M is negative uses Abs(M) for exact, and returns zero if < 0",Manipulation,fractional matching significant digits of x and y,,,,500
+Function,FFT,"(samples, [central])",Returns the N x 2 matrix of the FFT transform. The number of samples N must be a power of 2.,"Integrals, Series",Fast Fourier Transformation,FFT Coefficients armonic analysis,,,104
+Function,FFT_Inv,"(samples, [central])",Returns the N samples of the FFT inverse transform. The number of samples N must be a power of 2.,"Integrals, Series",Fast Fourier Inverse Transformation,FFT Coefficients armonic analysis,,,105
+Function,FFT2D,(samples),Returns the complex matrix of 2D-FFT transform. Samples is a matrix NxM where N and M must be a power of 2.,"Integrals, Series","2D Fast Fourier Transform,","fourier, sin, cos",,,196
+Function,FFT2D_Inv,(samples),Returns the matrix of 2D-FFT inverse transform. Samples is a matrix 2NxM where N and M must be a power of 2.,"Integrals, Series","2D Inverse Fast Fourier Transform,","fourier, sin, cos",,,196
+Function,fixString,"(s, [OldDecSep], [OldMilSep])",Attempts to fix string to current international settings for Decimal Separator.,Manipulation,Fix String to current International Settings,,,,500
+Function,Flip,(v),"Returns a vector with inverse order
+[a1, a2, a3, a4] --> [a4, a3, a2, a1]",Manipulation,Vector flip,,,,130
+Function,Fourier_Cos,"(Funct, k, [a], [Param], [Var_Label])",Perform the infinite integration of f(x)*cos(kx) from a to infinity. It uses the Double Exponential method. Default Var_Label is 'x',"Integrals, Series",Fourier cosine transform,integral,,,282
+Function,Fourier_Sin,"(Funct, k, [a], [Param], [Var_Label])",Perform the infinite integration of f(x)*sin(kx) from a to infinity. It uses the Double Exponential method. Default Var_Label is 'x',"Integrals, Series",Fourier sine transform,integral,,,282
+Function,FracInterp,"(x, xi, coeff, [DgtMax])","interpolation with continued fraction
+y = a0 + (x-x1)/(a1+(x-x2)/(a2+(x-x3)/(a3+...)))",Interpolation,continued fraction interpolation,,,,134
+Function,FracInterpCoef,"(xi, yi, [DgtMax])","coefficients [a0,a1,a2,...] of interpolation with continued fraction",Interpolation,continued fraction interpolation coefficients,,,,134
+Function,Fract,"(x, [ErrMax])","Returns numerator and denominator (to 2 cells) of fraction that approximates x.
+Returns a string 'numerator/denominator' if one cell is selected
+optional ErrMax = 10^-14 if is missing",Numbers,Fraction conversion,"rational, ratio, approximate",,,72
+Function,FractCont,"(x, [n])","Continued fraction of x using standard double precision, accurate to 15 digits.
+Entered as 2 x n or 3 x n array, or use [n] to return [a0;a1,a2,...,an] to a single cell.
+For more than 15 digits use xFractCont",Numbers,Continued fraction,"rational, ratio, approximate",,,314
+Function,FractContSqr,(n),Continued fraction of the square root of n.,Numbers,Continued fraction of square root,"rational, ratio, approximate",,,315
+Function,Fresnel_Cos,(x),Fresnel cosine integral C(x),Special functions,Fresnel cosine integral ,,,,219
+Function,Fresnel_Sin,(x),Fresnel Sine integral S(x),Special functions,Fresnel Sine integral ,,,,218
+Function,GetBadString,(),"Test function in xTest module. No Bad Strings in 64-bit will cause infinite loop:
+hold down on Esc key to avoid having to shut down with Task Manager",Manipulation,Test function in xTest module,,,,500
+Function,GetDecr,(x),"approx 29 digit string of (Decreasing) Increment for Previous (smaller) Double
+x + GetDecr(x) < x for positive x.
+x + GetDecr(x) > x for negative x.
+GetDecr(0) = -4.94E-324 ,  the smallest negative Increment:
+=xNeg(xPow2(-1074,29))",Manipulation,Decreasing Increment for Previous (smaller) Double,,,,500
+Function,GetDerivCoefs,"([Order], [NumofPoints], [Offset])","Returns the coefficients for the derivative functions as a 2 x (2+NumofPoints) array, with LCD and Divisor as the 1st 2 returns","Derivatives, limits",Returns the coefficients for the derivative functions,,,,503
+Function,GetDerivD,"([Var_Value], [Digit_Max], [Order], [NumOfPoints], [Offset], [MaxPrecision])",Returns the initial internal machine precision that will be used for the given parameters in the derivative functions. If missing [MaxPrecision] is allowed up to Digits_Limit,"Derivatives, limits",Initial machine precision for the derivative functions,,,,503
+Function,GetDerivExpectedDigits,"([Var_Value], [Digit_Max], [Order], [NumOfPoints], [Offset], [MaxPrecision])",The inverse of GetDerivD. Returns the expected number of correct digits for the derivative functions with the given parameters. If missing [MaxPrecision] is allowed up to Digits_Limit,"Derivatives, limits",expected correct digits for the derivative functions,,,,503
+Function,GetDigitsLimit,(),"Returns DigitsLimit, the largest allowed DgtMax",Options,"Returns DigitsLimit, the largest allowed DgtMax",,,,500
+Function,GetExcelAppVer,(),"Returns Excel Version of Office. 14=2010, 12=2007, 11=2003, 10=2002, 9=2000, 8=97",Options,Returns Excel Version of Office,,,,500
+Function,GetIncr,(x),"approx 29 digit string of the Increment for the Next (larger) Double.
+x + GetIncr(x) > x for positive x.
+x + GetIncr(x) < x for negative x.
+GetIncr(0) = 4.94E-324 ,  the smallest positive Increment: =xPow2(-1074,29))",Manipulation,Returns the Increment for the Next (larger) Double,,,,500
+Function,GetMaxString,(x),"Test function in xTest module
+Find Max string that converts to the same double",Manipulation,Find Max string that converts to the same double,,,,500
+Function,GetMinMax,"(x, [SigDgt])",Test function in xTest module,Manipulation,Test function in xTest module,,,,500
+Function,GetMinString,(x),"Test function in xTest module
+Find Min string that converts to the same double",Manipulation,Test function in xTest module,,,,500
+Function,GetNextDouble,(x),"Returns the Next  Double further away from 0
+GetNextDouble(''-0'') = -4.94E-324 ,  the smallest negative double",Manipulation,Returns the Next (larger) Double,,,,500
+Function,GetPof10,(),Test function in xTest module,Manipulation,Test function in xTest module,,,,500
+Function,GetPrevDouble,(x),Returns the Previous  Double(Closer to 0).,Manipulation,Returns the Previous (smaller) Double,,,,500
+Function,GetxBASE,(),"Returns xBASE, the number of digits per packet",Options,"Returns xBASE, the number of digits per packet",,,,500
+Function,GetXnArgSep,(),Returns the argument separator being used in VBA,Options,Returns the argument separator being used in VBA,,,,505
+Function,GetXnCaseSen,(),"Returns TRUE or FALSE,  the Configured default setting for using
+Case Sensitive Variable Names for formula strings and labels",Options,default setting for Case Sensitive Variable Names,,,,500
+Function,GetXnConfigStatus,(),"2 x 19 array function returns all 18 Configuration settings, with labels as their Public variable names (listed in the XnumbPrivate module), plus DigitsLimit",Options,array function returns the Configuration settings,,,,500
+Function,GetXnDecSep,(),Returns the decimal separator being used in VBA,Options,Returns the decimal separator being used in VBA,,,,505
+Function,GetXnDefaultDigits,(),Returns the Configured default DigitMax,Options,Returns the Configured default DigitMax,,,,500
+Function,GetXnDefCStr,(),"Returns the current Configuration setting for 'Default Dbl 2 Str Digits' .
+0=vCStr, 15-28=dCStr, 29-DigitsLimit=xCStr",Options,Returns current Config setting for 'Default Dbl 2 Str',,,,500
+Function,GetXnLeadZeros,(),"Returns the Configured default maximum number of leading zeros that get returned with decimal numbers between -1 and 1
+If more exist extended numbers are returned in scientific notation. To display more zeros than DigitMax use the xFmt function",Options,default maximum number of leading zeros,,,,500
+Function,GetXnMilSep,(),Returns the thousands separator being used in VBA,Options,Returns the thousands separator being used in VBA,,,,505
+Function,GetXnSMPadj,(),Returns the Configured default number of extra digits to use for internal calculation of most of the xFunctions,Options,Configured default extra digits for xFunctions,,,,500
+Function,GetXnTrailZeros,(),"Returns the Configured default maximum number of trailing zeros that get returned with integers.
+If more exist extended numbers are returned in scientific notation. To display more zeros than DigitMax use the iFmt function",Options,default maximum number of trailing zeros,,,,500
+Function,GetXnUseXroundIN,(),"Returns TRUE or FALSE,  the Configured default setting for using rounded input
+(IF extended number input strings are larger than DigitMax)",Options,default setting for rounded input (TRUE or FALSE),,,,500
+Function,GetXnUseXroundOUT,(),"Returns TRUE or FALSE,  the Configured default setting for using rounded output of extended number strings",Options,default setting for rounded output (TRUE or FALSE),,,,500
+Function,GetXnVersion,(),Returns the Configured version of Xnumbers,Options,Returns the Configured version of Xnumbers,,,,500
+Function,GetXNxAddAdj,(),Returns the Configured default number of extra digits to use for internal calculation of xAdd (and xSub). Setting this larger ensures that numbers with larger differences in exponents get included in calculations,Options,Configured default number of extra digits for xAdd,,,,500
+Function,GetXNxDivAdj,(),Returns the Configured default number of extra digits to use for internal calculation of xDiv. Setting this to 1 ensures at least 1 extra digit for rounding,Options,Configured default number of extra digits for xDiv,,,,500
+Function,GetXNxMultAdj,(),Returns the Configured default number of extra packets (as multiples of xBASE) to use for internal calculation of xMult. '2' is required to ensure accuracy,Options,Configured default number of extra packets for xMult,,,,500
+Function,gGTd,(x),"Returns the closest double Greater Than x
+gGTd(x) > x for all numbers, positive and negative.",Manipulation,Returns the closest double Greater Than x,,,,500
+Function,gLTd,(x),"Returns the closest double Less Than x
+gLTd(x) < x for all numbers, positive and negative.",Manipulation,Returns the closest double Less Than x,,,,500
+Function,Grad,"(Var_Values, Func, [Param], [Var_Labels], [MaxPrecision])","vector of first derivatives of  function f(x,y,z)
+'x,y,z,t' is default, otherwise can be specified by 'Var_Labels'","Derivatives, limits","Gradient of f(x,y,z)",,,,191
+Function,Hessian,"(Var_Values, Func, [Param], [Var_Labels])","Hessian matrix of a function f(x,y,z)
+'x,y,z,t' is default, otherwise can be specified by 'Var_Labels'","Derivatives, limits",Hessian matrix,,,,193
+Function,Hex2Dbl,(HexStr),Converts 16 byte Hex string back into a double,Manipulation,Converts 16 byte Hex string back into a double,,,,127
+Function,HypGeom,"(a,b,c,x)",Hypergeometric function,Special functions,Hypergeometric function,,,,260
+Function,iFmt,"(x, [NumIntDigits])","Converts Mantissa without decimal separator:
+formats an extended number, real or complex, as an integer and an exponent.
+If -1 is passed for NumIntDgts will always return ALL trailing zeros",Manipulation,Converts Mantissa without decimal separator,,,,500
+Function,Integr,"(Funct, a, b, [Param], [Var_Label])","Returns the integral of a function f(x) for a <= x <= b where a and b can also be infinite (a=inf, b=inf). Default Var_Label is 'x'","Integrals, Series",Integration f(x),"calculus, area",,,281
+Function,Integr_2D,"(Fxy, xMin, xMax, yMin, yMax, [Param], [Polar], [ErrMax], [Var_Labels],[Rank])","Approximates the double integral of a function f(x, y) for a <= x <= b and
+c <= y <= d  using the 2D Romberg method. Param used by all equations.
+Defaults are Polar=FALSE, Rank=8, ErrMax=1E-11, Var_Labels=''x'',''y''","Integrals, Series","2D Integral f(x, y) - Romberg method","calculus, area, double, domain",,,183
+Function,Integr_3D,"(Fxyz, xMin, xMax, yMin, yMax, zMin, zMax, [Param], [SysCoor], [ErrMax], [Var_Labels], [Rank])","Approximates the triple integral of a function f(x, y, z) using the 3D
+double exponential method.  SysCoor 1=Rect.,2=Polar,3=Cylindrical
+Defaults are SysCorr=1, Rank=8, ErrMax=2E-16, Var_Labels=''x'',''y'',''z''
+Param is used by all equations.","Integrals, Series",Triple integral - DE method,"calculus, area, triple, domain",,,307
+Function,Integr_DE,"(Funct, a, b, [Param], [Var_Label])",Returns the Integral of f(x) between a and b. using the Double Exponential (DE) Transformation. Default Var_Label is 'x',"Integrals, Series",Integration f(x) - Double Exponential method,integral,,,280
+Function,Integr_fCos,"(Funct, a, b, k, Intervals, [Param], [Var_Label])","Numeric Integration of f(t)*cos(k*t) with Filon's formula.
+Default Var_Label is 'x'","Integrals, Series",Numeric Integration of f(t)*cos(k*t) with Filon's formula,oscillating,,,150
+Function,Integr_fSin,"(Funct, a, b, k, Intervals, [Param], [Var_Label])","Numeric Integration of f(t)*sin(k*t) with Filon's formula.
+Default Var_Label is 'x'","Integrals, Series",Numeric Integration of f(t)*sin(k*t) with Filon's formula,oscillating,,,150
+Function,Integr_NC,"(Funct, a, b, Intervals, [Degree], [Param], [Var_Label])","Returns the integral of a function f(x) for a <= x <= b
+It uses the Newton-Cotes formulas. Default Var_Label is 'x'","Integrals, Series",Integration f(x) - Newton-Cotes formulas,"calculus, area",,,149
+Function,Integr_Ro,"(Funct, a, b, [Param], [Rank], [ErrMax], [Var_Label])",Returns the integral of a function f(x) for a <= x <= b. It uses the Romberg method. The parameter rank sets the max number of integration nodes = 2^rank (default rank=16). ErrMax default=4*10^-16. Default Var_Label is 'x',"Integrals, Series",Integration f(x) - Romberg method,integral,,,109
+Function,IntegrData,"(x, y, [IntType])","Returns the function integral of a data set (xi , yi)","Integrals, Series",Data set integration,"calculus, area",,,107
+Function,IntegrData2D,"(Dataxy, hx, hy)","Returns the integral of a bi-dimensiona array of data f(xi , yj)","Integrals, Series","2D data integration,","calculus, volume, quadrature",,,308
+Function,IntegrDataC,"(x, y, [Degree])","Returns the integral of a data vector (xi , yi)
+It uses the Newton-Cotes formulas up to 12th degree.","Integrals, Series",Integration of data vector - Newton-Cotes formulas,"calculus, area, quadrature",,,108
+Function,Interp_Mesh,(TableXY),"Linear interpolation of f(x,y) tabulated with a mesh of given points",Interpolation,"2D Mesh interpolate,",,,,144
+Function,IntPowCos,"(n, x)",Integral of cosine raised to integer power,Special functions,integral of cosine pow,,,,316
+Function,IntPowSin,"(n, x)",Integral of sine raised to integer power,Special functions,integral of sine pow,,,,316
+Function,IsDblBad,(x),"Test function in xTest module
+TRUE if string(s) exist that convert to the wrong double",Manipulation,Test function in xTest module,,,,500
+Function,IsStrBad,(x),"Test function in xTest module
+TRUE if string converts to the wrong double",Manipulation,Test function in xTest module,,,,500
+Function,Jacobian,"(Var_Values, Func, [Param], [Var_Labels], [MaxPrecision])","Jacobian matrix of a vector-function [f1(x,y,z), f2(x,y,z),... fm(x,y,z)]
+'x,y,z,t' is default, otherwise can be specified by 'Var_Labels'","Derivatives, limits",Jacobian matrix,,,,192
+Function,Kummer1,"(a,b,z)",Kummer confluent hypergeometric function of 1st kind,Special functions,Kummer confluent hypergeometric function of 1st kind,serie sum integral,,,309
+Function,Kummer2,"(a,b,z)",Kummer confluent hypergeometric function of 2nd kind,Special functions,Kummer confluent hypergeometric function of 2nd kind,serie sum integral,,,309
+Function,LRE,"(Q, C, [NoSD])","Return the LRE performing index for an estimated value (Q) and a certified value (C), which has a specified number of significant digits [NoSD], default 15",Statistical,Log Relative Error (LRE),,,,112
+Function,MatT,(Mat),"Matrix Transpose. (Mat) is a matrix n x m
+Array function transposes to m x n",Manipulation,Matrix Transpose,,,,89
+Function,MCD,"(a1, [a2], [a3],...)","Maximum Common Divisor (GCD) between numbers
+a1, a2, a3... may be numbers or arrays of numbers",Numbers,Maximun Common Divisor (GCD),,,,68
+Function,MCM,"(a1, [a2], [a3],...)","Minimun Common Multiple (LCM) between numbers.
+a1, a2, a3... may be numbers or arrays of numbers",Numbers,Minimun Common Multiple (LCM),,,,69
+Function,mjkLRE,"(Q, C, [NoSD])","Return the LRE performing index for an estimated value (Q) and a certified value (C), which has a specified number of significant digits [NoSD], default 15",Statistical,Log Relative Error (LRE),,,,112
+Function,NextPrime,(num),"Returns the first prime number after 'num', for all primes less than 2^53",Numbers,Next Prime number,,,,76
+Function,ODE_COR,"(yn, fp, f, h)",Solves Ord. Diff. Equation with multi-step corrector,ODE,ODE -Multi-step Corrector,Differential equation,,,202
+Function,ODE_PC2I,"(Equations, VarInit, Step, [Par], ...)",Solves Ord. Diff. Equation with implicit 2nd order predictor-corrector,ODE,ODE - Implicit Predictor-Corrector,Differential equation Stiff,,,292
+Function,ODE_PC4,"(Equations, VarInit, Step, [Par], ...)",Solves Ord. Diff. Equation with 4nd order Adams-Bashforth-Moulton predictor-corrector,ODE,ODE -Predictor-Corrector of 4th order,Differential equation Stiff,,,302
+Function,ODE_PRE,"(yn, f, h)",Solves Ord. Diff. Equation with multi-step predictor,ODE,ODE - Multi-step Predictor,Differential equation,,,201
+Function,ODE_RK4,"(Equations, VarInit, Step, [Par], ...)",Solves Ord. Diff. Equation and Diff. System with Runge-Kutta 4 formula,ODE,ODE - Runge-Kutta of 4th order,Differential equation,,,179
+Function,ODE_SYSL,"(A, y0, step, [b])",Solves Linear System ODE with constant coefficients,ODE,ODE - Linear System ,Differential equation,,,291
+Function,PellEqu,"(d, [n])",Solves the Brouncker/Pell Equation x^2-d*y^2=1,Numbers,Brouncker/Pell equation,,,,313
+Function,pFmt,(x),"Formats a numeric string, or a number as a string using DefCStr, with a 'plus' sign in front of a posive number, or leaves a negative number with its 'minus' sign.
+Useful for concatenation of formula strings ",Manipulation,Returns a positive number with a leading 'plus' sign,,,,500
+Function,Poly,"(x, Coef)","Returns the polynomial's value at the point x
+Coef is an array of the polynomial's coefficients",Polynomial,Value of a polynomial,,,,35
+Function,Poly_ChebychevT,"(x, [n])",Evaluates the Chebychev orthogonal polynomial of 1st kind,Polynomial,Chebychev orthogonal polynomial of 1st kind,,,,268
+Function,Poly_ChebychevU,"(x, [n])",Evaluates the Chebychev orthogonal polynomial of 2nd kind,Polynomial,Chebychev orthogonal polynomial of 2nd kind,,,,268
+Function,Poly_Gegenbauer,"(a, x, [n])",Evaluates the Gegenbauer orthogonal polynomial,Polynomial,Gegenbauer orthogonal polynomial,,,,268
+Function,Poly_Hermite,"(x, [n])",Evaluates the Hermite orthogonal polynomial,Polynomial,Hermite orthogonal polynomial,,,,268
+Function,Poly_Jacobi,"(a, b, x, [n])",Evaluates the Jacobi orthogonal polynomial,Polynomial,Jacobi orthogonal polynomial,,,,268
+Function,Poly_Laguerre,"(x, [n], [m])",Evaluates the generalized Laguerre orthogonal polynomial,Polynomial,Generalized Laguerre orthogonal polynomial,,,,268
+Function,Poly_Legendre,"(x, [n])",Evaluates the Legendre orthogonal polynomial,Polynomial,Legendre orthogonal polynomial,,,,268
+Function,Poly_Weight_ChebychevT,(n),Weight of the Chebychev orthogonal polynomial of 1st kind,Polynomial,Weight of Chebychev orthogonal polynomial of 1st kind,,,,275
+Function,Poly_Weight_ChebychevU,(n),Weight of the Chebychev orthogonal polynomial of 2nd kind,Polynomial,Weight of Chebychev orthogonal polynomial of 2nd kind,,,,275
+Function,Poly_Weight_Gegenbauer,"(n, l)",Weight of the Gegenbauer orthogonal polynomial,Polynomial,Weight of the Gegenbauer orthogonal polynomial,,,,275
+Function,Poly_Weight_Hermite,(n),Weight of the Hermite orthogonal polynomial,Polynomial,Weight of the Hermite orthogonal polynomial,,,,275
+Function,Poly_Weight_Jacobi,"(n, a, b)",Weight of the Jacobi orthogonal polynomial,Polynomial,Weight of the Jacobi orthogonal polynomial,,,,275
+Function,Poly_Weight_Laguerre,"(n, m)",Weight of the generalized Laguerre orthogonal polynomial,Polynomial,Weight of generalized Laguerre orthogonal polynomial,,,,275
+Function,Poly_Weight_Legendre,(n),Weight of the Legendre orthogonal polynomial,Polynomial,Weight of the Legendre orthogonal polynomial,,,,275
+Function,PolyAdd,"(Poly1, Poly2)","Returns the sum of two polynomials. Arguments are monovariable polynomial strings.
+ PolyAdd( Poly1(x), Poly2(x) ) = Poly1(x) + Poly2(x)",Polynomial,Polynomials addition,"addition, sum",,,234
+Function,PolyBuild,"(Roots, [Variable], [DgtMax])","Returns the polynomial, given the roots
+The argument is n x 2 range of cells (2 rows or 2 columns) [real, imag].
+Returns to 2 cells [real, imag] polynomial strings like: '1-3x+5x^2 +x^5' or an n x 2 array of polynomial coefficients like [a0, a1, ....an]",Polynomial,builds a polynomial from its roots,,,,242
+Function,PolyCenter,(Coefficients),Returns the center of polynomial roots,Polynomial,Polynomial center,circle roots,,,240
+Function,PolyDiv,"(Poly1, Poly2)","Returns the quotient of the division of two polynomials. Arguments are monovariable polynomial strings.
+ PolyDiv( Poly1(x), Poly2(x) ) = Q(x)     <==> Poly1(x) = Poly2(x) . Q(x) + R(x)",Polynomial,Quotient of the division of two polynomials,,,,237
+Function,PolyInt,"(Polynomial, [Variable])",Trasforms a polynomial with decimal coefficients into an another one with all its coefficients integer and with the same roots of original polynomial,Polynomial,Returns an integer denormalized polynomial,,,,245
+Function,PolyInterp,"(x, xi, yi, [DgtMax])","Returns the polynomial interpolation P(xi)
+Arguments Y [y1, y2, ...yn] and X [x1, x2, ...xn] are the nodes of interpolation. If xi is a litteral (ex: 'x') the function returns the polynomial string",Interpolation,Polynomial Interpolation,Newton,,,246
+Function,PolyInterpCoef,"(xi, yi, [DgtMax])",Returns coefficients of polynomial interpolation,Interpolation,Polynomial interpolation coefficients,,,,246
+Function,PolyMult,"(Poly1, Poly2)","Returns the product of two polynomials. Arguments are monovariable polynomial strings.
+ PolyMult( Poly1(x), Poly2(x) ) = Poly1(x) . Poly2(x)",Polynomial,Polynomial product,"multiplication, product",,,235
+Function,Polyn,"(z, Coefficients, [DgtMax])","Returns the polynomial's value in extended precision for argument z real or complex. If DgtMax is omitted, the result is in standard precision.",Polynomial,Multiprecision polynomial evaluation,,,,230
+Function,Polyn2,"(Polynomial, x, y, [DgtMax])","Returns the bi-variable polynomial's value P(x, y)  in extended precision for argument, real or complex. If DgtMax is omitted, the result is in standard precision.",Polynomial,Multiprecision bivariate polynomial evaluation,,,,248
+Function,PolyRadius,(Coefficients),Returns the radius of polynomial roots,Polynomial,radius of polynomial roots circle,circle roots,,,241
+Function,PolyRem,"(Poly1, Poly2)",Returns the remainder of the division of two polynomials.,Polynomial,Polynomials division remainder,,,,238
+Function,PolyShift,"(Poly, x0, [DgtMax])","Shift the polynomial to the point X0. 
+P(x) ---> P(x+x0)",Polynomial,Polynomial shift,Trasforming,,,239
+Function,PolySolve,"(Polynomial, [DgtMax])","Find all roots the polynomial. If DgtMax is omitted, the standard precision computing is performed. Returns a matrix (n x 2) of all roots [real, imm]",Polynomial,Polynomial roots,zero,,,244
+Function,PolySub,"(Poly1, Poly2)","Returns the subtraction of two polynomials. Arguments are monovariable polynomial strings.
+ PolySub( Poly1(x), Poly2(x) ) = Poly1(x) - Poly2(x)",Polynomial,Polynomials subtraction,difference,,,236
+Function,PolyTerms,(Poly),"Extracts the vector of polynomial coefficients
+The argument is a polynomial string like '1-3x+5x^2 +x^5' in any order.
+Returns: [ a0, a1, a2, a3... ]",Polynomial,polynomial coefficients,,,,232
+Function,PolyWrite,"(Coefficients, [Variable])","Write the polynomial string from its coefficients
+The argument is an array {a0, a1, a2, a3... } or a range of cells
+Returns polynomial string like: '1-3x+5x^2 +x^5'",Polynomial,Returns the polynomial string from its coefficients,,,,233
+Function,PrevPrime,(num),"Returns the first prime number less than 'num', for all primes less than 2^53",Numbers,Previous Prime number,,,,76
+Function,Prime,(num),States whether a number is prime or returns the lowest factor of a number,Numbers,States whether a number is prime,,,,75
+Function,PyMpMath,"(PyCmdStr,  [DgtMax], [WaitForOutput])","PyCmdStr is any valid Python/MpMath equation. Returns results from
+Python if WaitForOutput  is TRUE. Numeric strings should be bracketed
+with single quotes '2.1', and for some functions require mpf('2.1').
+nprint(PyCmdStr,DgtMax) is used for command line.",Arithmetic,Uses External Python and MpMath,,,,506
+Function,qCStr,(x),Fast up to 29 Digit Convert Double (x) to String,Manipulation,Convert Double (x) to 29 digit String,,,,501
+Function,rDgMat,"(x, y, [MatchValue], [DgtMax])","Returns the relative number of matching significant digits of x and y. If x and y are an exact match, by default returns 20000, but can be specified by [MatchValue]. Optional  [DgtMax] specifies digits to compare",Manipulation,# of relative matching significant digits of x and y,,,,500
+Function,RegLinMM,"(x, y)",Linear Regression Min-Max (Chebychev),Statistical,Linear Regression Min-Max,fitting,,,283
+Function,RegLinRM,"(x, y, [Method])",Linear Regression with Robust Method,Statistical,Linear Regression with Robust Method,fitting,,,128
+Function,s2Dbl,(x),Converts string to Double ignoring bad conversion strings,Manipulation,Convert string to Double ignoring bad conversion strings,,,,500
+Function,sCStr,(),"Returns current Configuration# setting for 'Default Dbl 2 Str'
+If # is 0 returns 'vCStr'          If 29 returns 'qCStr(29)'
+If 15 thru 28 returns 'dCStr(Config#)'
+If greater than 29 returns 'xCStr(Config#)'",Special functions,Returns current Config setting for 'Default Dbl 2 Str',,,,500
+Function,Serie_trig,"(t, period, Spectrum, [offset], [angle], [smooth])",evaluates the trigonometric serie from its harmonics,"Integrals, Series",Trigonometric serie,"fourier, sin, cos, lanczos",,,194
+Function,Serie2D_trig,"(x, y, Lx, Ly, Spectrum, [offset], [Angle])",evaluates the trigonometric double serie from its harmonics,"Integrals, Series",Trigonometric serie 2D,"fourier, sin, cos",,,195
+Function,SetBadString,(x),Test function in xTest module,Manipulation,Test function in xTest module,,,,500
+Function,sFmt,(x),"Converts an extended number, real or complex, to standard scientific format:
+the mantissa with one decimal separator, and an exponent (unless it is zero)",Manipulation,Converts Mantissa with one decimal separator,,,,131
+Function,SinIntegral,(x),Sine integral Si(x),Special functions,Sine integral Si(x),,,,217
+Function,SortRange,"(ArrayToSort, [IndexCol], [Order], [CaseSensitive])",Array sorting,Manipulation,Array sorting,Order,,,142
+Function,SumDigits,(number),Add up the digits of an integer.,Numbers,Add up the digits of an integer.,,,,129
+Function,SysPoly2,"(Poly1, Poly2)","Solve a system of two 2nd degree polynomials P(x,y)",Polynomial,Solve a system of two 2nd degree polynomials,,,,247
+Function,Totient,(n),Euler's Totient function,Numbers,Euler's Totient function,prime,,,310
+Function,Tst4BadCDbl,(x),"Test function in xTest module
+Return bad string if one exists, else blank",Manipulation,Test function in xTest module,,,,500
+Function,Tst4BadMM,"(min, max)",Test function in xTest module,Manipulation,Test function in xTest module,,,,500
+Function,Tst4Badx2Dbl,(x),Test function in xTest module,Manipulation,Test function in xTest module,,,,500
+Function,v2Dbl,(x),"Converts multiprecision into double precision with VBA Val funtion rather than CDbl, very rarely giving a different result than xCDbl",Manipulation,Converts multiprecision into double precision,,,,500
+Function,vAdd,"(x, y)","Uses VBA's addition for x+y, where x and y are doubles. Enables
+manipulation of doubles that are too close to each other for EXCEL.",Numbers,Uses VBA's addition for x+y,,,,500
+Function,vCStr,(x),"Convert Double (x) to String using VBA's CStr function (15 digit limit).
+Can sometimes differ from Excel's 15 digit representation and dCStr(x, 15)",Manipulation,Convert Double to String using VBA's CStr (15 digits),,,,501
+Function,vDiv,"(x, y)","uses VBA's division for x/y, where x and y are doubles.
+Enables manipulation of doubles smaller than 2.2251E-308",Numbers,uses VBA's division for x/y,,,,500
+Function,vDivInt,"(N, D)","Returns Double precision quotient Q using integer division N\D
+where Q = INT(N/D) = FLOOR(N/D,1), the closest integer <= N/D
+Extends Excels capabilities for numbers up to 2^53",Arithmetic,Double precision quotient Q = INT(N/D),module,,,65
+Function,vDivTrunc,"(N, D)","Returns Double precision quotient Q from dividend N and divisor D where
+Q = TRUNC(N/D), the integer portion of N/D (rounded down toward zero)
+Extends Excels QUOTIENT(N,D) capabilities for numbers up to 2^53",Arithmetic,Double precision quotient Q = TRUNC(N/D),module,,,65
+Function,vExponent,(x),"Returns the Exponent of an extended number as a double,
+whereas xExponent returns as a text string",Manipulation,Return Double Exponent,,,,132
+Function,vFix,(x),"Uses VBA's Fix(x). Enables manipulation of doubles that are too close
+to Integer values for EXCEL's TRUNC() function.",Numbers,Uses VBA's Int(x),,,,40
+Function,vGetDecr,(x),"Returns a double: the (Decreasing) Increment for Previous (smaller) Double
+x + GetDecr(x) < x for positive x.
+x + GetDecr(x) > x for negative x.
+GetDecr(0) =
+-4.94E-324 ,  the smallest negative Increment: =xCDbl(xNeg(xPow2(-1074)))",Manipulation,Decreasing Increment for Previous (smaller) Double,,,,500
+Function,vGetIncr,(x),"Returns a double: the Increment for the Next (larger) Double.
+x + GetIncr(x) > x for positive x.
+x + GetIncr(x) < x for negative x.
+GetIncr(0) = 4.94E-324 ,  the smallest positive Increment: =xCDbl(xPow2(-1074))",Manipulation,Returns the Increment for the Next (larger) Double,,,,500
+Function,vInt,(x),"Uses VBA's Int(x). Enables manipulation of doubles that are too close
+to Integer values for EXCEL's INT() function.",Numbers,Uses VBA's Int(x),,,,40
+Function,vIntLog10,(x),Returns Corrected Int(Log(Abs(x))/Log(10)) for doubles,Manipulation,Returns Corrected Int(Log(x)/Log(10)) for doubles,,,,500
+Function,vIntLog2,(x),Returns Corrected Int(Log(Abs(x))/Log(2)) for doubles,Manipulation,Returns Corrected Int(Log(x)/Log(2)) for doubles,,,,500
+Function,vIntMod,"(N, D)","Double precision remainder R = N - D * Q
+quotient Q = INT(N/D) = FLOOR(N/D,1), the closest integer <= N/D
+Extends Excels MOD(N,D) for numbers up to 2^53
+The sign of remainder R is always the same as the sign of divisor D",Numbers,Double precision remainder R = N - D * INT(N/D),,,,66
+Function,vMult,"(x, y)","Uses VBA's multiplication for x*y, where x and y are doubles.
+Enables manipulation of doubles smaller than 2.2251E-308",Numbers,uses VBA's multiplication for x*y,,,,500
+Function,vPow,"(x, y)","Uses VBA's power function. vPow(x, y) = x^y
+Works for some values that Excel can not handle
+i.e. 2^-1074",Arithmetic,VBA's power x^n,,,,13
+Function,vRound,"(x, [DecDgts])","Double precision VBA round function to number of decimal digits.
+Default [DecDgts] = 0
+Similar to Excels ROUND, but with VBA's rounding rules when last digit is a 5",Manipulation,Double precision VBA round to no. of decimal digits,,,,500
+Function,vRoundR,"(x, [SigDgts])","Multi-precision VBA round function to sigificant number of digits.
+Default [SigDgts] = 15
+Similar to xRoundR, but with VBA's rounding rules when last digit is a 5",Manipulation,Multi-precision VBA round to sigificant no. of digits,,,,500
+Function,vSub,"(x, y)","Uses VBA's subtraction for x-y, where x and y are doubles. Enables
+manipulation of doubles that are too close to each other for EXCEL.",Numbers,Uses VBA's subtraction for x-y,,,,500
+Function,vTruncMod,"(N, D)","Double precision remainder R = N - D * Q
+quotient Q = TRUNC(N/D), the integer portion of N/D (rounded toward zero)
+The sign of remainder R is always the same as the sign of dividend N
+extends Excels capability for numbers up to 2^53",Arithmetic,Double precision remainder R = N - D * TRUNC(N/D),,,,66
+Function,vTruncR,"(x, [SigDgts])","Truncate an extended number to sigificant number of digits. The same as xTruncR.
+It is used internally when the Add-In is compiled to return unformatted strings",Manipulation,Truncate to sigificant number of digits,,,,278
+Function,x_And,"(a1, [a2], [a3],...)","Multiprecision AND function returns TRUE or FALSE. Numeric string evaluates to TRUE, '0' as string evaluates to FALSE, whereas Excel's AND does not evaluate strings. Empty cells and non-numeric strings are skipped.",Manipulation,Multiprecision AND function,,,,500
+Function,x_If,"(TestVal, [TrueVal], [FalseVal])","Multiprecision IF function evaluates TRUE and FALSE conditions. A numeric string will evaluate to TRUE, '0' as string will evaluate to FALSE, whereas Excel does not evaluate numeric strings.",Manipulation,Multiprecision IF function,,,,500
+Function,x_Not,(a),"Multiprecision NOT function reverses TRUE or FALSE. A numeric string will evaluate to TRUE, '0' as string will evaluate to FALSE, whereas Excel does not evaluate strings.",Manipulation,Multiprecision NOT function,,,,500
+Function,x_Or,"(a1, [a2], [a3],...)","Multiprecision OR function returns TRUE or FALSE. Numeric string evaluates to TRUE, '0' as string evaluates to FALSE, whereas Excel's OR does not evaluate strings. Empty cells and non-numeric strings are skipped.",Manipulation,Multiprecision OR function,,,,500
+Function,x2Dbl,(x),"Converts a string into a Double  ensuring that the double produced is the mathematically closest double to the numeric string being passed, x. For strings half way between 2 doubles chooses the double away from Zero.",Manipulation,Converts multiprecision into double precision,,,,500
+Function,x2Dbl2,(x),"Converts a string into a Double  ensuring that the double produced is the mathematically closest double to the numeric string being passed, x. For strings half way between 2 doubles chooses the double closer to Zero.",Manipulation,Converts multiprecision into double precision,,,,500
+Function,x2Dbl3,(x),"Converts a string into a Double  ensuring that the double produced is the mathematically closest double to the numeric string being passed, x. For strings half way between 2 doubles chooses the double with 1st bit clear(Alternating).",Manipulation,Converts multiprecision into double precision,,,,500
+Function,x2Pi,([Digit_Max]),Returns the constant 2Pi = 6.282...,Trigonometric,Multiprecision constant 2Pi ,,,,33
+Function,xAbs,(a),Returns the absolute value of an extended number  xAbs(A)= |A|,Arithmetic,Multiprecision Absolute value,,,,16
+Function,xAbsR,(x),"internal function the same as xAbs, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent",Arithmetic,Multiprecision Absolute value for VBA,,,,16
+Function,xAcos,"(x, [Digit_Max])",Returns the arccos or inv-cos of x:  xAcos(x) = arccos(x),Trigonometric,Multiprecision Arccos ,,,,31
+Function,xAcosh,"(x, [DgtMax])",Multiprecision Inverse Hyperbolic Cosine,Transcendental ,Multiprecision Inverse Hyperbolic Cosine,,,,123
+Function,xAdd,"(x, y, [Digit_Max])","Performs the addition of two extended numbers:  xAdd(x, y) = x + y",Arithmetic,Multiprecision Addition ,,,,8
+Function,xAddMod,"(a, b, m)",Modular addition,Numbers,Modular addition,Congruence,,,298
+Function,xAddR,"(x, y, Digit_Max)","internal function the same as xAdd, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent",Arithmetic,Multiprecision Addition for VBA,,,,500
+Function,xAdj2Pi,"(x, [Digit_Max])",Adjust angle x (in radians) to range of 0 to +2*Pi,Manipulation,Adjust angle to range of 0 to +2*Pi,,,,500
+Function,xAdjPi,"(x, [Digit_Max])",Adjust angle x (in radians) to range of -Pi to +Pi,Manipulation,Adjust angle to range of -Pi to +Pi,,,,500
+Function,xAGM,"(a, b, [Digit_Max])",The arithmetic-geometric mean (AGM) of two positive real numbers,Statistical,The arithmetic-geometric mean,,,,42
+Function,xAlog,"(x, [Digit_Max])","Multiprecision antilogarithm in base 10
+xAlog(x) = 10^x",Transcendental ,Multiprecision antilogarithm in base 10,,,,500
+Function,xAngleC,"(a, [Digit_Max])",Returns the complement of the right angle: xAngleCompl(a) = Pi/2 - a,Trigonometric,Multiprecision Complement of right angle ,,,,63
+Function,xAsin,"(x, [Digit_Max])",Returns the arcsin or inv-sin of x : xAsin(x) = arcsin(x),Trigonometric,Multiprecision Arcsin ,,,,30
+Function,xAsinh,"(x, [DgtMax])",Multiprecision Inverse Hyperbolic Sine,Transcendental ,Multiprecision Inverse Hyperbolic Sine,,,,124
+Function,xAtan,"(x, [Digit_Max])",Multiprecision Arctangent,Trigonometric,Multiprecision Arctangent,,,,32
+Function,xAtan2,"(y, x, [Digit_Max])","Multiprecision Arctangent returns angle in radians between -Pi and +Pi
+xAtan2(y,x) equals ATAN(y/x), except that x can equal zero",Trigonometric,Multiprecision Arctangent ATAN(y/x),,,,32
+Function,xAtanh,"(x, [DgtMax])",Multiprecision Inverse Hyperbolic Tangent,Transcendental ,Multiprecision Inverse Hyperbolic Tangent,,,,122
+Function,xAveDev,"(a, [Digit_Max])",Average of the absolute deviations of data points from their mean,Statistical,Avg of the absolute deviations from their mean,,,,500
+Function,xBaseChange,"(xBC_OldNum, [xBC_NewBase], [deep])",Multiprecision base conversion,Arithmetic,Multiprecision base conversion,,,,305
+Function,xBeta,"(a, b, [DgtMax])","Beta function using xGamma
+If Digit_Max < 16 returns Double Precision
+If Digit_Max > 30 uses Spouge's algorithm",Special functions,Beta function,,,,213
+Function,xBetaI,"(x,a,b,[sel])","Incomplete Beta function.
+Optional [sel] can be entered as 1 or 2
+If [sel] is missing, [sel] = 1",Special functions,Incomplete Beta function,,,,288
+Function,xBinomial,"(k, n, p, [Dtype], [Digit_Max])","Binomial distribution. The same as the function DSBinomial( ), but with extended precision.
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Binomial distribution,,,,403
+Function,xBreak,"(a, [Digit_Max])",Breaks an extended number a,Manipulation,Multiprecision Breaking ,,,,60
+Function,xCalc,"(Formula, [DgtMax])",Multiprecision Excel formula evaluation,Arithmetic,Multiprecision Excel formula evaluation,,,,306
+Function,xCat,"([Method], a1, [a2], [a3],...)","The same as Excels CONCATENATE( ) function, with extended precision.
+Parameter 'Method' is a numeric designator for one of the CStr functions:
+0=vCStr, 15 thru 28=dCStr, 29 thru DigitsLimit=xCStr
+If 'Method' is missing = Default CStr",Manipulation,Concatenate numbers and strings to a single string,,,,500
+Function,xCDbl,(x),"Converts multiprecision into double precision
+Uses VBA's CDbl function. When a string is exactly
+between two doubles, chooses the double with
+1st bit clear(Alternating).",Manipulation,Converts multiprecision into double precision,,,,255
+Function,xCeil,"(x, [signif])","Rounds to the nearest multiple of significance >= x for positive signif,
+<= x for negative signif. Default signif = 1
+The same as Excels CEILING( ) function, but with extended precision",Manipulation,Nearest multiple of (positive) significance >= x,,,,500
+Function,xClip,"(T, Floor, Ceil)","Returns extended number T if Floor < T < Ceil
+Returns Floor if T <= Floor
+Returns Ceil if T >= Ceil",Manipulation,extended numbers clipping function,,,,500
+Function,xComb,"(n, k, [Digit_Max])","Returns the combination of n, class k, with extended precision:  xComb(n,k)= C(n,k).
+(Binomial coefficients)",Statistical,Multiprecision Combinations ,,,,39
+Function,xComb_big,"(n, k, [DgtMax])","combinations for large numbers using xGamma
+If Digit_Max < 16 returns Double Precision
+If Digit_Max > 30 uses Spouge's algorithm",Statistical,Combinations for large numbers,,,,214
+Function,xComp,"(a, [b])","Compares two extended or normal numbers.
+Returns: 1 if a>b,  or  -1 if a<b,  or 0 if a=b
+If b is omitted, this function returns sign(a)",Manipulation,Multiprecision numbers comparison,sign,,,62
+Function,xComp1,(x),"Compares ABS(x) to 1
+Returns: 1 if xAbs(x)>1,  or  -1 if xAbs(x)<1,  or 0 if xAbs(x)=1",Manipulation,Multiprecision numbers comparison to 1,sign,,,62
+Function,xCompZ,(x),"Compares x to Zero
+Returns: 1 if x>0,  or  -1 if x<0,  or 0 if x=0",Manipulation,Multiprecision numbers comparison,sign,,,62
+Function,xCorrel,"(ax, ay, [Digit_Max])","Returns the correlation coefficient, the same as Excels CORREL( ) function, but with extended precision",Statistical,Returns the correlation coefficient,,,,500
+Function,xCos,"(x, [Digit_Max])","Returns the cos of angle:  xCos(x) = cos(x)
+The argument 'x', in radians, may be either a normal or an extended number.",Trigonometric,Multiprecision Cosine ,,,,28
+Function,xCosh,"(x, [DgtMax])",Multiprecision Hyperbolic Cosine,Transcendental ,Multiprecision Hyperbolic Cosine,,,,120
+Function,xCoVar,"(ax, ay, [Digit_Max])","average of the products of deviations for each data point pair,
+the same as Excels COVAR( ) function, but with extended precision",Statistical,average of the products of deviations for each pair,,,,500
+Function,xCplx,"(R, I, [Optional S])","Builds complex number in one cell from real coefficient (R), imaginary coefficient (I), and optional suffix (S), ''i'' or ''j'' (don't forget the quotes to enter S as text)",Complex,Builds complex number in one cell,,,,500
+Function,xCplxAbs,"(z, [Digit_Max])","Returns the absolute value of a complex extended number
+ xAbs(z)= |z|",Complex,Multiprecision complex absolute ,,,,57
+Function,xCplxAcos,"(z, [Digit_Max])",Complex Inverse Cosine with extended precision,Complex,complex Inverse Cosine,,,,163
+Function,xCplxAcosh,"(z, [Digit_Max])",Complex Inverse Hyperbolic Cosine with extended precision,Complex,complex Inverse Hyperbolic Cosine,,,,169
+Function,xCplxAdd,"(a, b, [Digit_Max])","Performs the complex addition of two complex extended numbers:
+ xCplxAdd(a, b) = a + b ",Complex,Multiprecision complex Addition ,,,,51
+Function,xCplxArg,"(z, [Digit_Max])","Returns the argument (theta), the same as Excels IMARGUMENT( ) function, but with extended precision",Complex,Returns the argument (theta),,,,500
+Function,xCplxAsin,"(z, [Digit_Max])","Complex Inverse Sine, with extended precision",Complex,complex Inverse Sine,,,,164
+Function,xCplxAsinh,"(z, [Digit_Max])","Complex Inverse Hyperbolic Sine, with extended precision",Complex,complex Inverse Hyperbolic Sine,,,,170
+Function,xCplxAtan,"(z, [Digit_Max])","Complex Inverse Tangent, with extended precision",Complex,complex Inverse Tangent,,,,165
+Function,xCplxAtanh,"(z, [Digit_Max])","Complex Inverse Hyperbolic Tangent, with extended precision",Complex,complex Inverse Hyperbolic Tangent,,,,171
+Function,xCplxConj,(z),Multi-precision complex conjugate,Complex,Multi-precision complex conjugate,,,,147
+Function,xCplxCos,"(z, [Digit_Max])","Complex Cosine, with extended precision",Complex,complex Cosine,,,,158
+Function,xCplxCosh,"(z, [Digit_Max])","Complex Hyperbolic Cosine, with extended precision",Complex,complex Hyperbolic Cosine,,,,167
+Function,xCplxDiv,"(a, b, [Digit_Max])","Performs the complex division of two complex extended numbers:
+ xCplxdiv(a, b) = a / b ",Complex,Multiprecision complex Division ,,,,54
+Function,xCplxExp,"(z, [Digit_Max])","Returns the complex function e^z  where z is complex number, in multi precision arithmetic",Complex,Multiprecision complex function exp (z),exponential,,,102
+Function,xCplxInv,(z),Multi-precision complex inverse. 1/z,Complex,Multi-precision complex inverse. 1/z,,,,145
+Function,xCplxLn,"(z, [Digit_Max])","Returns the complex function Ln(z) where z is complex number, in multi precision arithmetic",Complex,Multiprecision complex function Ln(z) ,Logarithm,,,101
+Function,xCplxLog,"(z, [BASEn], [Digit_Max])","Complex Log to any Base, similar to the existing function xLog( ), but accepts a complex number",Complex,Complex Log to any Base,,,,20
+Function,xCplxLog10,"(z, [Digit_Max])","Complex Log to Base 10
+The same as Excels IMLOG10( ) function, but with extended precision",Complex,Complex Log to Base 10,,,,20
+Function,xCplxLog2,"(z, [Digit_Max])","Complex Log to Base 2
+The same as Excels IMLOG2( ) function, but with extended precision",Complex,Complex Log to Base 2,,,,20
+Function,xCplxMult,"(a, b, [Digit_Max])","Performs the complex multiplication of two complex extended numbers
+ xCplxMult(a, b) = a x b ",Complex,Multiprecision complex Multiplication ,,,,53
+Function,xCplxNeg,(z),Returns the opposite of a multi-precision complex  -z,Complex,Multi-precision complex opposite. -z,sign,,,146
+Function,xCplxPolar,"(z, [angle], [Digit_Max])","Converts a complex extended number from rectangular to polar form
+Angle is RAD(default), DEG, or GRAD",Complex,Multiprecision Polar Conversion ,,,,55
+Function,xCplxPow,"(z, [n], [Digit_Max])","Raises a complex extended number to real power n.
+ cplxPow(z, n) = z^n   (default n = 2)",Complex,Multiprecision complex power,,,,96
+Function,xCplxRect,"(z, [angle], [Digit_Max])","Converts a complex extended number from polar to rectangular form
+Angle is RAD(default), DEG, or GRAD",Complex,Multiprecision Rectangular Conversion ,,,,56
+Function,xCplxRoot,"(z, [n], [Digit_Max])","returns the nth root of a complex extended number.
+ cplxrad(z, n) = z^(1/n)   (default n = 2)",Complex,Multiprecision complex nth root,,,,97
+Function,xCplxSin,(z),"Complex Sine, with extended precision",Complex,complex Sin,,,,157
+Function,xCplxSinh,(z),"Complex Hyperbolic Sine, with extended precision",Complex,complex Hyperbolic Sin,,,,166
+Function,xCplxSqr,"(z, [Digit_Max])","Returns the square root of a complex number, the same as Excels IMSQRT( ) function, but with extended precision",Complex,Returns the square root of a complex number ,,,,97
+Function,xCplxSub,"(a, b, [Digit_Max])","Performs the complex subtraction of two complex extended numbers:
+  xCplxSub(a, b) = a - b",Complex,Multiprecision complex Subtraction ,,,,52
+Function,xCplxTan,(z),"Complex Tangent, with extended precision",Complex,complex Tangent,,,,160
+Function,xCplxTanh,(z),"Complex Hyperbolic Tangent, with extended precision",Complex,complex Hyperbolic Tan,,,,168
+Function,xCStr,"(x, [Digit_Max])","Converts Double (x) to String with optional Digit_Max (default 767, the maximum number of significant digits needed to exactly represent any double)",Manipulation,Converts double precision into multiprecision,,,,501
+Function,xCvExp,"(mantissa, [exponent])",Converts into scientific notation x= mantissa*10^exponent; default exponent=0,Manipulation,Converts into scientific notation,scientific,,,131
+Function,xd2Poly_ChebychevT,"(x, n, [DgtMax])",Chebychev orthogonal polynomial 2nd Derivative of 1st kind,Polynomial,Chebychev polynomial 2nd Derivative of 1st kind,,,,268
+Function,xDec,(x),Returns the decimal part of an extended number,Manipulation,Returns the decimal part of an extended number,fraction,,,73
+Function,xDecr,(x),"Decrements an extended number 'x' by 1; =x-1
+xDecr(x) = xSub(x, 1)",Manipulation,Decrements an extended number 'x' by 1; =x-1,,,,500
+Function,xDecrSq,"(x, DgtMax)","Calculates (x^2 - 1). x must be a string. DgtMax is not optional.
+Returns Unformated(Raw) String",Manipulation,Calculates (1 + x^2),,,,500
+Function,xDegrees,"(Angle, [Digit_Max])","Converts radians into degrees, with extended precision",Manipulation,Converts radians into degrees,,,,500
+Function,xDelta,"(x, [y])","Tests whether two values are equal, the same as Excels DELTA( ) function, but with extended precision",Statistical,Tests whether two values are equal,,,,500
+Function,xDevSq,"(a, [Digit_Max])","Sum of squares of deviations of data points from their sample mean.
+The same as Excels DEVSQ( ) function, but with extended precision",Statistical,Sum of squares of deviations from their sample mean,,,,500
+Function,xDgMat,"(x, y, [M])","Returns number of matching digits of x and y, including fractional portion.
+If x and y are exact, by default returns xDgtS(x), but can be specified by [M]
+If < 0 returns -ABS(Log(x)-Log(y))
+If M is negative uses Abs(M) for exact, and returns zero if < 0",Manipulation,fractional matching significant digits of x and y,,,,500
+Function,xDgt,(x),Returns the number of all digits,Manipulation,Digits count ,,,,61
+Function,xDgtS,(x),Returns the number of significant digits,Manipulation,Significant digits count ,,,,279
+Function,xDiff,"(Var_Value, Func, [Param], [Digit_Max], [Order], [MaxPrecision], [Var_Label], [Delta_H])","simplest 1st to 20th Order derivitive of f(x). VarLabel default is 'x'
+Param is for variables sustitution. Default Order = 1
+MaxPrecision limits precision to calculate with internally.
+Delta_H allows user to pass small value Delta (h), else it is calc'ed","Derivatives, limits",First up to 20th Order derivative of f(x),,,,503
+Function,xDiff1,"(Var_Value, Func, [Lim], [Param], [Digit_Max], [Var_Label], [MaxPrecision])","First derivative of f(x), 'x' is default, otherwise can be specified by 'Var_Label'
+lim = 0 central, -1 left and +1 right
+The same as the existing Diff1( ) function, but with extended precision.","Derivatives, limits",First derivative of f(x),,,,189
+Function,xDiff2,"(Var_Value, Func, [Param], [Digit_Max], [Var_Label], [MaxPrecision])","Second derivative of f(x), 'x' is default, otherwise can be specified by 'Var_Label'
+The same as the existing Diff2( ) function, but with extended precision.","Derivatives, limits",Second derivative of f(x),,,,190
+Function,xDiffI,"(Var_Value, Func, [Param], [Digit_Max], [Order], [NumOfPoints], [Offset], [MaxPrecision], [MaxDerEstCnt], [FindBestHflag], [Var_Label], [Coef])","any Order derivitive of f(x). VarLabel default is 'x'. Default Order = 1
+NumOfPoints specifies formula used. min is (Order+1)
+MaxPrecision limits machine precision
+Offset default is central = (odd#pts+1)/2
+Delta_H allows user to pass small value Delta (h)","Derivatives, limits",any Order derivative of f(x) by iteration,,,,503
+Function,xDiffOpt,"(Var_Value, Func, [Param], [Digit_Max], [Order], [NumOfPoints], [Offset], [MaxPrecision], [Optim], [Var_Label], [Delta_H], [Coef])","Array returns deriv est (any Order) to 1st cell, h to 2nd cell, d to 3rd
+Default Var_Label is 'x'. default Order = 1
+NumOfPoints specifies formula. min is (Order+1)
+Offset...default is central = (odd#pts+1)/2
+Optim TRUE or FALSE (default), optimizes Delta","Derivatives, limits",any Order derivative of f(x) for Var_Label x (default),,,,503
+Function,xDiv,"(x, y, [Digit_Max])","Performs the division of two extended number:  xDiv(x, y) = x / y",Arithmetic,Multiprecision Division ,,,,11
+Function,xDivInt,"(N, D)","Returns Multi-precision quotient Q using integer division N\D
+where Q = xInt(N/D) = xFloor(N/D), the closest integer <= N/D",Arithmetic,Multiprecision quotient Q = xInt(N/D) = xFloor(N/D),module,,,65
+Function,xDivMod,"(a, b, m)",Modular division,Numbers,Modular division,Congruence,,,301
+Function,xDivR,"(x, y, Digit_Max)","internal function the same as xDiv, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent",Arithmetic,Multiprecision Division for VBA,,,,11
+Function,xDivRem,"(A, B)","Former name of xIntMod(N, D), as xTruncMod is an alternate Remainder
+Multi-precision remainder R = N - D * Q
+quotient Q = xInt(N/D), the closest integer <= N/D
+The sign of remainder R is always the same as the sign of divisor D",Numbers,Former name of xIntMod: R = N - D * xInt(N/D),,,,66
+Function,xDivTrunc,"(N, D)","Returns Multi-precision quotient Q from dividend N and divisor D where
+Q = xTrunc(N/D), the integer portion of N/D (rounded down toward zero)",Arithmetic,Multiprecision quotient Q = xTrunc(N/D),module,,,65
+Function,xDLgI,"(x, Xi, Yi, [Level], [IsRadians], [DgtMax])","First Derivative at 'x' from Lagrange Interpolation Polynomial
+Yi and Xi are vectors of data. Default Level=(data pts-1)
+Set IsRadians=True for adjustment of input. Default=False
+Set DgtMax>0 for multi-precision, 0 for double precision, -1 for quadruple","Derivatives, Interpolation",First Derivative of Lagrange Interpolation Polynomial,,,,143
+Function,xDpoly,"(x, Coef, ord, [Digit_Max])",Returns the multiprecision derivative value of a polynomial at the point x,Polynomial,Multiprecision derivative value of a polynomial,,,,36
+Function,xdPoly_ChebychevT,"(x, n, [DgtMax])",Chebychev orthogonal polynomial 1st Derivative of 1st kind,Polynomial,Chebychev polynomial 1st Derivative of 1st kind,,,,268
+Function,xdPoly_ChebychevU,"(x, n, [DgtMax])",Chebychev orthogonal polynomial 1st Derivative of 2nd kind,Polynomial,Chebychev polynomial 1st Derivative of 2nd kind,,,,268
+Function,xe,([Digit_Max]),"Returns the constant 'e', base of natural logarithm: e = 2.718...",Transcendental ,Multiprecision constant e,,,,23
+Function,xErf,"(x, [Digit_Max])","Integral of Gauss' standard error function
+The same as Excels ERF( ) function, but with extended precision",Statistical,Integral of Gauss' standard error function,,,,204
+Function,xErfC,"(x, [Digit_Max])","Complementary of the standard error function
+The same as Excels ERFC( ) function, but with extended precision",Statistical,Complementary of the standard error function,,,,204
+Function,xEu,([Digit_Max]),Euler-Mascheroni gamma constant,Transcendental ,Euler-Mascheroni gamma constant,"eulero, Euler",,,152
+Function,xEval,"(Formula, [VarArray], [DgtMax], [AngleSet], [Tiny], [IntSwapFix])","Multiprecision evaluation math expression. 
+Parameter Formula is a string, like 'x^3+x*y/2+1', '(a+b)*(a-b)', etc. 
+VarArray contains the variables values to substitute
+New ver.6.0 adds optional parameters Tiny and IntSwapFix",Arithmetic,Multiprecision evaluator,parser formula computing,,,125
+Function,xEvall,"(Formula, [VarArray1, VarArray2...])","Multiprecision evaluation math expression. 
+Parameter Formula is a string, like  'x^3+x*y/2+1',  '(a+b)*(a-b)',  etc. 
+VarArray1... contains all parameters to pass to the function
+Optional parameters DgtMax, AngleSet, and Tiny are always Case Insensitive",Arithmetic,Multiprecision evaluator,parser formula computing,,,125
+Function,xEven,(x),"Returns positive number rounded up, negative number rounded down,
+to the nearest even integer.
+The same as Excels EVEN( ) function, but with extended precision",Statistical,Returns number rounded up to the nearest even integer,,,,500
+Function,xExp,"(x, [Digit_Max])",Returns the exponential of x in base 'e': xExp(x)= e^x,Transcendental ,Multiprecision exponential e^x,,,,21
+Function,xExpa,"(x, [a], [Digit_Max])","Returns the exponential of x in the base a;  xExpa = a^x
+default a = 10. If a is negative and x is not an integer, result will have a leading space, alerting the user that it is valid only if the denominator of x is odd:
+xExpa(1/3,-8)=_-2",Transcendental ,Multiprecision exponential base a^x ,,,,22
+Function,xExpaNI,"(x, a, [Digit_Max])","Returns the exponential of x in the base a;  xExpa = a^x
+where x is not an integer. If a is negative, result will have a leading space, alerting the user that it is valid only if the denominator of x is odd:
+xExpaNI(1/3,-8)=_-2",Transcendental ,Multiprecision exponential base a^x ,,,,22
+Function,xExpBase,"(a, x, [Digit_Max])","Returns the exponential of x in the base a;  xExpBase = a^x
+If 'a' is negative and 'x' is not an integer, the result will have a leading space, alerting the user that it is valid only if the denominator of 'x' is odd:
+xExpBase(-8,1/3)=_-2",Transcendental ,Multiprecision exponential base a^x ,,,,22
+Function,xExponent,(x),"Returns the exponent of a number, the second value returned from xSplit( )",Manipulation,Return String Exponent,,,,132
+Function,xExtDelta2,"(x, [DgtMax])","returns the Aitken's delta square extrapolation of a succession
+[x0, x1, x2] --> x*
+The argument X is a 3 elements vector.",Interpolation,Extrapolation with Aitken's square delta method,"iterate, sequence",,,95
+Function,xFact,"(n, [Digit_Max])",Returns the factorial of n in extended precision  xFact(n)= n! ,Statistical,Multiprecision Factorial ,,,,38
+Function,xFact2,"(n, [Digit_Max])",double-step factorial (odd/even factorial),Statistical,Double-step factorial (odd/even factorial),,,,136
+Function,xFib,"(n, [DgtMax])",Returns the Fibonacci number,Special functions,Multiprecision Fibonacci number,,,,220
+Function,xFisher,"(x, [Digit_Max])","Returns the Fisher transformation at x
+The same as Excels FISHER( ) function, but with extended precision",Statistical,Returns the Fisher transformation at x,,,,500
+Function,xFishInv,"(y, [Digit_Max])","Returns the inverse of the Fisher transformation
+The same as Excels FISHERINV( ) function, but with extended precision",Statistical,Returns the inverse of the Fisher transformation,,,,500
+Function,xFloor,"(x, [signif])","Rounds to the nearest multiple of significance <= x for positive signif,
+>= x for negative signif. Default signif = 1
+The same as Excels FLOOR( ) function, but with extended precision",Statistical,Nearest multiple of (positive) significance <= x,,,,500
+Function,xFmt,"(x, [Digit_Max], [Zeros])","Formats a string with your Configuration settings for 'lead zeros', 'trailing zeros', and 'rounding'.
+If  [Digit_Max] is omitted, the full length formatted string is returned.
+[Optional Zeros] allows you to specify zeros other than the Configured default",Manipulation,Converts Mantissa with Standard decimal separator,,,,500
+Function,xFormat,"(str, Digit_Sep)",Formats an extended number separating groups of digits. It works like Excel's built-in Format function for standard numbers,Manipulation,Format extended numbers,char separator,,,100
+Function,xFract,"(x, [DigitMax])","Returns numerator and denominator of the fraction that approximates x with extended precision. The function returns a vector of two numbers
+Ex: xFract(x) --> {n, d},  or to a single cell xFract(x) --> 'n/d'",Numbers,Multiprecision fraction converter,"rational, ratio, approximation",,,72
+Function,xFractCont,"(x, [DgtMax], [n], [StopMethod], [StopValue])","Continued fraction of x, as 2 x n or 3 x n array, or use [n] to return [a0;a1,a2,...,an] to one cell. Truncate with StopValue. StopMethod = 0 (default): not truncated.
+1: use x-n/d. 2: use rDgMat(x, n/d). 3: use xDgt(n)+xDgt(d). 4: use x*d-n",Numbers,Multiprecision continued fraction,"rational, ratio, approximate",,,314
+Function,xGamma,"(x, [DgtMax])","Gamma function  using Lanczos formula
+If Digit_Max < 16 returns Double Precision
+If Digit_Max > 30 uses Spouge's algorithm",Special functions,Gamma function,,,,208
+Function,xGammaF,"(x1, x2, [DgtMax])","Gamma Fisher's distribution factor 
+If Digit_Max < 16 returns Double Precision
+If Digit_Max > 30 uses Spouge's algorithm",Special functions,Gamma Fisher's distribution factor ,,,,211
+Function,xGammaI,"(a, x, [sel])","Incomplete Gamma function
+Optional [sel] can be entered as 1 or 2
+If [sel] is missing, [sel] = 1",Special functions,Incomplete Gamma function,,,,287
+Function,xGammaLn,"(x, [DgtMax])","Natural log of Gamma function
+If Digit_Max < 16 returns Double Precision
+If Digit_Max > 30 uses Spouge's algorithm",Special functions,Natural log of Gamma function,,,,209
+Function,xGammaLog,"(x, [DgtMax])","Decimal log of Gamma function
+If Digit_Max < 16 returns Double Precision
+If Digit_Max > 30 uses Spouge's algorithm",Special functions,Decimal log of Gamma function,,,,209
+Function,xGammaQ,"(x1, x2, [DgtMax])","Quotient of two Gamma functions q= Gamma(x1)/Gamma(x2)
+If Digit_Max < 16 returns Double Precision
+If Digit_Max > 30 uses Spouge's algorithm",Special functions,Quotient  Gamma(x1)/Gamma(x2),,,,210
+Function,xGEstep,"(x, [step])","Returns 1 if number x is > or = step; returns 0 (zero) otherwise.
+If is missing, step = 0
+The same as Excels GESTEP( ) function, but with extended precision",Statistical,Returns 1 if number = step; returns 0 (zero) otherwise,,,,500
+Function,xGm,([Digit_Max]),Euler-Mascheroni gamma constant,Special functions,Euler-Mascheroni gamma constant,"eulero, Euler",,,207
+Function,xGmean,"(a As Range, [Digit_Max])","Returns the geometric mean of n numbers, extended or not",Statistical,Multiprecision Geometric Mean ,,,,43
+Function,xGrad,"(Var_Values, Func, [Param], [Digit_Max], [Var_Labels], [MaxPrecision])","vector of first derivatives of  function f(x,y,z)
+'x,y,z' is default, otherwise can be specified by 'Var_Labels'","Derivatives, limits","Gradient of f(x,y,z)",,,,191
+Function,xHmean,"(a, [Digit_Max])","Returns the harmonic mean, the same as Excels HARMEAN( ) function, but with extended precision",Statistical,Returns the harmonic mean,,,,500
+Function,xHypGeom,"(a,b,c,x,[Digit_Max],[ConvDetCnt],[Tolerance],[Force_NUMBER_ret])","Hypergeometric function
+ConvDetCnt default=5000, Tolerance default=0.05
+[Force_NUMBER_ret] returns current sum instead of error message. Default=FALSE",Special functions,Hypergeometric function,,,,260
+Function,xIElliptic1,"(phi, k, [AngleSet], [Digit_Max],[ArcLen])","Elliptic integral of 1st kind (array can return 2nd kind to 2nd cell)
+AngleSet is RAD(default), DEG, or GRAD
+Digit_Max  -1=quad prec, 0=double prec, >0 extended prec (default)
+ArcLen as Boolean(default=FALSE)",Special functions,Elliptic integral of 1st kind,,,,290
+Function,xIElliptic2,"(phi, k, [AngleSet], [Digit_Max],[ArcLen])","Elliptic integral of 2nd kind (array can return 1st kind to 2nd cell)
+AngleSet is RAD(default), DEG, or GRAD
+Digit_Max  -1=quad prec, 0=double prec, >0 extended prec (default)
+ArcLen as Boolean(default=FALSE)",Special functions,Elliptic integral of 2nd kind,,,,290
+Function,xIElliptic3,"(phi, k, n, [AngleSet], [Digit_Max],[ArcLen])","Elliptic integral of 3rd kind
+AngleSet is RAD(default), DEG, or GRAD
+Digit_Max  -1=quad prec, 0=double prec, >0 extended prec (default)
+ArcLen as Boolean(default=FALSE)",Special functions,Elliptic integral of 3rd kind,,,,290
+Function,xImag,(x),"Returns the imaginary coefficient of an extended complex number, the same as Excels IMAGINARY( ) function",Complex,Returns the imaginary coefficient of a complex number,,,,500
+Function,xIncr,(x),"Increments an extended number 'x' by 1; =x+1
+xIncr(x) = xAdd(x, 1)",Manipulation,Increments an extended number 'x' by 1; =x+1,,,,500
+Function,xIncrSq,"(x, DgtMax, [IsNeg])","x must be a string. DgtMax is not optional
+Returns Unformated(Raw) String. Calculates (1 + x^2) or
+if optional parameter IsNeg(default=FALSE) is TRUE  (1 - x^2)",Manipulation,Calculates (1 + x^2) or  (1 - x^2),,,,500
+Function,xInt,(x),Returns the 'integer' of an extended number 'x' as the greatest integer less than or equal to 'x',Manipulation,Multiprecision Integer part ,,,,40
+Function,xIntercept,"(ax, ay, [Digit_Max])","Calculates the point at which a line will intersect the y-axis
+The same as Excels INTERCEPT( ) function, but with extended precision",Statistical,Calculates the point at which a line intersects the y-axis,,,,500
+Function,xIntLog10,(x),"Returns corrected Int(Log(Abs(x))/Log(10)) for Xnumbers.
+Same as xInt(xLog(xAbs(x),10), but with absolute accuracy near exact powers of 10",Manipulation,Corrected Int(Log(x)/Log(10)) for Xnumbers,,,,500
+Function,xIntLog2,(x),"Returns corrected Int(Log(Abs(x))/Log(2)) for Xnumbers.
+Same as xInt(xLog(xAbs(x),2), but with absolute accuracy near exact powers of 2",Manipulation,Corrected Int(Log(x)/Log(2)) for Xnumbers,,,,500
+Function,xIntMod,"(N, D)","Multi-precision remainder R = N - D * Q
+quotient Q = xInt(N/D), the closest integer <= N/D
+The sign of remainder R is always the same as the sign of divisor D",Numbers,Multi-precision remainder R = N - D * xInt(N/D),,,,66
+Function,xIntQR,"(N, D)","Multi-precision quotient Q and remainder R as 2 x array
+Q =  xInt(N/D), the closest integer <= N/D
+R = N - D * Q
+The sign of remainder R is always the same as the sign of divisor D",Numbers,quotient Q = xInt(N/D) & remainder R as 2 x array,,,,66
+Function,xInv,"(x, [Digit_Max])",Multi-precision inverse,Manipulation,Multi-precision Inverse,,,,153
+Function,xInvR,"(x, Digit_Max)","Internal function the same as xInv, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent",Manipulation,Multi-precision Inverse,,,,153
+Function,xIsErr,"(a1, [a2], [a3],...)","returns 0 if no errors in a range, else returns 1",Manipulation,"returns 0 if no errors in a range, else returns 1",,,,500
+Function,xIsErrNA,"(a1, [a2], [a3],...)","Returns 0 if no errors in a range, else returns 1 - ignoring #N/A errors",Manipulation,"Returns 0 for no errors, else returns 1 - ignoring #N/A",,,,500
+Function,xIsEven,(a),"Returns TRUE if integer number is even, FALSE if odd.
+If number 'a' is not an integer, it is truncated.
+The same as Excels ISEVEN( ) function, but with extended precision",Statistical,Returns TRUE if number is even,,,,266
+Function,xIsInteger,(n),Checks if x is an integer. It returns TRUE or FALSE ,Numbers,Checks if x is an integer,,,,303
+Function,xIsNumeric,(x),"Return 0 = non numerico (FALSE) , 1 = Numeric (a double), 2 = Numeric string (Xnumber)",Manipulation,"Return 0 = non numerico, 1 Numeric, 2 Numeric string",,,,500
+Function,xIsOdd,(a),"Checks if an integer number is odd (TRUE) or even (FALSE)
+If number 'a' is not an integer, it is truncated.",Numbers,Odd/even check,,,,266
+Function,xIsSquare,(n),Checks if an integer number is perfect square,Numbers,Perfect square check,,,,265
+Function,xIsXnumber,(x),Returns TRUE if x is a true extended-precision number and cannot be converted into double precision without loss of precision,Manipulation,Check multiprecision number,,,,74
+Function,xJacobian,"(Var_Values, Func, [Param], [Digit_Max], [Var_Labels], [MaxPrecision])","Jacobian matrix of a vector-function [f1(x,y,z), f2(x,y,z),... fm(x,y,z)]
+'x,y,z' is default, otherwise can be specified by 'Var_Labels'","Derivatives, limits",Jacobian matrix,,,,192
+Function,xKummer1,"(a,b,z,[Digit_Max],[ConvDetCnt],[Tolerance],[Force_NUMBER_ret])","Kummer confluent hypergeometric function of 1st kind
+ConvDetCnt default=5000, Tolerance default=0.05
+[Force_NUMBER_ret] returns current sum instead of error message. Default=FALSE",Special functions,Kummer confluent hypergeometric function of 1st kind,serie sum integral,,,309
+Function,xLgI,"(x, Xi, Yi, [Level], [RadiansLB], [DgtMax])","data Interpolation using Lagrange Poly
+Yi and Xi are vectors of data. Default Level=(data pts-1)
+Set RadiansLB=0 for data from 0 to 2pi, -1 for -pi to +pi. Default=don't adjust
+Set DgtMax>0 for multi-precision, 0 for double precision, -1 for quadruple",Interpolation,Lagrange Interpolation Polynomial,,,,143
+Function,xLn,"(x, [Digit_Max])",Returns the natural logarithm (or Neper's),Transcendental ,Multiprecision natural logarithm,,,,19
+Function,xLn10,([Digit_Max]),Returns the constant Ln(10) = 2.302... ,Transcendental ,Multiprecision constant Ln(10) ,,,,25
+Function,xLn2,([Digit_Max]),Returns the constant Ln(2 ) = 0.693....,Transcendental ,Multiprecision constant Ln(2) ,,,,24
+Function,xLog,"(x, [base], [Digit_Max])",Returns the logarithm in any base (default 10),Transcendental ,Multiprecision logarithm in any base,,,,20
+Function,xLogistic,"(x, avg, dev, [Dtype], [Digit_Max])","Multi-precision Logistic distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Multi-precision Logistic distribution,,,,403
+Function,xLogNorm,"(x, avg, dev, [Dtype], [Digit_Max])","Log-normal distribution with extended precision.
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Log-normal distribution with extended precision,,,,403
+Function,xLRE,"(Q, C, [NoSD], [Digit_Max])","Returns the LRE performing index for an estimated value (Q) and a certified value (C), which has a specified number of significant digits [NoSD].
+If missing NoSD = xDgtS(C )",Statistical,Multiprecision Log Relative Error (LRE),,,,112
+Function,xMAbs,"(mat, [DgtMax])",returns the modulus of a matrix or a vector || V || in multi-precision,Linear Algebra,Multiprecision modulus of vector or matrix,"Norma, Absolute",,,88
+Function,xMAbsC,"(Mat, [Cformat], [DgtMax])",Multi-precision complex matrix Euclidean Norm,Linear Algebra,Multi-precision complex matrix Euclidean Norm,,,,511
+Function,xMAdd,"(mat1, mat2, [DgtMax])","returns the sum of two matrices in multi-precision
+ [n1 x m1] + [n2 x m2] => [n3 x m3]",Linear Algebra,Multiprecision matrix addition,,,,83
+Function,xMAddC,"(Mat1, Mat2, [Cformat], [DgtMax])",returns the sum of two complex matrices in multi-precision,Linear Algebra,Multiprecision complex matrix addition,,,,512
+Function,xMantissa,(x),returns mantissa of number (x). Same as entering xSplit( ) into a single cell,Manipulation,Returns mantissa of number (x),,,,132
+Function,xMatAbs,"(mat, [DgtMax])",returns the modulus of a matrix or a vector || V || in multi-precision,Linear Algebra,Multiprecision modulus of vector or matrix,"Norma, Absolute",,,88
+Function,xMatAdd,"(mat1, mat2, [DgtMax])","returns the sum of two matrices in multi-precision
+ [n1 x m1] + [n2 x m2] => [n3 x m3]",Linear Algebra,Multiprecision matrix addition,,,,83
+Function,xMatBAB,"(A, B, [DgtMax])",Perfoms the similarity transform B^(-1)*A*B in extended precision,Linear Algebra,Multiprecision similarity transform,matrix contragradienza,,,113
+Function,xMatDet,"(Mat, [DgtMax])",returns the determinant of a square matrix in multiprecision,Linear Algebra,Multiprecision Determinant of a Square matrix ,,,,87
+Function,xMatInv,"(Mat, [DgtMax])",returns the Inverse of a square matrix in mutli-precision,Linear Algebra,Multiprecision Inverse of a square matrix ,,,,86
+Function,xMatLL,"(Mat, [DgtMax])",Perform the Cholesky's decomposition.  A = L*L^T in multiprecision arithmetic,Linear Algebra,Multiprecision Cholesky decomposition,,,,254
+Function,xMatLU,"(Mat, [Pivot], [DgtMax])",Perform the LU decomposition with Crout's algorithm.  A = L*U in multiprecision arithmetic,Linear Algebra,Multiprecision matrix LU decomposition,"Crout, matrix, pivot",,,115
+Function,xMatMult,"(mat1, mat2, [DgtMax])","returns the product of two matrices in multi-precision
+ [n1 x m1] x[n2 x m2] => [n3 x m3]",Linear Algebra,Multiprecision matrix product,,,,85
+Function,xMatPow,"(Mat, n, [DgtMax])","Returns the integer power of a square matrix: A^n in multiprecision arithmetic.
+n must be a positive integer",Linear Algebra,Multiprecision power of square matrix,,,,114
+Function,xMatSub,"(mat1, mat2, [DgtMax])","returns the difference of two matrices in multi-precision
+ [n1 x m1] - [n2 x m2] => [n3 x m3]",Linear Algebra,Multiprecision matrix subtraction,,,,84
+Function,xMax,"(a1, [a2], [a3],...)","Multiprecision Maximum
+analyzes a range (or multiple ranges) of values",Statistical,Multiprecision Maximum,,,,258
+Function,xMaxwell,"(x, a, [Dtype], [DgtMax])","Multiprecision Maxwell-Boltzman
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Multiprecision Maxwell-Boltzman,,,,403
+Function,xMBAB,"(A, B, [DgtMax])",Perfoms the similarity transform B^(-1)*A*B in extended precision,Linear Algebra,Multiprecision similarity transform,matrix contragradienza,,,113
+Function,xMBABMCM,"(A, B, [DgtMax])",Perfoms the similarity transform B^(-1)*A*B in extended precision,Linear Algebra,Multiprecision similarity transform,matrix contragradienza,,,113
+Function,xMCD,"(a1, [a2], [a3],...)","Returns the Maximum Common Divisor (also known as Largest Common Denominator or Greatest Common Denominator ) between extended numbers.
+a1, a2, a3... may be numbers or arrays of numbers",Numbers,Maximun Common Divisor (GCD),,,,68
+Function,xMCharC,"(Mat, z, [Cformat], [DgtMax])",returns the complex characteristic matrix A-zI in multi-precision,Linear Algebra,Multiprecision  complex characteristic matrix A-zI,,,,514
+Function,xMCharPoly,"(Mat, [Variable], [DgtMax])",returns the coefficients of the characteristic polynomial,Linear Algebra,Coefficients of the characteristic polynomial,,,,99
+Function,xMCharPolyC,"(Mat,[Cformat], [DgtMax])",returns the complex coefficients of the characteristic polynomial,Linear Algebra,Coefficients of the characteristic polynomial,,,,99
+Function,xMCholesky,"(Mat, [DgtMax])",Perform the Cholesky's decomposition.  A = L*L^T in multiprecision arithmetic,Linear Algebra,Multiprecision Cholesky decomposition,,,,254
+Function,xMCM,"(a1, [a2], [a3],...)","Returns the Minimun Common Multiple (also known as Least Common Multiple, LCM ) between extended numbers
+a1, a2, a3... may be numbers or arrays of numbers",Numbers,Minimum Common Multiple (LCM),,,,69
+Function,xMCond,"(Mat, [DgtMax], [ETA])","Multi-precision Condition number of a Matrix
+using Singular Value Decomposition. Default ETA= '1E- & Digit_Max'",Linear Algebra,Multi-precision Condition number,,,,502
+Function,xMCondC,"(Mat, [Cformat], [Digit_Max], [ETA], [TOL])","Multi-precision Condition number of a Complex Matrix
+using Singular Value Decomposition
+Default ETA= '1E- & Digit_Max'. Default TOL= 0",Linear Algebra,Complex Multi-precision Condition number,,,,502
+Function,xMCplx,"([Ar], [Ai], [Cformat])",converts 2 real matrices into a complex matrix in multi-precision,Linear Algebra,converts 2 real matrices into a complex matrix,,,,515
+Function,xMDet,"(Mat, [DgtMax])",returns the determinant of a square matrix in multiprecision,Linear Algebra,Multiprecision Determinant of a Square matrix ,,,,87
+Function,xMDetC,"(Mat, [Cformat], [DgtMax])",Multi-precision complex matrix determinant,Linear Algebra,Multi-precision complex matrix determinant,,,,516
+Function,xMDetMCM,"(Mat, [DgtMax],[IsIntMat])","returns the determinant of a square matrix in multiprecision
+If IsIntMat is missing,  tests for integer matrix.",Linear Algebra,Multiprecision Determinant of a Square matrix ,,,,87
+Function,xMean,"(A, [Digit_Max])","Returns the arithmetic mean of n numbers, extended or not.",Statistical,Multiprecision Arithmetic Mean ,,,,42
+Function,xMedian,"(a1, [a2], [a3],...)","Returns the middle number of a group of numbers.
+The same as Excels MEDIAN( ) function, but with extended precision",Statistical,Returns the middle number of a group of numbers,,,,500
+Function,xMExp,"(Mat, [N], [Tiny], [DgtMax])",returns the matrix series expansion for exp(Mat) in multi-precision,Linear Algebra,Multiprecision matrix series expansion,,,,513
+Function,xMExpC,"(Mat, [N], [Cformat], [Tiny], [DgtMax])",returns the complex matrix series expansion for exp(Mat) in multi-precision,Linear Algebra,Multiprecision complex matrix series expansion,,,,513
+Function,xMExpErr,"(Mat, N, [DgtMax])",returns the truncation error of matrix series expansion for exp(Mat) in multi-precision,Linear Algebra,Multiprecision  truncation error for exp(Mat),,,,517
+Function,xMExpErrC,"(Mat, N, [Cformat], [DgtMax])",returns the truncation error of complex matrix series expansion for exp(Mat) in multi-precision,Linear Algebra,Multiprecision  truncation error for exp(Mat),,,,517
+Function,xMin,"(a1, [a2], [a3],...)","Multiprecision Minimum
+analyzes a range of values",Statistical,Multiprecision Minimum,,,,258
+Function,xMInv,"(Mat, [DgtMax])",returns the Inverse of a square matrix in mutli-precision,Linear Algebra,Multiprecision Inverse of a square matrix ,,,,86
+Function,xMInvC,"(Mat, [Cformat], [DgtMax])",returns the inverse of a complex matrix in multi-precision,Linear Algebra,Multi-precision inverse of complex matrix,,,,518
+Function,xMInvMCM,"(Mat, [DgtMax])",returns the Inverse of a square matrix in mutli-precision,Linear Algebra,Multiprecision Inverse of a square matrix ,,,,86
+Function,xMLU,"(Mat, [Pivot], [DgtMax])",Perform the LU decomposition with Crout's algorithm.  A = L*U in multiprecision arithmetic,Linear Algebra,Multiprecision matrix LU decomposition,"Crout, matrix, pivot",,,115
+Function,xMMopUp,"(Mat, [ErrMin], [CFormat], [Digit_Max])","Eliminates all round-off errors from a matrix.
+Each |element| < ErrMin is substituted by zero",Manipulation,Matrix Mop-up,,,,89
+Function,xMMult,"(mat1, mat2, [DgtMax])","returns the product of two matrices in multi-precision
+ [n1 x m1] x[n2 x m2] => [n3 x m3]",Linear Algebra,Multiprecision matrix product,,,,85
+Function,xMMultC,"(Mat1, Mat2, [Cformat], [DgtMax])",performs complex matrix multiplication a3 = a1 x a2 in multi-precision,Linear Algebra,Multiprecision complex matrix multiplication,,,,519
+Function,xMMultS,"(Mat, Scalar, [DgtMax])",multiplies a scalar for a real matrix in multi-precision,Linear Algebra,Multiprecision scalar matrix multiplication,,,,520
+Function,xMMultSC,"(Mat, Scalar, [Cformat], [DgtMax])",multiplies a complex scalar for a complex matrix in multi-precision,Linear Algebra,Multiprecision complex scalar matrix multiplication,,,,520
+Function,xMNormalize,"(Mat, [NormType], [Tiny], [DgtMax])","Multi-precision normalized vectors of the matrix of real numbers
+NormType = 1 (scaled to min) ,  2 (modulo=1),  3 (scaled to max)
+4 (mean of abs values), 5 (mean=0 and standard deviation=1)",Linear Algebra,Normalized vectors of the matrix,,,,521
+Function,xMNormalizeC,"(Mat, [NormType], [Cformat], [Tiny], [DgtMax])","Multi-precision normalized vectors of the matrix of complex numbers
+NormType = 1 (scaled to min) ,  2 (modulo=1),  3 (scaled to max)",Linear Algebra,Complex normalized vectors of the matrix,,,,521
+Function,xMod,"(A, B, [DgtMax])","Former name of xIntMod(N, D): [DgtMax] is ignored
+Multi-precision remainder R = N - D * Q
+quotient Q = xInt(N/D), the closest integer <= N/D
+The sign of remainder R is always the same as the sign of divisor D",Numbers,Former name of xIntMod: R = N - D * xInt(N/D),,,,66
+Function,xMode,"(a1, [a2], [a3],...)","Returns the most frequently occurring number in a group of numbers.
+The same as Excels MODE( ) function, but with extended precision",Statistical,Returns most frequently occurring number in a group,,,,500
+Function,xMpCond,"(Mat, [DgtMax], [ETA])","Multi-precision -log10 of Condition number of a Matrix
+using Singular Value Decomposition. Default ETA= '1E- & Digit_Max'",Linear Algebra,Multi-precision -log10 of Condition number,,,,502
+Function,xMpCondC,"(Mat, [Cformat], [Digit_Max], [ETA], [TOL])","Multi-precision -log10 of Condition number of a Complex Matrix
+using Singular Value Decomposition
+Default ETA= '1E- & Digit_Max'. Default TOL= 0",Linear Algebra,Complex Multi-precision -log10 of Condition number,,,,502
+Function,xMPow,"(Mat, n, [DgtMax])","Returns the integer power of a square matrix: A^n in multiprecision arithmetic.
+n must be a positive integer",Linear Algebra,Multiprecision power of square matrix,,,,114
+Function,xMPowC,"(Mat, N, [Cformat], [DgtMax])",returns the complex Matrix^n in multi-precision,Linear Algebra,Multiprecision complex Matrix^n,,,,522
+Function,xMPseudoinv,"(Mat, [Digit_Max], [ETA])","Moore-Penrose Pseudo-Inverse of SVD decomposition
+Default ETA= '1E- & Digit_Max'",Linear Algebra,Moore-Penrose Pseudo-Inverse of SVD decomposition,,,,502
+Function,xMPseudoinvC,"(Mat, [Cformat], [Digit_Max], [ETA], [TOL])","Moore-Penrose Pseudo-Inverse of Complex SVD decomposition
+Default ETA= '1E- & Digit_Max'. Default TOL= 0",Linear Algebra,Moore-Penrose Pseudo-Inv of Complex SVD decomp,,,,502
+Function,xMround,"(x, [Multiple])","Returns a number rounded to the nearest Multiple.
+Default [Multiple] = 1
+The same as Excels MROUND( ) function, but with extended precision",Manipulation,Returns a number rounded to the nearest Multiple,,,,500
+Function,xMSub,"(mat1, mat2, [DgtMax])","returns the difference of two matrices in multi-precision
+ [n1 x m1] - [n2 x m2] => [n3 x m3]",Linear Algebra,Multiprecision matrix subtraction,,,,84
+Function,xMSubC,"(Mat1, Mat2, [Cformat], [DgtMax])",performs complex matrix subtraction in multi-precision,Linear Algebra,Multiprecision complex matrix subtraction,,,,523
+Function,xMT,(Mat),"Matrix Transpose. (Mat) is a matrix n x m
+Array function transposes to m x n",Manipulation,Matrix Transpose,,,,89
+Function,xMTC,"(Mat, [Cformat], [Conj])","Multi-precision complex matrix transpose
+Optional Conj As Boolean = False",Linear Algebra,Multi-precision complex matrix transpose,,,,524
+Function,xMTH,"(Mat, [Cformat])",Multi-precision complex matrix transpose-conjugate,Linear Algebra,Multi-precision complex matrix transpose-conjugate,,,,525
+Function,xMult,"(x, y, [Digit_Max])","Performs the multiplication of two extended number:  xMult(x, y) = x * y",Arithmetic,Multiprecision multiplication ,,,,10
+Function,xMultinom,"(a, [Digit_Max])","Returns the ratio of the factorial of a sum of values to the product of factorials.
+The same as Excels MULTINOMIAL( ) function, but with extended precision",Statistical,Ratio of the factorial of a sum to product of factorials,,,,500
+Function,xMultMod,"(a, b, m)",Modular multiplication,Numbers,Modular multiplication,Congruence,,,300
+Function,xMultR,"(x, y, Digit_Max)","internal function the same as xMult, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent",Arithmetic,Multiprecision multiplication for VBA,,,,10
+Function,xNeg,(x),Returns the opposite of an extended number:  xNeg(x) = -x,Manipulation,Multiprecision opposite ,,,,17
+Function,xNegR,(x),"internal function the same as xNeg, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent",Manipulation,Multiprecision opposite for VBA,,,,17
+Function,xNormal,"(x, avg, dev, [Dtype], [Digit_Max])","Returns the normal distribution for the specified mean and standard deviation.
+The same as Excels NORMDIST( ) function, but with extended precision.
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Normal distribution for the mean and standard deviation,,,,403
+Function,xNormalS,"(z, [Dtype], [Digit_Max])","Returns the standard normal cumulative distribution function.
+the same as Excel 2010 NORM.S.DIST( ) function, but with extended precision
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Standard normal cumulative distribution function,,,,403
+Function,xNormS,"(z, [Digit_Max])","Returns the standard normal cumulative distribution function.
+the same as Excels NORMSDIST( ) function, but with extended precision",Statistical,Standard normal cumulative distribution function,,,,403
+Function,xOdd,(z),"Returns number rounded up to the nearest odd integer.
+The same as Excels ODD( ) function, but with extended precision",Statistical,Returns number rounded up to the nearest odd integer,,,,500
+Function,xOddDen,"(x, [Digit_Max])","Checks if the denominator of 'x' is odd (TRUE) or even (FALSE), from
+the resulting denominator of 'x' as string from xFract(x, DgtMax),
+or 'x' as number from Fract(x)",Numbers,Odd/even check for denominator,,,,266
+Function,xPearson,"(ax, ay, [Digit_Max])","Pearson product moment correlation coefficient.
+The same as Excels PEARSON( ) function, but with extended precision",Statistical,Pearson product moment correlation coefficient,,,,500
+Function,xPerm,"(n, [k], [Digit_Max])","Returns the permutation of n, class k, with extended precision:P(n,k).",Statistical,Multiprecision Permutation,,,,249
+Function,xPi,([Digit_Max]),Returns the constant Pi = 3.141...,Trigonometric,Multiprecision constant Pi ,,,,33
+Function,xPi2,([Digit_Max]),Returns the constant Pi /2 = 1.570...,Trigonometric,Multiprecision constant Pi /2 ,,,,33
+Function,xPi4,([Digit_Max]),Returns the constant Pi /4 = 0.785...,Trigonometric,Multiprecision constant Pi /4,,,,33
+Function,xPoly,"(x, Coef, [Digit_Max])",Returns the multiprecision polynomial's value at the point x,Polynomial,Multiprecision value of a polynomial,,,,35
+Function,xPoly_ChebychevT,"(x, n, [DgtMax])",Evaluates the Chebychev orthogonal polynomial of 1st kind,Polynomial,Chebychev orthogonal polynomial of 1st kind,,,,268
+Function,xPoly_ChebychevU,"(x, n, [DgtMax])",Evaluates the Chebychev orthogonal polynomial of 2nd kind,Polynomial,Chebychev orthogonal polynomial of 2nd kind,,,,268
+Function,xPolyAdd,"(Poly1, Poly2, [Digit_Max])","Returns the sum of two polynomials. Arguments are monovariable polynomial strings.
+ xPolyAdd( Poly1(x), Poly2(x) ) = Poly1(x) + Poly2(x)",Polynomial,polynomials addition,"addition, sum",,,234
+Function,xPolyDiv,"(Poly1, Poly2, [Digit_Max])","Returns the quotient of the division of two polynomials. Arguments are monovariable polynomial strings.
+ xPolyDiv( Poly1(x), Poly2(x) ) = Q(x)     <==> Poly1(x) = Poly2(x) . Q(x) + R(x)",Polynomial,Quotient of the division of two polynomials,,,,237
+Function,xPolyMult,"(Poly1, Poly2, [Digit_Max])","Returns the product of two polynomials. Arguments are monovariable polynomial strings.
+ xPolyMult( Poly1(x), Poly2(x) ) = Poly1(x) . Poly2(x)",Polynomial,Polynomial product,"multiplication, product",,,235
+Function,xPolyRem,"(Poly1, Poly2, [Digit_Max])",Returns the remainder of the division of two polynomials.,Polynomial,Polynomials division remainder,,,,238
+Function,xPolySub,"(Poly1, Poly2, [Digit_Max])","Returns the subtraction of two polynomials. Arguments are monovariable polynomial strings.
+ xPolySub( Poly1(x), Poly2(x) ) = Poly1(x) - Poly2(x)",Polynomial,Polynomials subtraction,difference,,,236
+Function,xPolyTerms,"(Polynomial, [Digit_Max])","Extracts the vector of polynomial coefficients
+The argument is a polynomial string like '1-3x+5x^2 +x^5' in any order.
+Returns: [ a0, a1, a2, a3... ]",Polynomial,polynomial coefficients,,,,232
+Function,xPow,"(x, n, [Digit_Max])","Raises an extended number to power n. xPow(x, n) = x^n
+When n is not an integer and x is negative, will return a complex result",Arithmetic,Multiprecision power x^n,,,,13
+Function,xPow2,"(n, [Digit_Max])","Powers of 2, in extended precision. xPow2(n) = 2^n
+n can be positive or negative, integer or noninteger",Arithmetic,Powers of 2,,,,13
+Function,xPow2Int,"(n, [Digit_Max])","Integer Powers of 2, in extended precision. xPow2Int(n) = 2^n
+where n must be an integer",Arithmetic,Integer Powers of 2,,,,13
+Function,xPowInt,"(y, n, [Digit_Max])","Raises an extended number to integer power n. xPowInt(y, n) = y^n",Arithmetic,Multiprecision integer power y^n,,,,13
+Function,xPowMod,"(a, p, m)",Modular power a^p mod m,Manipulation,Modular power a^p mod m,,,,264
+Function,xProd,"(v, [Digit_Max])",Multiprecision Productory,Arithmetic,Multiprecision productory,,,,200
+Function,xProdScal,"(v1, v2, [DgtMax])",Multiprecision Scalar product of two vectors,Linear Algebra,Multiprecision scalar product,inner,,,90
+Function,xProdScalC,"(v1, v2, [Cformat], [DgtMax])",returns complex scalar product (inner) in multi-precision,Linear Algebra,Multiprecision complex scalar product (inner),,,,526
+Function,xProdVect,"(v1, v2, [DgtMax])",Multiprecision vector product of two 3D vectors,Linear Algebra,Multiprecision vector product,inner,,,116
+Function,xqAbs,(x),Returns the absolute value in quadruple precision up to 29 digits: xqAbs(x)= |x|,Arithmetic,quadruple precision Absolute value,,,,16
+Function,xqAcos,(x),"Returns the arccos or inv-cos of x:  xqAcos(x) = arccos(x)
+using quadruple precision (up to 29 digits)",Trigonometric,quadruple precision Arccos ,,,,31
+Function,xqAcosh,(x),quadruple precision Inverse Hyperbolic Cosine returns up to 29 digits,Transcendental ,quadruple precision Inverse Hyperbolic Cosine,,,,123
+Function,xqAdd,"(x, y)","Performs addition in quadruple precision up to 29 digits:  xqAdd(x, y) = x + y",Arithmetic,quadruple precision Addition ,,,,8
+Function,xqAngleC,(x),"Complement of the right angle with quadruple precision returns up to 29 digits:
+xqAngleC(x) = Pi/2 - x",Trigonometric,Complement of right angle with quadruple precision,,,,63
+Function,xqAsin,(x),"Returns the arcsin or inv-sin of x : xqAsin(x) = arcsin(x)
+in quadruple precision up to 29 digits",Trigonometric,quadruple precision Arcsin ,,,,30
+Function,xqAsinh,(x),quadruple precision Inverse Hyperbolic Sine returns up to 29 digits,Transcendental ,quadruple precision Inverse Hyperbolic Sine,,,,124
+Function,xqAtan,(x),quadruple precision Arctangent returns up to 29 digits,Trigonometric,quadruple precision Arctangent,,,,32
+Function,xqAtan2,"(y, x)","Arctangent returns angle in radians between -Pi and +Pi
+using quadruple precision (up to 29 digits)
+xAtan2(y,x) equals ATAN(y/x), except that x can equal zero",Trigonometric,quadruple precision Arctangent ATAN(y/x),,,,32
+Function,xqAtanh,(x),quadruple precision Inverse Hyperbolic Tangent returns up to 29 digits,Transcendental ,quadruple precision Inverse Hyperbolic Tangent,,,,122
+Function,xqCos,(x),Cosine x with quadruple precision returns up to 29 digits,Trigonometric,Cosine x with quadruple precision,,,,28
+Function,xqCosh,(x),quadruple precision Hyperbolic Cosine returns up to 29 digits,Transcendental ,quadruple precision Hyperbolic Cosine,,,,120
+Function,xqDec,(x),Returns the decimal part of a number in quadruple precision up to 29 digits,Manipulation,quadruple precision decimal part of a number,fraction,,,73
+Function,xqDiv,"(x, y)","Performs division in quadruple precision up to 29 digits:  xqDiv(x, y) = x / y",Arithmetic,quadruple precision Division ,,,,11
+Function,xqErf,(x),"Integral of Gauss' standard error function
+The same as Excels ERF( ) function, but with quadruple precision",Statistical,Integral of Gauss' standard error function,,,,204
+Function,xqErfC,(x),"Complementary of the standard error function
+The same as Excels ERFC( ) function, but with quadruple precision",Statistical,Complementary of the standard error function,,,,204
+Function,xqExp,(x),e^x with quadruple precision returns up to 29 digits,Transcendental,e^x with quadruple precision,,,,21
+Function,xqExpa,"(x, a)",compute a^x with quadruple precision returns up to 29 digits,Transcendental,compute a^x with quadruple precision,,,,22
+Function,xqInt,(x),"Returns the 'integer' of a number 'x' as the greatest integer less than or equal to 'x'
+Returns up to 29 digits in quadruple precision",Manipulation,quadruple precision Integer part ,,,,40
+Function,xqLn,(x),Natural Log x with quadruple precision returns up to 29 digits,Transcendental,Natural Log x with quadruple precision,,,,19
+Function,xqLog,"(x, [Base])",Log to any Base with quadruple precision returns up to 29 digits,Transcendental,Log to any Base with quadruple precision,,,,20
+Function,xQmean,"(A, [Digit_Max])","Returns the quadratic mean of n numbers, extended or not",Statistical,Multiprecision Quadratic Mean ,,,,44
+Function,xqMult,"(x, y)","Performs multiplication in quadruple precision up to 29 digits:  xqMult(x, y) = x * y",Arithmetic,quadruple precision multiplication ,,,,10
+Function,xqPow,"(x, n)","Raises a number to power n. xqPow(x, n) = x^n
+When n is not an integer and x is negative, assumes denominator of n is odd.
+Returns up to 29 digits in quadruple precision",Arithmetic,quadruple precision power x^n,,,,13
+Function,xqPow2,(n),"Integer Powers of 2, xqPow2(n) = 2^n
+Retrieves Stored up to 29 digits in quadruple precision",Arithmetic,Integer Powers of 2,,,,13
+Function,xqRoot,"(x, n)","the n-th root of a number in quadruple precision (returns up to 29 digits).
+When x is negative, assumes numerator of n is odd (returns real number)",Arithmetic,quadruple precision nth root ,,,,15
+Function,xqRound,"(x, [DecDgts])",Rounding of numbers in quadruple precision up to 29 digits (default DecDgts = 0),Manipulation,quadruple precision rounding ,,,,47
+Function,xqSin,(x),Sine x with quadruple precision returns up to 29 digits,Trigonometric,Sine x with quadruple precision,,,,27
+Function,xqSinh,(x),quadruple precision Hyperbolic Sine returns up to 29 digits,Transcendental ,quadruple precision Hyperbolic Sine,,,,119
+Function,xqSqr,(x),Returns the square root of a number using quadruple precision (up to 29 digits),Arithmetic,quadruple precision Square Root,,,,14
+Function,xqSub,"(x, y)","Performs subtraction in quadruple precision up to 29 digits:  xqSub(x, y) = x - y",Arithmetic,quadruple precision Subtraction ,,,,9
+Function,xqTan,(x),"Returns the tangent of angle:  xqTan(x) = tan(x)
+using quadruple precision (up to 29 digits)",Trigonometric,quadruple precision Tan ,,,,29
+Function,xqTanh,(x),quadruple precision Hyperbolic Tangent returns up to 29 digits,Transcendental ,quadruple precision Hyperbolic Tangent,,,,121
+Function,xRad12,([Digit_Max]),Multiprecision constant Square Root of 12,Arithmetic,Multiprecision constant Square Root of 12,,,,500
+Function,xRad5,([Digit_Max]),Multiprecision constant Square Root of 5,Arithmetic,Multiprecision constant Square Root of 5,,,,500
+Function,xRadians,"(Angle, [Digit_Max])",Converts degrees to radians,Manipulation,Converts degrees to radians,,,,500
+Function,xRand,([Digit_Max]),Returns random extended number between 0 and 1,Arithmetic,Returns random number between 0 and 1,,,,500
+Function,xRandD,"(x, y, [Digit_Max])",Returns random extended number between x and y,Arithmetic,Returns random number between x and y,,,,500
+Function,xRandI,"(x, y, [Digit_Max])",Returns random extended integer between x and y,Arithmetic,Returns random integer between x and y,,,,500
+Function,xRank,"(num, ref, [order])","Returns the rank of a number in a list of numbers, the same as Excels RANK( ) function",Statistical,Returns the rank of a number in a list of numbers,,,,500
+Function,xRayleigh,"(x, dev, [Dtype], [Digit_Max])","Multiprecision Rayleigh distribution
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Multiprecision Rayleigh distribution,,,,403
+Function,xRdown,"(v, [Dec])","Round Down toward zero. [Dec] is number of decimal places (default = 0)
+the same as Excels ROUNDDOWN( ) function, but with extended precision",Manipulation,Round Down toward zero,,,,500
+Function,xReal,(x),"Returns the real coefficient of an extended complex number
+The same as Excels IMREAL( ) function",Complex,Returns the real coefficient of a complex number ,,,,500
+Function,xRegLinCoef,"(Y, X, [DgtMax], Optional Intcpt)","Returns the coefficients of the linear regression
+ y = a0 + a1*x1 + a2*x2 +a3*x3 +... am*xm where Y(n) range of dependent variable, X(n x m) range of independent variables (n > m). Intcpt = false forces the intercept to 0",Statistical,Multiprecision Linear Regression - coefficients,fitting,,,79
+Function,xRegLinCov,"(y, x, coeff, [DgtMax[, [intcpt])",Returns the Linear Regression Covariance matrix in multiprecision,Statistical,Multiprecision Linear Regression - Covariance matrix,fitting,,,80
+Function,xRegLinErr,"(Y, X, coeff, [DgtMax], [intcpt]","Returns the multiprecision standard deviation of the estimate
+Y(n) range or dependent variable, X(n x m) range of independent variables (n > m), vector cefficients [a0, a1, a2,...am] of regression function",Statistical,Multiprecision Linear Regression - Standard deviation,fitting,,,293
+Function,xRegLinEval,"(Coeff, X)","Evaluates the linear regression at the point X. 
+Parameter Coeff is the coefficients vector [a0, a1, a2...] of linear regression
+Parameter X is the vector of independent variable values [x1, x2,...]",Statistical,Multiprecision Linear Regression evaluation,fitting,,,117
+Function,xRegLinStat,"(Y, X, coef, [DgtMax], [intcpt])","Returns the multiprecision factor R^2 and the standard deviation of the linear regression
+Y(n) range or dependent variable, X(n x m) range of independent variables (n > m), vector cefficients [a0, a1, a2,...am] ",Statistical,Multiprecision Linear Regression - R-sq'd and std,fitting,,,81
+Function,xRegPolyCoef,"(Y, X, [Degree], [DgtMax], [intcpt])","Returns the coefficients of the polynomial regression
+ y = a0 + a1*x + a2*x^2 +a3*x^3 +... am*x^m where Y(n) range of dependent variable, X(n) range of independent variables. Intcpt = false forces the intercept to 0",Statistical,Multiprecision Polynomial Regression - coefficients,fitting,,,294
+Function,xRegPolyErr,"(Y, X, coeff, [degree], [DgtMax], [intcpt]",Returns the standard deviation of the estimate of the polynomial regression,Statistical,Multiprecision Polynomial Regression - std dev,fitting,,,295
+Function,xRegPolyStat,"(Y, X, coeff, [degree], [DgtMax], [intcpt]",Returns the R-squared factor and the standard deviation of the polynomial regression,Statistical,Multiprecision Polynomial Regression - std dev,fitting,,,296
+Function,xRegrL,"(y, x, [Digit_Max], [Intcpt], [ETA])","Returns the coefficients of the linear regression
+y = a0 + a1*x1 + a2*x2 + a3*x3 + ... + am*Xm
+with SVD, where y(n): range of dependent variables, x(n,m): range of independent variables, Intcpt = 0 for curve through origin, otherwise Intcpt = 1 (default)",Linear Algebra,Returns the coefficients of linear regression with SVD,,,,502
+Function,xRegrLC,"(y, x, [Cformat], [Digit_Max], [Intcpt], [ETA], [TOL])","Complex coefficients of the linear regression
+y = a0 + a1*x1 + a2*x2 + a3*x3 + ... + am*Xm
+with SVD, where y(n): range of dependent variables, x(n,m): range of independent variables, Intcpt = 0 for curve through origin, otherwise Intcpt = 1 (default)",Linear Algebra,Complex coefficients of linear regression with SVD,,,,502
+Function,xRoot,"(x, [n], [Digit_Max])",Returns the n-th root of an extended number ,Arithmetic,Multiprecision nth root ,,,,15
+Function,xRound,"(x, [Dec])",Rounding of extended numbers (default Dec = 0),Manipulation,Multiprecision rounding ,,,,47
+Function,xRoundR,"(x, [Dgt])",Relative rounding (default Dgt = 15),Manipulation,Multiprecision relative rounding,,,,133
+Function,xRsq,"(ax, ay, [Digit_Max])","Returns the square of the Pearson product moment correlation coefficient
+The same as Excels RSQ( ) function, but with extended precision",Statistical,Sq of Pearson prod moment correlation coefficient,,,,500
+Function,xRup,"(v, [Dec])","Round Up away from zero. [Dec] is number of decimal places (default = 0)
+The same as Excels ROUNDUP( ) function, but with extended precision",Manipulation,Round Up away from zero,,,,500
+Function,xSerie,"(Funct, Id, Id_min, Id_max, [Param], [DgtMax], [Increment], [Chk4NoChange])",Returns the series of a function F(n) for min <= n <= max,"Integrals, Series",Series of function,sum,,,110
+Function,xSerie2D,"(Funct, Id1, Id1_min, Id1_max, Id2, Id2_min, Id2_max,[Param],[DgtMax],[Increment1],[Increment2],[Chk4NoChange])","Returns the double series of a function F(n, m) ","Integrals, Series",Double Series of function,sum,,,284
+Function,xSerSum,"(x, n, m, a, [Digit_Max])","Returns the sum of a power series
+The same as Excels SERIESSUM( ) function, but with extended precision",Statistical,Returns the sum of a power series,,,,500
+Function,xSin,"(x, [Digit_Max])","Returns the sin of angle:  xSin(x) = sin(x)
+The argument 'x', in radians, may be either normal or extended number.",Trigonometric,Multiprecision Sine,,,,27
+Function,xSinh,"(x, [DgtMax])",Multiprecision Hyperbolic Sine,Transcendental ,Multiprecision Hyperbolic Sine,,,,119
+Function,xSlope,"(ax, ay, [Digit_Max])","Returns the slope of the linear regression line
+The same as Excels SLOPE( ) function, but with extended precision",Statistical,Returns the slope of the linear regression line,,,,500
+Function,xSplit,(x),"Split into mantissa and exponent
+x= mantissa*10^exponent",Manipulation,Split into mantissa and exponent,scientific,,,132
+Function,xSqr,"(x, [Digit_Max])",Returns the square root (radix) of an extended number ,Arithmetic,Multiprecision Square Root,,,,14
+Function,xSqrPi,"([x], [Digit_Max])","Returns the square root of (x*Pi) with extended precision
+if x is omitted x=1
+if x<0 returns error #VALUE!",Arithmetic,Return the square root of (x*Pi),,,,500
+Function,xStatis,"(a, [Digit_Max])",Univariate statistic summary,Statistical,Univariate statistic summary,,,,286
+Function,xStDev,"(A, [Digit_Max])","Returns the population standard deviation of n numbers, extended or not",Statistical,Multiprecision Standard Deviation ,,,,45
+Function,xStDevP,"(A, [Digit_Max])","Returns the standard deviation of n numbers, extended or not",Statistical,Multiprecision Pop. Standard Deviation ,,,,45
+Function,xSub,"(a1, a2, [Digit_Max])","Performs the subtraction of two extended number:  xSub(a1, a2) = a1 - a2",Arithmetic,Multiprecision Subtraction ,,,,9
+Function,xSubMod,"(a, b, m)",Modular subtraction,Numbers,Modular subtraction,Congruence,,,299
+Function,xSubR,"(x, y, Digit_Max)","internal function the same as xSub, but 10% faster in VBA Projects.
+Can also be called from the spreadsheet, where it is 3% faster, but returns numbers in 'Raw' format: as an integer and an unformatted exponent",Arithmetic,Multiprecision Subtraction for VBA,,,,10
+Function,xSum,"(v, [Digit_Max])",Multiprecision Sum of a range of cells 'v',Arithmetic,Multiprecision Sum,,,,12
+Function,xSumProd,"(ax, ay, [Digit_Max])","Multiplies all the components of the two arrays and then adds the products.
+The same as Excels SUMPRODUCT( ) function, but with extended precision",Statistical,Multiplies components of two arrays; adds the products,,,,500
+Function,xSumSq,"(a, [Digit_Max])","Returns the sum of the squares of the arguments.
+The same as Excels SUMSQ( ) function, but with extended precision",Statistical,Returns the sum of the squares of the arguments,,,,500
+Function,xSumX2mY2,"(ax, ay, [Digit_Max])","Returns the sum of the difference of squares of corresponding values in two arrays. The same as Excels SUMX2MY2( ) function, but with extended precision",Statistical,Sum of the diff of squares ...in two arrays,,,,500
+Function,xSumX2pY2,"(ax, ay, [Digit_Max])","Returns the sum of the sum of squares of corresponding values in two arrays.
+The same as Excels SUMX2PY2( ) function, but with extended precision",Statistical,Sum of the sum of squares ...in two arrays,,,,500
+Function,xSumXmY2,"(ax, ay, [Digit_Max])","Returns the sum of squares of differences of corresponding values in two arrays.
+The same as Excels SUMXMY2( ) function, but with extended precision",Statistical,Sum of squares of differences ...in two arrays,,,,500
+Function,xSVDD,"(Mat, [Digit_Max], [ETA])","Singular Value Decomposition: returns D matrix in Multi-Precision
+Default ETA= '1E- & Digit_Max'",Linear Algebra,Singular Value Decomposition: returns D matrix,,,,502
+Function,xSVDDC,"(Mat, [Cformat], [Digit_Max], [ETA], [TOL])","Singular Value Decomposition: returns Complex D matrix in Multi-Precision
+Default ETA= '1E- & Digit_Max'. Default TOL= 0",Linear Algebra,Singular Value Decomposition: Complex D matrix,,,,502
+Function,xSVDU,"(Mat, [Digit_Max], [ETA])","Singular Value Decomposition: returns U matrix in Multi-Precision
+Default ETA= '1E- & Digit_Max'",Linear Algebra,Singular Value Decomposition: returns U matrix,,,,502
+Function,xSVDUC,"(Mat, [Cformat], [Digit_Max], [ETA], [TOL])","Singular Value Decomposition: Complex U matrix in Multi-Precision
+Default ETA= '1E- & Digit_Max'. Default TOL= 0",Linear Algebra,Singular Value Decomposition: Complex U matrix,,,,502
+Function,xSVDV,"(Mat, [Digit_Max], [ETA])","Singular Value Decomposition: returns V matrix in Multi-Precision
+Default ETA= '1E- & Digit_Max'",Linear Algebra,Singular Value Decomposition: returns V matrix,,,,502
+Function,xSVDVC,"(Mat, [Cformat], [Digit_Max], [ETA], [TOL])","Singular Value Decomposition: Complex V matrix in Multi-Precision
+Default ETA= '1E- & Digit_Max'. Default TOL= 0",Linear Algebra,Singular Value Decomposition: Complex V matrix,,,,502
+Function,xSysLin,"(Mat, V, [DgtMax])",Solve Linear System Ax = B ( Gauss-Jordan algorithm ) in multiprecision arithmetic,Linear Algebra,Multiprecision Solve Linear System,,,,92
+Function,xSysLinC,"(A, B, [Cformat], [DgtMax])",Solve a complex linear system A*X=B in multi-precision,Linear Algebra,Solve a complex linear system A*X=B in multi-precision,,,,527
+Function,xSysLinIterG,"(Mat,U,[x0],[nMax],[w],[Digit_Max])",Solve Linear System Mat*x = U (Gauss-Seidel iterative method) in multiprecision arithmetic,Linear Algebra,Multiprecision Solve Linear System,,,,94
+Function,xSysLinIterJ,"(Mat,U,[x0],[nMax],[Digit_Max])",Solve Linear System Mat*x = U (Jacobi iterative method) in multiprecision arithmetic,Linear Algebra,Multiprecision Solve Linear System,,,,94
+Function,xSysLinMCM,"(Mat, V, [DgtMax])",Solve Linear System Ax = B ( Gauss-Jordan algorithm ) in multiprecision arithmetic,Linear Algebra,Multiprecision Solve Linear System,,,,92
+Function,xTan,"(x, [Digit_Max])",Returns the tangent of angle:  xTan(x) = tan(x),Trigonometric,Multiprecision Tan ,,,,29
+Function,xTanh,"(x, [DgtMax])",Multiprecision Hyperbolic Tangent,Transcendental ,Multiprecision Hyperbolic Tangent,,,,121
+Function,xTrunc,"(x, [Dec])","Eliminates the decimal part from a number (with default Dec = 0)
+The same as Excels TRUNC( ) function, with extended precision",Manipulation,Truncate an extended number,,,,278
+Function,xTruncMod,"(N, D)","Multi-precision remainder R = N - D * Q
+quotient Q = xTrunc(N/D), the integer portion of N/D (rounded toward zero)
+The sign of remainder R is always the same as the sign of dividend N",Arithmetic,Multiprecision remainder R = N - D * xTrunc(N/D),,,,66
+Function,xTruncQR,"(N, D)","Multi-precision quotient Q and remainder R as 2 x array
+Q = xTrunc(N/D), the integer portion of N/D (rounded down toward zero)
+R = N - D * Q
+The sign of remainder R is always the same as the sign of dividend N",Numbers,quotient Q = xTrunc(N/D) & remainder R as 2 x array,,,,66
+Function,xTruncR,"(x, [SigDgts])",Truncate an extended number to sigificant number of digits,Manipulation,Truncate to sigificant number of digits,,,,278
+Function,xUnformat,(str),Remove all formattig characters from an extended number,Manipulation,Removes all formattig characters,char separator,,,100
+Function,xVar,"(A, [Digit_Max])","Returns the variance of n numbers, extended or not",Statistical,Multiprecision Variance ,,,,46
+Function,xVarP,"(A, [Digit_Max])","Returns the population variance of n numbers, extended or not",Statistical,Multiprecision Pop. Variance ,,,,46
+Function,xWeibull,"(x, k, lambda, [Dtype], [Digit_Max])","Weibull distribution
+The same as Excels WEIBULL( ) function, but with extended precision
+Optional Dtype can be entered as 1 or TRUE;  0 or FALSE
+If Dtype is missing, Dtype = 0 (FALSE)",Statistical,Weibull distribution,,,,403
+Function,xZeta,"(x, [Digit_Max])",multi-precision Riemann Zeta function,Special functions,multi-precision Riemann Zeta function,serie sum,,,221
+Function,Zero_Bisec,"(a, b, Func, [Step], [Param], [Var_Label])","Solves the nonlinear equation f(x) = 0 with the bisection method.
+Default Var_Label is 'x'",Equations,zero of function with bisection method,root,,,186
+Function,Zero_Sec,"(a, b, Func, [Step], [Param],  [DgtMax], [Var_Label])","Solves the nonlinear equation f(x) = 0 with the secant method.
+Default Var_Label is 'x'",Equations,zero of function with secant method,root,,,187
+Function,Zeta,(x),Riemann Zeta function,Special functions,Riemann Zeta function,serie sum,,,221
+Sub,DFT_Routines,(),Discrete Fourier Transform,"Integrals, Series",Discrete Fourier Transform,DFT FFT,,,253
+Sub,DFT2D_Routines,(),Bidimensional Discrete Fourier Transform,"Integrals, Series","2D -Discrete Fourier Transform,",DFT FFT,,,253
+Sub,Double_Hex_Conv,(),"Converts a double into a 16 byte Hex string that represents the full 64bit internal storage. Separator character defaults to a space, but can also be null.",Manipulation,Converts a double into a 16 byte Hex string,,,,500
+Sub,Factorize_Number,(),Factorizes an integer number of active cell,Numbers,Factorize the number of active cell,prime,,,77
+Sub,Hex_Double_Conv,(),Converts 16 byte Hex string back into a double,Manipulation,Converts 16 byte Hex string back into a double,,,,500
+Sub,Integr2D,(),"Approximates the double integral of a function f(x, y) using the 2D Romberg method. ","Integrals, Series",Double integral - Romberg method,"calculus, area, double, domain",,,182
+Sub,Integr3D,(),"Approximates the triple integral of a function f(x, y, z) using the 3D double exponential method. ","Integrals, Series",Triple integral - DE method,"calculus, area, triple, domain",,,307
+Sub,Integral_Inf,(),Numeric Integration of f(x) over infinite interval,"Integrals, Series",Infinite Integral,generalized integral,,,184
+Sub,Macro_ODESlope,(),"Generate the slope field of the diff. equation y' = f(x,y)",ODE,ODE Slope grid generator,,,,312
+Sub,Macro_ODESolverV,(),ODE integration with variable step (Runge-Kutta-Fehlberg method),ODE,Differential Equation Solver,,,,311
+Sub,MacroPSLQ,(),Macro Integer-Relation Finder with PSLQ 2-Level algorithm,Numbers,Macro Integer-Relation Finder with PSLQ 2-Level algm,,,,318
+Sub,MPMatrix_Complex,(),Multiprecision complex matrix operations,Linear Algebra,Multiprecision complex matrix operations,inverse transpose determinant system norm addition subtraction multiplication scalar product similarity LU cholesky,,,93
+Sub,MPMatrix_Operations,(),Matrix operations,Linear Algebra,matrix operations,inverse transpose determinant system norm addition subtraction multiplication scalar product similarity LU cholesky,,,93
+Sub,Mesh_Fill,(),Completes a matrix by interpolation,Interpolation,"2D Mesh Fill,",holes,,,402
+Sub,MPRegressionLin,(),Multiprecision Linear Regression,Statistical,Multiprecision Linear Regression,fitting,,,297
+Sub,MPRegressionPoly,(),Multiprecision Polynomial Regression,Statistical,Multiprecision Polynomial Regression,fitting,,,297
+Sub,Optim1,(),Optimization for multivariable function (downhill-simplex),Optimization,Optim. for multivariable function (downhill-simplex),Nelder Mead,,,261
+Sub,Optim2,(),Optimization for multivariable function (downhill-simplex resets),Optimization,Optim. for multivar. function (downhill-simplex resets),Nelder Mead,,,261
+Sub,Optim3,(),Optimization for monovariable function (divide-and-conquer algorithm),Optimization,Optimiz for monovar. function (divide-and-conquer),bisection,,,261
+Sub,PasteExactValues,(),"Paste exact cell contents from Source Range to Destination Range.
+Does not change cell references in formulas.
+When one entire array is selected can change size of the array.
+Selecting upper left cell of array also indicates the entire array",Manipulation,Paste exact cell contents from Source to Destination,,,,504
+Sub,PasteSpecialValues,(),"Paste Value into each cell with a formula in selected range.
+Pastes the cell's formula into a comment, for each cell in range",Manipulation,Paste Values into cell. Paste formula into a comment,,,,504
+Sub,Poly_Horto_Coeff,(),Computes all coefficients of orthogonal polynomials,Polynomial,Coefficients of orthogonal polynomials,,,,277
+Sub,Poly_Horto_Zero,(),Finds all roots of orthogonal polynomials,Polynomial,Roots of orthogonal polynomials,,,,276
+Sub,PolyBuildCfx,(),"Computes polynomial coefficients from polynomial roots in multiprecision
+[x1, x2, x3... xn] --> [a0, a1, a2...an]",Polynomial,Multiprecision Polynomial Coefficients,Roots,,,243
+Sub,Polynomial_Factorize,(),Extracts factors having single roots from a polynomial with the GCD method,Polynomial,Polynomial factors extractor,factorization GCD MCD,,,285
+Sub,Prime_Test_Fermat,(),Probabilistic Fermat's Prime Test ,Numbers,Probabilistic Fermat's Prime Test ,,,,263
+Sub,PrimeGenerator,(),Ouptut the prime table into active worksheet (column A),Numbers,Prime Table Generator,,,,78
+Sub,Range_InterNat_Conv,(),Attempts to fix string to current international settings for Decimal Separator.,Manipulation,Fix String to current International Settings,,,,500
+Sub,Range_Xnumber_Format,(),Formats extended numbers separating groups of digits.,Manipulation,Xnumbers format,,,,256
+Sub,Range_Xnumber_MopUp,(),Mop-up of extended numbers,Manipulation,Xnumbers mop-up,,,,256
+Sub,Range_Xnumber_relround,(),Relative rounding of extended numbers,Manipulation,Xnumbers relative rounding,,,,256
+Sub,Range_Xnumber_round,(),Rounding of extended numbers,Manipulation,Xnumbers rounding,,,,256
+Sub,Range_Xnumber_Unformat,(),Removes all formatting characters from extended numbers,Manipulation,Xnumbers unformat,,,,256
+Sub,RemoveDependents,(),Removes Dependent Arrows from selected range of cells,Manipulation,Removes Dependent Arrows from selected range,,,,504
+Sub,RemoveDependPreced,(),Removes both Dependent and Precedent Arrows from selected range of cells,Manipulation,Removes both Depend and Preced Arrows from range,,,,504
+Sub,RemovePrecedents,(),Removes Precedent Arrows from selected range of cells,Manipulation,Removes Precedent Arrows from selected range,,,,504
+Sub,RePasteSpecialValues,(),"Performs UnPasteSpecialValues, calculates formula, then re-performs PasteSpecialValues",Manipulation,"UnPasteSpecialValues, then PasteSpecialValues",,,,504
+Sub,RePasteSpecialValuesCalc,(),"Performs UnPasteSpecialValues, calculates workbooks (F9), then re-performs PasteSpecialValues",Manipulation,"UnPasteSpecialValues, F9, then PasteSpecialValues",,,,504
+Sub,Rootfinding_macros,(),Finds all roots of a polynomial. ,Polynomial,Polynomial Rootfinder,zero equation,,,224
+Sub,Samples_Generate,(),Samples generator,"Integrals, Series",Samples generator,sampling,,,251
+Sub,Setting_Digits_Default,(),Changes the default multiprecision digits and all of the Configuration options since version 6.0,Options,Default multiprecision digits and Configuration,,,,257
+Sub,ShowDependents,(),Traces Dependent Arrows from selected range of cells,Manipulation,Traces Dependent Arrows from selected range,,,,504
+Sub,ShowPrecedents,(),Traces Precedent Arrows from selected range of cells,Manipulation,Traces Precedent Arrows from selected range,,,,504
+Sub,UnPasteSpecialValues,(),"The reverse of PasteSpecialValues.
+Puts formulas stored in comments back into the cells of selected range",Manipulation,The reverse of PasteSpecialValues.,,,,504
+Sub,Xnumber_Double_Conv,(),Converts extended numbers into standard numbers,Manipulation,Xnumbers conversion,double,,,256
